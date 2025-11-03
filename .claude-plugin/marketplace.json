@@ -1,0 +1,19 @@
+{
+  "name": "nicknisi-claude-plugins",
+  "owner": {
+    "name": "Nick Nisi",
+    "email": "nick@nisi.org"
+  },
+  "plugins": [
+    {
+      "name": "gpt5-consultant",
+      "source": "./plugins/gpt5-consultant",
+      "description": "Ask GPT5 to consult on your task via MCP",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      }
+    }
+  ]
+}

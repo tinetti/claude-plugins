@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "gpt5-server": {
+      "command": "node",
+      "args": ["mcp-server/dist/index.js"],
+      "env": {}
+    }
+  }
+}
