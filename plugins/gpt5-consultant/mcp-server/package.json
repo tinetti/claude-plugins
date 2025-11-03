@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "bundle": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --banner:js=\"#!/usr/bin/env node\" --external:fsevents && chmod +x dist/index.js",
+    "bundle": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --external:fsevents",
     "start": "node build/index.js",
     "dev": "tsc && node build/index.js"
   },

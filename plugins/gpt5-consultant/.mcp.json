@@ -2,7 +2,7 @@
   "mcpServers": {
     "gpt5-server": {
       "command": "node",
-      "args": ["mcp-server/dist/index.js"],
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp-server/dist/index.js"],
       "env": {
         "OPENAI_API_KEY": "${OPENAI_API_KEY}"
       }
