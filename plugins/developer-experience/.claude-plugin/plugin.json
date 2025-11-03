@@ -1,0 +1,9 @@
+{
+  "name": "developer-experience",
+  "version": "0.1.0",
+  "description": "Tools for the experienced developer experience engineer.",
+  "author": {
+    "name": "Nick Nisi",
+    "email": "nick@nisi.org"
+  }
+}
