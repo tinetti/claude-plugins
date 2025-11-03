@@ -1,6 +1,6 @@
 {
   "name": "workos",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WorkOS authentication and enterprise SSO integration toolkit",
   "author": {
     "name": "Nick Nisi",
