@@ -7,13 +7,13 @@ My personal collection of Claude Code plugins.
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin add-marketplace /Users/nicknisi/Developer/claude-plugins
+/plugin marketplace add /Users/nicknisi/Developer/claude-plugins
 ```
 
 Or if you're setting it up from GitHub:
 
 ```bash
-/plugin add-marketplace git@github.com:nicknisi/claude-plugins.git
+/plugin marketplace add nicknisi/claude-plugins
 ```
 
 Then install plugins:
@@ -23,6 +23,18 @@ Then install plugins:
 ```
 
 ## Plugins
+
+### developer-experience
+
+Tools for the experienced developer experience engineer. Includes specialized agents for:
+
+- **dx-optimizer** - Developer experience specialist for eliminating friction and maximizing velocity
+- **dx-sdk-advocate** - SDK design and API usability review
+- **typescript-pro** - TypeScript 5.x architecture and type-level programming
+- **code-simplifier** - Refactor code for readability and maintainability
+- **coder** - Implement features from detailed specifications
+- **readme-writer** - Create engaging documentation for open source projects
+- **security-agent** - OWASP compliance and vulnerability assessment
 
 ### gpt5-consultant
 
@@ -59,9 +71,9 @@ pnpm run build:all
 1. Create `plugins/your-plugin/.claude-plugin/plugin.json` with metadata
 2. Add components: agents, commands, skills, or MCP servers
 3. If adding an MCP server, update `pnpm-workspace.yaml` and root `tsconfig.json`
-4. Run `pnpm run build:all` to bundle and sync
+4. Run `pnpm run sync` to auto-discover and add to marketplace
 
-The sync script automatically pulls metadata from each plugin's `plugin.json` into `marketplace.json`.
+The sync script scans `plugins/` and automatically discovers all plugins with valid `plugin.json` files. Add a plugin directory and it shows up. Remove one and it disappears.
 
 ## Structure
 
