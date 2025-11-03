@@ -26,9 +26,6 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: 0.6.0
         version: 0.6.0
-      dotenv:
-        specifier: ^16.3.1
-        version: 16.6.1
       zod:
         specifier: ^3.22.4
         version: 3.25.76
@@ -225,10 +222,6 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dotenv@16.6.1:
-    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
-    engines: {node: '>=12'}
-
   esbuild@0.25.12:
     resolution: {integrity: sha512-bbPBYYrtZbkt6Os6FiTLCTFxvq4tt3JKall1vRwshA3fdVztsLAatFaZobhkBC8/BrPetoa0oksYoKXoG4ryJg==}
     engines: {node: '>=18'}
@@ -406,8 +399,6 @@ snapshots:
   content-type@1.0.5: {}
 
   depd@2.0.0: {}
-
-  dotenv@16.6.1: {}
 
   esbuild@0.25.12:
     optionalDependencies:

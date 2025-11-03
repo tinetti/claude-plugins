@@ -7,20 +7,9 @@ import {
   ErrorCode,
   McpError,
 } from "@modelcontextprotocol/sdk/types.js";
-import path from "path";
-import { fileURLToPath } from "url";
-import dotenv from "dotenv";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { callGPT5, callGPT5WithMessages } from "./utils.js";
-
-// Initialize environment from parent directory
-import { dirname } from "path";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const envPath = path.join(__dirname, "../../.env");
-dotenv.config({ path: envPath });
-console.error("Environment loaded from:", envPath);
 
 // Schema definitions
 const GPT5GenerateSchema = z.object({
