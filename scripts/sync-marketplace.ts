@@ -1,11 +1,55 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync } from "fs";
-import { resolve, dirname } from "path";
+import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
+import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(__dirname, "..");
+
+function discoverPlugins() {
+  const pluginsDir = resolve(projectRoot, "plugins");
+  const plugins = [];
+
+  try {
+    const entries = readdirSync(pluginsDir);
+
+    for (const entry of entries) {
+      const pluginPath = join(pluginsDir, entry);
+      const pluginJsonPath = join(pluginPath, ".claude-plugin/plugin.json");
+
+      if (!statSync(pluginPath).isDirectory()) continue;
+
+      try {
+        const pluginJson = JSON.parse(readFileSync(pluginJsonPath, "utf-8"));
+
+        const plugin: any = {
+          name: pluginJson.name,
+          source: `./plugins/${entry}`,
+          description: pluginJson.description,
+          version: pluginJson.version,
+          author: pluginJson.author,
+        };
+
+        if (pluginJson.homepage) plugin.homepage = pluginJson.homepage;
+        if (pluginJson.repository) plugin.repository = pluginJson.repository;
+        if (pluginJson.license) plugin.license = pluginJson.license;
+        if (pluginJson.keywords) plugin.keywords = pluginJson.keywords;
+        if (pluginJson.category) plugin.category = pluginJson.category;
+
+        plugins.push(plugin);
+        console.log(`Discovered plugin: ${pluginJson.name}`);
+      } catch (err) {
+        console.warn(`Skipping ${entry}: no valid plugin.json`);
+      }
+    }
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error(`Failed to read plugins directory:`, message);
+  }
+
+  return plugins;
+}
 
 function syncMarketplace() {
   const marketplacePath = resolve(
@@ -14,34 +58,11 @@ function syncMarketplace() {
   );
   const marketplace = JSON.parse(readFileSync(marketplacePath, "utf-8"));
 
-  for (const plugin of marketplace.plugins) {
-    const pluginJsonPath = resolve(
-      projectRoot,
-      plugin.source,
-      ".claude-plugin/plugin.json",
-    );
-
-    try {
-      const pluginJson = JSON.parse(readFileSync(pluginJsonPath, "utf-8"));
-
-      // Sync metadata from plugin.json to marketplace entry
-      plugin.description = pluginJson.description;
-      plugin.version = pluginJson.version;
-      plugin.author = pluginJson.author;
-
-      if (pluginJson.homepage) plugin.homepage = pluginJson.homepage;
-      if (pluginJson.repository) plugin.repository = pluginJson.repository;
-      if (pluginJson.license) plugin.license = pluginJson.license;
-      if (pluginJson.keywords) plugin.keywords = pluginJson.keywords;
-      if (pluginJson.category) plugin.category = pluginJson.category;
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      console.error(`Failed to read ${pluginJsonPath}:`, message);
-    }
-  }
+  // Discover all plugins in plugins/ directory
+  marketplace.plugins = discoverPlugins();
 
   writeFileSync(marketplacePath, JSON.stringify(marketplace, null, 2) + "\n");
-  console.log("Marketplace synced successfully");
+  console.log(`Marketplace synced successfully with ${marketplace.plugins.length} plugins`);
 }
 
 syncMarketplace();
