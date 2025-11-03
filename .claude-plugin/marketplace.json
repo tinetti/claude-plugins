@@ -6,6 +6,24 @@
   },
   "plugins": [
     {
+      "name": "content",
+      "source": "./plugins/content",
+      "description": "Tools for bootstrapping content creation such as blog posts and conference talks",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org",
+        "keywords": [
+          "content",
+          "blog",
+          "blogging",
+          "talks",
+          "developer-talks",
+          "meetups"
+        ]
+      }
+    },
+    {
       "name": "developer-experience",
       "source": "./plugins/developer-experience",
       "description": "Tools for the experienced developer experience engineer.",
