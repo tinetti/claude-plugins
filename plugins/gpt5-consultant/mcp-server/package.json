@@ -1,6 +1,6 @@
 {
   "name": "gpt5-mcp-server",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "MCP server for OpenAI GPT-5 API integration",
   "type": "module",
   "main": "build/index.js",

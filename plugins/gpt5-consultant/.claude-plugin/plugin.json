@@ -1,6 +1,6 @@
 {
   "name": "gpt5-consultant",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Ask GPT5 to consult on your task via MCP",
   "author": {
     "name": "Nick Nisi",
