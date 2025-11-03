@@ -24,6 +24,24 @@
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
       }
+    },
+    {
+      "name": "workos",
+      "source": "./plugins/workos",
+      "description": "WorkOS authentication and enterprise SSO integration toolkit",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "workos",
+        "authentication",
+        "sso",
+        "saml",
+        "oidc",
+        "enterprise"
+      ]
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "workos",
+  "version": "0.1.0",
+  "description": "WorkOS authentication and enterprise SSO integration toolkit",
+  "author": {
+    "name": "Nick Nisi",
+    "email": "nick@nisi.org"
+  },
+  "keywords": ["workos", "authentication", "sso", "saml", "oidc", "enterprise"]
+}
