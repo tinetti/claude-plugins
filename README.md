@@ -27,6 +27,7 @@ Then install plugins:
 - [content](plugins/content/README.md) - Tools for bootstrapping content creation
 - [developer-experience](plugins/developer-experience/README.md) - Tools for the experienced developer experience engineer
 - [gpt5-consultant](plugins/gpt5-consultant/README.md) - Brings GPT-5 into Claude Code as a consultant
+- [spec-driven](plugins/spec-driven/README.md) - Transform specifications into executable code with validation-driven development
 - [workos](plugins/workos/README.md) - Enterprise authentication and SSO integration toolkit
 
 ## Development
