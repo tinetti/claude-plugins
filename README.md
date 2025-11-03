@@ -24,40 +24,10 @@ Then install plugins:
 
 ## Plugins
 
-### developer-experience
-
-Tools for the experienced developer experience engineer. Includes specialized agents for:
-
-- **dx-optimizer** - Developer experience specialist for eliminating friction and maximizing velocity
-- **dx-sdk-advocate** - SDK design and API usability review
-- **typescript-pro** - TypeScript 5.x architecture and type-level programming
-- **code-simplifier** - Refactor code for readability and maintainability
-- **coder** - Implement features from detailed specifications
-- **readme-writer** - Create engaging documentation for open source projects
-- **security-agent** - OWASP compliance and vulnerability assessment
-
-### gpt5-consultant
-
-Brings GPT-5 into Claude Code as a consultant via MCP. Useful when you want a second opinion or to leverage GPT-5's specific strengths.
-
-**Requirements:** OpenAI API key with GPT-5 access. Set `OPENAI_API_KEY` in your environment.
-
-**Features:**
-
-- Simple text generation with GPT-5
-- Structured conversation support
-- Configurable reasoning effort levels
-- Token usage reporting
-
-### workos
-
-Enterprise authentication and SSO integration toolkit. Includes a WorkOS specialist agent with context7 MCP pre-configured for always-current WorkOS documentation.
-
-**What you get:**
-
-- WorkOS integration specialist agent
-- Context7 MCP auto-configured for WorkOS docs
-- Guidance on AuthKit, SSO, Directory Sync, and multi-tenant patterns
+- [content](plugins/content/README.md) - Tools for bootstrapping content creation
+- [developer-experience](plugins/developer-experience/README.md) - Tools for the experienced developer experience engineer
+- [gpt5-consultant](plugins/gpt5-consultant/README.md) - Brings GPT-5 into Claude Code as a consultant
+- [workos](plugins/workos/README.md) - Enterprise authentication and SSO integration toolkit
 
 ## Development
 
@@ -85,23 +55,6 @@ pnpm run build:all
 4. Run `pnpm run sync` to auto-discover and add to marketplace
 
 The sync script scans `plugins/` and automatically discovers all plugins with valid `plugin.json` files. Add a plugin directory and it shows up. Remove one and it disappears.
-
-## Structure
-
-```
-claude-plugins/
-├── .claude-plugin/
-│   └── marketplace.json          # Marketplace registry
-├── plugins/
-│   └── gpt5-consultant/
-│       ├── .claude-plugin/
-│       │   └── plugin.json       # Plugin metadata
-│       ├── .mcp.json              # MCP server config
-│       ├── agents/                # Agent definitions
-│       └── mcp-server/            # Node.js MCP server
-└── scripts/
-    └── sync-marketplace.ts        # Syncs plugin metadata
-```
 
 ## License
 
