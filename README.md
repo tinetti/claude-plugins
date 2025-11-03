@@ -43,6 +43,7 @@ Brings GPT-5 into Claude Code as a consultant via MCP. Useful when you want a se
 **Requirements:** OpenAI API key with GPT-5 access. Set `OPENAI_API_KEY` in your environment.
 
 **Features:**
+
 - Simple text generation with GPT-5
 - Structured conversation support
 - Configurable reasoning effort levels
@@ -53,6 +54,7 @@ Brings GPT-5 into Claude Code as a consultant via MCP. Useful when you want a se
 Enterprise authentication and SSO integration toolkit. Includes a WorkOS specialist agent with context7 MCP pre-configured for always-current WorkOS documentation.
 
 **What you get:**
+
 - WorkOS integration specialist agent
 - Context7 MCP auto-configured for WorkOS docs
 - Guidance on AuthKit, SSO, Directory Sync, and multi-tenant patterns

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
-import { resolve, dirname, join } from "path";
-import { fileURLToPath } from "url";
+import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
+import { resolve, dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const projectRoot = resolve(__dirname, "..");
+const projectRoot = resolve(__dirname, '..');
 
 function discoverPlugins() {
-  const pluginsDir = resolve(projectRoot, "plugins");
+  const pluginsDir = resolve(projectRoot, 'plugins');
   const plugins = [];
 
   try {
@@ -16,12 +16,12 @@ function discoverPlugins() {
 
     for (const entry of entries) {
       const pluginPath = join(pluginsDir, entry);
-      const pluginJsonPath = join(pluginPath, ".claude-plugin/plugin.json");
+      const pluginJsonPath = join(pluginPath, '.claude-plugin/plugin.json');
 
       if (!statSync(pluginPath).isDirectory()) continue;
 
       try {
-        const pluginJson = JSON.parse(readFileSync(pluginJsonPath, "utf-8"));
+        const pluginJson = JSON.parse(readFileSync(pluginJsonPath, 'utf-8'));
 
         const plugin: any = {
           name: pluginJson.name,
@@ -54,15 +54,17 @@ function discoverPlugins() {
 function syncMarketplace() {
   const marketplacePath = resolve(
     projectRoot,
-    ".claude-plugin/marketplace.json",
+    '.claude-plugin/marketplace.json',
   );
-  const marketplace = JSON.parse(readFileSync(marketplacePath, "utf-8"));
+  const marketplace = JSON.parse(readFileSync(marketplacePath, 'utf-8'));
 
   // Discover all plugins in plugins/ directory
   marketplace.plugins = discoverPlugins();
 
-  writeFileSync(marketplacePath, JSON.stringify(marketplace, null, 2) + "\n");
-  console.log(`Marketplace synced successfully with ${marketplace.plugins.length} plugins`);
+  writeFileSync(marketplacePath, JSON.stringify(marketplace, null, 2) + '\n');
+  console.log(
+    `Marketplace synced successfully with ${marketplace.plugins.length} plugins`,
+  );
 }
 
 syncMarketplace();

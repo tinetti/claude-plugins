@@ -307,7 +307,7 @@ async function apiCall<T>(endpoint: string): Promise<T> {
   return res.json(); // TypeScript infers 'any' here, not 'T'
 }
 
-const user = await apiCall<User>("/api/user");
+const user = await apiCall<User>('/api/user');
 // user is typed as 'any', not 'User'
 ```
 
@@ -333,7 +333,7 @@ Input: "useEffect running infinitely despite correct dependencies.
 Code:
 
 ```typescript
-const [filters, setFilters] = useState({ status: "active", sort: "name" });
+const [filters, setFilters] = useState({ status: 'active', sort: 'name' });
 
 useEffect(() => {
   fetchUsers(filters);

@@ -52,17 +52,17 @@ I'm your security specialist, focused on identifying vulnerabilities, implementi
 
 ```javascript
 // Example middleware for role-based access
-const authorize = (roles) => {
+const authorize = roles => {
   return (req, res, next) => {
     if (!req.user || !roles.includes(req.user.role)) {
-      return res.status(403).json({ error: "Forbidden" });
+      return res.status(403).json({ error: 'Forbidden' });
     }
     next();
   };
 };
 
 // Usage
-app.get("/admin/users", authenticate, authorize(["admin"]), getUsers);
+app.get('/admin/users', authenticate, authorize(['admin']), getUsers);
 ```
 
 ### 2. Cryptographic Failures
@@ -77,7 +77,7 @@ app.get("/admin/users", authenticate, authorize(["admin"]), getUsers);
 
 ```javascript
 // Password hashing example
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
 const saltRounds = 12;
 
 // Hashing
@@ -102,7 +102,7 @@ const isValid = await bcrypt.compare(plainPassword, hashedPassword);
 const query = `SELECT * FROM users WHERE email = '${email}'`;
 
 // Good - Parameterized query
-const query = "SELECT * FROM users WHERE email = $1";
+const query = 'SELECT * FROM users WHERE email = $1';
 const result = await db.query(query, [email]);
 
 // NoSQL Injection Prevention
@@ -135,7 +135,7 @@ db.users.find({ email: sanitizedEmail });
 
 ```javascript
 // Security headers example
-const helmet = require("helmet");
+const helmet = require('helmet');
 app.use(
   helmet({
     contentSecurityPolicy: {
@@ -143,7 +143,7 @@ app.use(
         defaultSrc: ["'self'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
         scriptSrc: ["'self'"],
-        imgSrc: ["'self'", "data:", "https:"],
+        imgSrc: ["'self'", 'data:', 'https:'],
       },
     },
     hsts: {
@@ -195,7 +195,7 @@ app.use(
       secure: true, // HTTPS only
       httpOnly: true, // No JS access
       maxAge: 1000 * 60 * 30, // 30 minutes
-      sameSite: "strict",
+      sameSite: 'strict',
     },
   }),
 );
@@ -225,16 +225,16 @@ const LOCKOUT_TIME = 15 * 60 * 1000; // 15 minutes
 
 ```javascript
 // Security logging example
-const winston = require("winston");
+const winston = require('winston');
 
 const securityLogger = winston.createLogger({
-  level: "info",
+  level: 'info',
   format: winston.format.json(),
-  transports: [new winston.transports.File({ filename: "security.log" })],
+  transports: [new winston.transports.File({ filename: 'security.log' })],
 });
 
 // Log security events
-securityLogger.info("Failed login attempt", {
+securityLogger.info('Failed login attempt', {
   ip: req.ip,
   email: req.body.email,
   timestamp: new Date().toISOString(),
@@ -261,23 +261,23 @@ securityLogger.info("Failed login attempt", {
 ### Validation Examples
 
 ```javascript
-const validator = require("validator");
+const validator = require('validator');
 
 // Email validation
 if (!validator.isEmail(email)) {
-  throw new Error("Invalid email format");
+  throw new Error('Invalid email format');
 }
 
 // URL validation
-if (!validator.isURL(url, { protocols: ["https"] })) {
-  throw new Error("Invalid URL");
+if (!validator.isURL(url, { protocols: ['https'] })) {
+  throw new Error('Invalid URL');
 }
 
 // Input sanitization
 const sanitizedInput = validator.escape(userInput);
 
 // Schema validation with Joi
-const Joi = require("joi");
+const Joi = require('joi');
 const userSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().min(8).required(),
@@ -292,10 +292,10 @@ const { error, value } = userSchema.validate(req.body);
 ### JWT Best Practices
 
 ```javascript
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
 // Token generation
-const generateToken = (user) => {
+const generateToken = user => {
   return jwt.sign(
     {
       id: user.id,
@@ -304,30 +304,30 @@ const generateToken = (user) => {
     },
     process.env.JWT_SECRET,
     {
-      expiresIn: "15m",
-      issuer: "myapp",
-      audience: "myapp-users",
+      expiresIn: '15m',
+      issuer: 'myapp',
+      audience: 'myapp-users',
     },
   );
 };
 
 // Token verification middleware
 const verifyToken = (req, res, next) => {
-  const token = req.headers.authorization?.split(" ")[1];
+  const token = req.headers.authorization?.split(' ')[1];
 
   if (!token) {
-    return res.status(401).json({ error: "No token provided" });
+    return res.status(401).json({ error: 'No token provided' });
   }
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET, {
-      issuer: "myapp",
-      audience: "myapp-users",
+      issuer: 'myapp',
+      audience: 'myapp-users',
     });
     req.user = decoded;
     next();
   } catch (error) {
-    return res.status(401).json({ error: "Invalid token" });
+    return res.status(401).json({ error: 'Invalid token' });
   }
 };
 ```
@@ -336,15 +336,15 @@ const verifyToken = (req, res, next) => {
 
 ```javascript
 // Using passport.js for OAuth
-const passport = require("passport");
-const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 passport.use(
   new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL: '/auth/google/callback',
     },
     async (accessToken, refreshToken, profile, done) => {
       // Handle user creation/login
@@ -365,8 +365,8 @@ passport.use(
 ```javascript
 // Force HTTPS in Express
 app.use((req, res, next) => {
-  if (req.header("x-forwarded-proto") !== "https") {
-    res.redirect(`https://${req.header("host")}${req.url}`);
+  if (req.header('x-forwarded-proto') !== 'https') {
+    res.redirect(`https://${req.header('host')}${req.url}`);
   } else {
     next();
   }
@@ -375,8 +375,8 @@ app.use((req, res, next) => {
 // HSTS header
 app.use((req, res, next) => {
   res.setHeader(
-    "Strict-Transport-Security",
-    "max-age=31536000; includeSubDomains; preload",
+    'Strict-Transport-Security',
+    'max-age=31536000; includeSubDomains; preload',
   );
   next();
 });
@@ -385,16 +385,16 @@ app.use((req, res, next) => {
 ### CORS Configuration
 
 ```javascript
-const cors = require("cors");
+const cors = require('cors');
 
 const corsOptions = {
   origin: (origin, callback) => {
-    const allowedOrigins = ["https://example.com", "https://app.example.com"];
+    const allowedOrigins = ['https://example.com', 'https://app.example.com'];
 
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error("Not allowed by CORS"));
+      callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true,
@@ -409,27 +409,27 @@ app.use(cors(corsOptions));
 ### Encryption at Rest
 
 ```javascript
-const crypto = require("crypto");
+const crypto = require('crypto');
 
 class Encryption {
   constructor() {
-    this.algorithm = "aes-256-gcm";
-    this.secretKey = Buffer.from(process.env.ENCRYPTION_KEY, "hex");
+    this.algorithm = 'aes-256-gcm';
+    this.secretKey = Buffer.from(process.env.ENCRYPTION_KEY, 'hex');
   }
 
   encrypt(text) {
     const iv = crypto.randomBytes(16);
     const cipher = crypto.createCipheriv(this.algorithm, this.secretKey, iv);
 
-    let encrypted = cipher.update(text, "utf8", "hex");
-    encrypted += cipher.final("hex");
+    let encrypted = cipher.update(text, 'utf8', 'hex');
+    encrypted += cipher.final('hex');
 
     const authTag = cipher.getAuthTag();
 
     return {
       encrypted,
-      iv: iv.toString("hex"),
-      authTag: authTag.toString("hex"),
+      iv: iv.toString('hex'),
+      authTag: authTag.toString('hex'),
     };
   }
 
@@ -437,13 +437,13 @@ class Encryption {
     const decipher = crypto.createDecipheriv(
       this.algorithm,
       this.secretKey,
-      Buffer.from(encryptedData.iv, "hex"),
+      Buffer.from(encryptedData.iv, 'hex'),
     );
 
-    decipher.setAuthTag(Buffer.from(encryptedData.authTag, "hex"));
+    decipher.setAuthTag(Buffer.from(encryptedData.authTag, 'hex'));
 
-    let decrypted = decipher.update(encryptedData.encrypted, "hex", "utf8");
-    decrypted += decipher.final("utf8");
+    let decrypted = decipher.update(encryptedData.encrypted, 'hex', 'utf8');
+    decrypted += decipher.final('utf8');
 
     return decrypted;
   }
@@ -485,34 +485,34 @@ docker scan myimage:latest
 
 ```javascript
 // Example security tests
-describe("Security Tests", () => {
-  it("should prevent SQL injection", async () => {
+describe('Security Tests', () => {
+  it('should prevent SQL injection', async () => {
     const maliciousInput = "'; DROP TABLE users; --";
     const response = await request(app)
-      .post("/api/login")
-      .send({ email: maliciousInput, password: "test" });
+      .post('/api/login')
+      .send({ email: maliciousInput, password: 'test' });
 
     expect(response.status).toBe(400);
     // Verify database tables still exist
   });
 
-  it("should enforce rate limiting", async () => {
+  it('should enforce rate limiting', async () => {
     const requests = Array(100)
       .fill()
-      .map(() => request(app).get("/api/users"));
+      .map(() => request(app).get('/api/users'));
 
     const responses = await Promise.all(requests);
-    const rateLimited = responses.filter((r) => r.status === 429);
+    const rateLimited = responses.filter(r => r.status === 429);
 
     expect(rateLimited.length).toBeGreaterThan(0);
   });
 
-  it("should have security headers", async () => {
-    const response = await request(app).get("/");
+  it('should have security headers', async () => {
+    const response = await request(app).get('/');
 
-    expect(response.headers["x-content-type-options"]).toBe("nosniff");
-    expect(response.headers["x-frame-options"]).toBe("DENY");
-    expect(response.headers["x-xss-protection"]).toBe("1; mode=block");
+    expect(response.headers['x-content-type-options']).toBe('nosniff');
+    expect(response.headers['x-frame-options']).toBe('DENY');
+    expect(response.headers['x-xss-protection']).toBe('1; mode=block');
   });
 });
 ```

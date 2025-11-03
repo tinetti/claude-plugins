@@ -5,9 +5,11 @@ Enterprise authentication and SSO integration toolkit for WorkOS.
 ## What's included
 
 **Agent:**
+
 - `workos-specialist` - Expert guidance on AuthKit, SSO, Directory Sync, and multi-tenant patterns
 
 **MCP Server:**
+
 - Context7 configured for WorkOS documentation - Always has access to the latest WorkOS API docs
 
 ## Use cases

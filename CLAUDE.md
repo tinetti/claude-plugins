@@ -64,6 +64,7 @@ plugins/{plugin-name}/
 ### MCP Server Integration
 
 **Pattern 1: Custom Node.js MCP Server**
+
 - Location: `plugins/{name}/mcp-server/`
 - Build: TypeScript → `build/` (dev) and esbuild → `dist/` (distribution)
 - Config: `.mcp.json` with `${CLAUDE_PLUGIN_ROOT}` for path resolution
@@ -77,7 +78,7 @@ plugins/{plugin-name}/
       "command": "node",
       "args": ["${CLAUDE_PLUGIN_ROOT}/mcp-server/dist/index.js"],
       "env": {
-        "API_KEY": "${API_KEY}"  // User's environment variable
+        "API_KEY": "${API_KEY}" // User's environment variable
       }
     }
   }
@@ -85,6 +86,7 @@ plugins/{plugin-name}/
 ```
 
 **Pattern 2: External MCP Server**
+
 - Uses `npx` to install and run published package
 - No local mcp-server directory needed
 - Example: `workos` uses `@context7/mcp-server`
@@ -107,17 +109,20 @@ plugins/{plugin-name}/
 ### pnpm Workspace Architecture
 
 **Workspace configuration** (`pnpm-workspace.yaml`):
+
 ```yaml
 packages:
   - 'plugins/*/mcp-server'
 ```
 
 This auto-discovers all MCP server packages. Benefits:
+
 - Shared dependency management
 - Parallel builds: `pnpm -r run bundle`
 - Filtered operations: `pnpm -r --filter './plugins/**/mcp-server' run bundle`
 
 **TypeScript project references** (`tsconfig.json`):
+
 ```json
 {
   "references": [
@@ -156,6 +161,7 @@ mkdir -p plugins/my-plugin/.claude-plugin
 ### 3. Add Components (Optional)
 
 **Agents** (`agents/*.md`):
+
 ```markdown
 ---
 name: agent-name
@@ -169,6 +175,7 @@ Agent prompt content...
 ```
 
 **Skills** (`skills/skill-name/SKILL.md`):
+
 ```markdown
 ---
 name: skill-name
@@ -179,6 +186,7 @@ Skill instructions...
 ```
 
 **Custom MCP Server** (`mcp-server/`):
+
 - Copy structure from `plugins/gpt5-consultant/mcp-server/`
 - Update `pnpm-workspace.yaml` (if pattern doesn't match)
 - Add to root `tsconfig.json` references
@@ -186,6 +194,7 @@ Skill instructions...
 - Use `${CLAUDE_PLUGIN_ROOT}` for paths
 
 **External MCP Server**:
+
 - Create `.mcp.json` with `npx` command
 - No mcp-server directory needed
 
@@ -202,18 +211,21 @@ The sync script auto-discovers the new plugin and adds it to `marketplace.json`.
 ### Building MCP Servers
 
 **Development build** (for local testing):
+
 ```bash
 cd plugins/{plugin-name}/mcp-server
 pnpm run build  # TypeScript → build/
 ```
 
 **Distribution build** (for plugin users):
+
 ```bash
 cd plugins/{plugin-name}/mcp-server
 pnpm run bundle  # esbuild → dist/ (bundled, no node_modules needed)
 ```
 
 **Workspace build** (all MCP servers):
+
 ```bash
 pnpm run build  # Runs bundle in all mcp-server packages
 ```
@@ -245,12 +257,14 @@ Users must export variables in their shell config (`.zshrc`, `.bashrc`) for MCP 
 The sync script extracts these fields from `plugin.json`:
 
 **Required:**
+
 - `name` - Plugin identifier (kebab-case)
 - `version` - Semantic version
 - `description` - Brief description
 - `author` - Object with `name` and `email`
 
 **Optional:**
+
 - `keywords` - Array of search terms
 - `category` - Plugin category
 - `homepage` - Project URL
@@ -262,6 +276,7 @@ All fields are auto-synced to `marketplace.json`. Edit `plugin.json`, never `mar
 ## Project Type: ESM-Only
 
 All packages use `"type": "module"` in package.json. This is a pure ESM monorepo:
+
 - Use `import/export` syntax
 - File extensions required in imports: `./utils.js` not `./utils`
 - No `require()` or `module.exports`
@@ -310,6 +325,7 @@ The sync script (`scripts/sync-marketplace.ts`) **replaces** the entire `plugins
 ### Why esbuild Bundle Size Matters
 
 The `gpt5-consultant` MCP server bundles to ~214KB because:
+
 - All npm dependencies are included
 - Users don't need to run `npm install`
 - Server works immediately after plugin installation

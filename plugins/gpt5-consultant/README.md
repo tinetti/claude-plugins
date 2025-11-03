@@ -11,11 +11,13 @@ This plugin requires an OpenAI API key with access to GPT-5 models.
 The plugin reads the `OPENAI_API_KEY` environment variable. Set it in your shell configuration:
 
 **bash/zsh:**
+
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
 
 **fish:**
+
 ```fish
 set -x OPENAI_API_KEY "your-api-key-here"
 ```
@@ -28,6 +30,7 @@ Alternatively, set it in your Claude Code configuration before starting the appl
 - **gpt5_messages** - Generate text using GPT-5 with structured conversation messages
 
 Both tools support:
+
 - Custom system instructions
 - Reasoning effort levels (low, medium, high)
 - Token usage reporting

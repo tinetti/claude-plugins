@@ -27,6 +27,7 @@ Ask the user for:
 Load `references/story-circle.md` to understand the eight-step narrative structure.
 
 The framework maps tech talks to:
+
 - Top half: Established practices and order
 - Bottom half: Disruption and experimentation
 

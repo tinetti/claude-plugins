@@ -5,6 +5,7 @@ Quick reference for creating slides in iA Presenter.
 ## CRITICAL: Tabbing Rules
 
 **MUST be tabbed to appear on slides:**
+
 - Regular paragraphs
 - Lists (bullets, numbered, tasks)
 - Block quotes
@@ -13,28 +14,36 @@ Quick reference for creating slides in iA Presenter.
 - Images
 
 **NO TAB needed (appear on slides automatically):**
+
 - Headers (`#`, `##`, `###`, etc.)
 - Horizontal rules (`---`)
 - Fenced code blocks (` ``` `)
 - Math blocks (`$$`)
 
 **Never appears on slides:**
+
 - Comments (`//`)
 
 ## Slide Structure
 
 ### Create New Slides
+
 ```markdown
 ---
 ```
+
 Use horizontal rules to split slides. No tab needed.
 
 ### Headings
+
 ```markdown
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
 ```
+
 Headers appear on slides automatically. No tab needed.
 
 ## Text on Slides
@@ -48,6 +57,7 @@ Regular paragraphs MUST be tabbed to appear on slides:
 ```
 
 Without tabs, text is spoken only (speaker notes):
+
 ```markdown
 This text is only for the speaker to read.
 ```
@@ -55,6 +65,7 @@ This text is only for the speaker to read.
 ## Text Formatting
 
 Inside tabbed paragraphs:
+
 ```markdown
 ⇥**bold text**
 ⇥*italic text*
@@ -63,6 +74,7 @@ Inside tabbed paragraphs:
 ```
 
 Superscript and subscript:
+
 ```markdown
 ⇥100m^2
 ⇥y^(a+b)^
@@ -80,6 +92,7 @@ Lists MUST be tabbed to appear on slides:
 ```
 
 Numbered lists:
+
 ```markdown
 ⇥1. First item
 ⇥2. Second item
@@ -87,16 +100,18 @@ Numbered lists:
 ```
 
 Task lists:
+
 ```markdown
 ⇥- [ ] Unchecked task
 ⇥- [x] Completed task
 ```
 
 Nested lists:
+
 ```markdown
 ⇥- Main item
-⇥    - Nested item
-⇥    - Another nested item
+⇥ - Nested item
+⇥ - Another nested item
 ```
 
 ## Block Quotes
@@ -120,17 +135,19 @@ Definition lists MUST be tabbed:
 ## Code
 
 ### Inline Code
+
 ```markdown
 ⇥Use `keyword` for inline code within a paragraph
 ```
 
 ### Code Blocks
+
 Fenced code blocks appear on slides automatically. NO TAB needed:
 
 ````markdown
 ```typescript
 function hello() {
-  console.log("Hello");
+  console.log('Hello');
 }
 ```
 ````
@@ -159,6 +176,7 @@ Tables MUST be tabbed:
 ```
 
 Alignment:
+
 - Left: `:--`
 - Right: `--:`
 - Center: `:-:`
@@ -168,11 +186,13 @@ Alignment:
 Math blocks appear on slides automatically. NO TAB needed:
 
 Inline math (needs surrounding text tabbed):
+
 ```markdown
 ⇥An example of math $x+y^2$ within text.
 ```
 
 Block math:
+
 ```markdown
 $$
 \displaystyle \frac{1}{x}
@@ -190,25 +210,28 @@ Comments are only visible in the editor:
 ## Links and Footnotes
 
 Links within tabbed content:
+
 ```markdown
 ⇥Visit [this site](https://example.com) for more info.
 ```
 
 Footnotes:
+
 ```markdown
 ⇥Text with footnote[^1].
 [^1]: Footnote content.
 ```
 
 Citations:
+
 ```markdown
 ⇥Statement with source[p. 23][#Doe:2006].
-[#Doe:2006]: Author. *Title*. Publisher, Year.
+[#Doe:2006]: Author. _Title_. Publisher, Year.
 ```
 
 ## Complete Slide Example
 
-```markdown
+````markdown
 # Slide Title
 
 // This is a speaker note - not visible on slide
@@ -223,15 +246,17 @@ Citations:
 ```typescript
 // Code blocks don't need tabs
 function example() {
-  return "This appears on slide automatically";
+  return 'This appears on slide automatically';
 }
 ```
+````
 
 ---
 
 ## Next Slide
 
 ⇥More content here...
+
 ```
 
 ## Best Practices
@@ -241,3 +266,4 @@ function example() {
 3. Use comments for speaker notes
 4. Break complex code across multiple slides
 5. Test that all visible content is properly tabbed
+```

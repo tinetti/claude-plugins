@@ -1,32 +1,32 @@
 #!/usr/bin/env node
-import { Server } from "@modelcontextprotocol/sdk/server/index.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import {
   ListToolsRequestSchema,
   CallToolRequestSchema,
   ErrorCode,
   McpError,
-} from "@modelcontextprotocol/sdk/types.js";
-import { z } from "zod";
-import { zodToJsonSchema } from "zod-to-json-schema";
-import { callGPT5, callGPT5WithMessages } from "./utils.js";
+} from '@modelcontextprotocol/sdk/types.js';
+import { z } from 'zod';
+import { zodToJsonSchema } from 'zod-to-json-schema';
+import { callGPT5, callGPT5WithMessages } from './utils.js';
 
 // Schema definitions
 const GPT5GenerateSchema = z.object({
-  input: z.string().describe("The input text or prompt for GPT-5"),
+  input: z.string().describe('The input text or prompt for GPT-5'),
   model: z
     .string()
     .optional()
-    .default("gpt-5")
-    .describe("GPT-5 model variant to use"),
+    .default('gpt-5')
+    .describe('GPT-5 model variant to use'),
   instructions: z
     .string()
     .optional()
-    .describe("System instructions for the model"),
+    .describe('System instructions for the model'),
   reasoning_effort: z
-    .enum(["low", "medium", "high"])
+    .enum(['low', 'medium', 'high'])
     .optional()
-    .describe("Reasoning effort level"),
+    .describe('Reasoning effort level'),
 });
 
 const GPT5MessagesSchema = z.object({
@@ -34,25 +34,25 @@ const GPT5MessagesSchema = z.object({
     .array(
       z.object({
         role: z
-          .enum(["user", "developer", "assistant"])
-          .describe("Message role"),
-        content: z.string().describe("Message content"),
+          .enum(['user', 'developer', 'assistant'])
+          .describe('Message role'),
+        content: z.string().describe('Message content'),
       }),
     )
-    .describe("Array of conversation messages"),
+    .describe('Array of conversation messages'),
   model: z
     .string()
     .optional()
-    .default("gpt-5")
-    .describe("GPT-5 model variant to use"),
+    .default('gpt-5')
+    .describe('GPT-5 model variant to use'),
   instructions: z
     .string()
     .optional()
-    .describe("System instructions for the model"),
+    .describe('System instructions for the model'),
   reasoning_effort: z
-    .enum(["low", "medium", "high"])
+    .enum(['low', 'medium', 'high'])
     .optional()
-    .describe("Reasoning effort level"),
+    .describe('Reasoning effort level'),
 });
 
 // Type definitions
@@ -63,16 +63,16 @@ type GPT5MessagesArgs = z.infer<typeof GPT5MessagesSchema>;
 async function main() {
   // Check if OPENAI_API_KEY is set
   if (!process.env.OPENAI_API_KEY) {
-    console.error("Error: OPENAI_API_KEY environment variable is not set");
-    console.error("Please set it in .env file or as an environment variable");
+    console.error('Error: OPENAI_API_KEY environment variable is not set');
+    console.error('Please set it in .env file or as an environment variable');
     process.exit(1);
   }
 
   // Create MCP server
   const server = new Server(
     {
-      name: "gpt5-mcp-server",
-      version: "0.1.0",
+      name: 'gpt5-mcp-server',
+      version: '0.1.0',
     },
     {
       capabilities: {
@@ -82,42 +82,42 @@ async function main() {
   );
 
   // Set up error handling
-  server.onerror = (error) => {
-    console.error("MCP Server Error:", error);
+  server.onerror = error => {
+    console.error('MCP Server Error:', error);
   };
 
-  process.on("SIGINT", async () => {
+  process.on('SIGINT', async () => {
     await server.close();
     process.exit(0);
   });
 
   // Set up tool handlers
   server.setRequestHandler(ListToolsRequestSchema, async () => {
-    console.error("Handling ListToolsRequest");
+    console.error('Handling ListToolsRequest');
     return {
       tools: [
         {
-          name: "gpt5_generate",
+          name: 'gpt5_generate',
           description:
-            "Generate text using OpenAI GPT-5 API with a simple input prompt",
+            'Generate text using OpenAI GPT-5 API with a simple input prompt',
           inputSchema: zodToJsonSchema(GPT5GenerateSchema),
         },
         {
-          name: "gpt5_messages",
+          name: 'gpt5_messages',
           description:
-            "Generate text using GPT-5 with structured conversation messages",
+            'Generate text using GPT-5 with structured conversation messages',
           inputSchema: zodToJsonSchema(GPT5MessagesSchema),
         },
       ],
     };
   });
 
-  server.setRequestHandler(CallToolRequestSchema, async (request) => {
-    console.error("Handling CallToolRequest:", JSON.stringify(request.params));
+  server.setRequestHandler(CallToolRequestSchema, async request => {
+    console.error('Handling CallToolRequest:', JSON.stringify(request.params));
 
     try {
       switch (request.params.name) {
-        case "gpt5_generate": {
+        case 'gpt5_generate': {
           const args = GPT5GenerateSchema.parse(
             request.params.arguments,
           ) as GPT5GenerateArgs;
@@ -148,14 +148,14 @@ async function main() {
           return {
             content: [
               {
-                type: "text",
+                type: 'text',
                 text: responseText,
               },
             ],
           };
         }
 
-        case "gpt5_messages": {
+        case 'gpt5_messages': {
           const args = GPT5MessagesSchema.parse(
             request.params.arguments,
           ) as GPT5MessagesArgs;
@@ -186,7 +186,7 @@ async function main() {
           return {
             content: [
               {
-                type: "text",
+                type: 'text',
                 text: responseText,
               },
             ],
@@ -200,12 +200,12 @@ async function main() {
           );
       }
     } catch (error) {
-      console.error("ERROR during GPT-5 API call:", error);
+      console.error('ERROR during GPT-5 API call:', error);
 
       return {
         content: [
           {
-            type: "text",
+            type: 'text',
             text: `GPT-5 API error: ${error instanceof Error ? error.message : String(error)}`,
           },
         ],
@@ -215,25 +215,24 @@ async function main() {
   });
 
   // Start the server
-  console.error("Starting GPT-5 MCP server");
+  console.error('Starting GPT-5 MCP server');
 
   try {
     const transport = new StdioServerTransport();
-    console.error("StdioServerTransport created");
+    console.error('StdioServerTransport created');
 
     await server.connect(transport);
-    console.error("Server connected to transport");
+    console.error('Server connected to transport');
 
-    console.error("GPT-5 MCP server running on stdio");
+    console.error('GPT-5 MCP server running on stdio');
   } catch (error) {
-    console.error("ERROR starting server:", error);
+    console.error('ERROR starting server:', error);
     throw error;
   }
 }
 
 // Main execution
-main().catch((error) => {
-  console.error("Server runtime error:", error);
+main().catch(error => {
+  console.error('Server runtime error:', error);
   process.exit(1);
 });
-

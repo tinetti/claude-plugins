@@ -5,6 +5,7 @@ The Story Circle is an eight-step framework adapted from Dan Harmon's storytelli
 ## The Eight Steps
 
 ### 1. Introduction (You)
+
 **Top half - Order**
 
 Introduce yourself and the current status quo of your project.
@@ -14,6 +15,7 @@ Introduce yourself and the current status quo of your project.
 - Make the audience understand the familiar ground
 
 ### 2. Problem Statement (Need)
+
 **Top half - Order**
 
 Identify and explain the problem you're trying to solve.
@@ -23,6 +25,7 @@ Identify and explain the problem you're trying to solve.
 - Create the motivation for change
 
 ### 3. Exploration (Go)
+
 **Crossing to bottom half - Chaos**
 
 Describe the steps taken to address the problem.
@@ -33,6 +36,7 @@ Describe the steps taken to address the problem.
 - Show the journey into the unknown
 
 ### 4. Experimentation (Search)
+
 **Bottom half - Chaos**
 
 Detail the process of digging into the actual problem.
@@ -43,6 +47,7 @@ Detail the process of digging into the actual problem.
 - Share the messy middle of problem-solving
 
 ### 5. Solution (Find)
+
 **Bottom half - Chaos**
 
 Explain how you found the solution or made progress.
@@ -52,6 +57,7 @@ Explain how you found the solution or made progress.
 - Explain the technical approach that worked
 
 ### 6. Challenges (Take)
+
 **Bottom half - Chaos**
 
 Discuss the actual implementation of the project.
@@ -61,6 +67,7 @@ Discuss the actual implementation of the project.
 - Be honest about the cost of change
 
 ### 7. Apply Knowledge (Return)
+
 **Crossing to top half - Order**
 
 Describe the results and how the solution was integrated.
@@ -70,6 +77,7 @@ Describe the results and how the solution was integrated.
 - Return to the familiar with new tools
 
 ### 8. Results & Insights (Change)
+
 **Top half - Order**
 
 Conclude with lessons learned and how things changed.

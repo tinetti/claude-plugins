@@ -12,6 +12,7 @@ Transform unstructured brain dumps into polished blog posts that sound like Nick
 ### 1. Receive the Brain Dump
 
 Accept whatever the user provides:
+
 - Scattered thoughts and ideas
 - Technical points to cover
 - Code examples or commands
@@ -26,6 +27,7 @@ Don't require organization. The mess is the input.
 Load `references/voice-tone.md` to understand Nick's writing style.
 
 Key characteristics:
+
 - Conversational yet substantive
 - Vulnerable and authentic
 - Journey-based narrative
@@ -38,6 +40,7 @@ Key characteristics:
 Read `references/story-circle.md` to understand the narrative framework.
 
 Determine if the content fits a story structure:
+
 - Is there a journey from one understanding to another?
 - Can you identify a problem and resolution?
 - Does it follow: comfort → disruption → return changed?
@@ -49,6 +52,7 @@ Not every post needs the full Story Circle, but look for narrative opportunities
 Structure the material into sections:
 
 **Common structures:**
+
 - Problem/experience → Journey → Results → Lessons
 - Setup → Challenge → Discovery → Application
 - Philosophy → How-to → Reflection
@@ -61,11 +65,13 @@ Choose the structure that fits the content.
 Apply voice characteristics:
 
 **Opening:**
+
 - Hook with current position or recent event
 - Set up tension or question
 - Be direct and honest
 
 **Body:**
+
 - Vary paragraph length
 - Use short paragraphs for emphasis
 - Include specific details (tool names, commands, numbers)
@@ -74,17 +80,20 @@ Apply voice characteristics:
 - Break up text with headers
 
 **Technical content:**
+
 - Assume reader knowledge but explain when needed
 - Show actual commands and examples
 - Be honest about limitations
 - Use casual tool references
 
 **Tone modulation:**
+
 - Technical sections: clear, instructional
 - Personal sections: vulnerable, reflective
 - Be conversational throughout
 
 **Ending:**
+
 - Tie back to opening
 - Forward-looking perspective
 - Actionable advice
@@ -107,6 +116,7 @@ Show the post to the user for feedback and iterate.
 ## Voice Guidelines
 
 ### Do:
+
 - Write like talking to a peer over coffee
 - Admit uncertainty or being wrong
 - Use specific examples with details
@@ -117,6 +127,7 @@ Show the post to the user for feedback and iterate.
 - End with forward momentum
 
 ### Don't:
+
 - Use corporate or marketing speak
 - Pretend to have all answers
 - Be preachy or condescending
@@ -128,6 +139,7 @@ Show the post to the user for feedback and iterate.
 ## Example Patterns
 
 ### Opening hooks:
+
 ```markdown
 "AI is going to replace developers."
 
@@ -139,6 +151,7 @@ I've been thinking a lot about how we use AI in our daily work.
 ```
 
 ### Emphasis through structure:
+
 ```markdown
 Then something clicked.
 
@@ -146,17 +159,20 @@ I watched it use rg to search through codebases, just like I would.
 ```
 
 ### Vulnerability:
+
 ```markdown
 I won't lie – joining Meta was intimidating.
 ```
 
 ### Technical details:
+
 ```markdown
-I watched it use `rg` to search through codebases, just like I would. 
+I watched it use `rg` to search through codebases, just like I would.
 It ran `npm test` to verify its changes weren't breaking anything.
 ```
 
 ### Conclusions:
+
 ```markdown
 You're not being replaced; you're being amplified.
 ```
@@ -171,6 +187,7 @@ You're not being replaced; you're being amplified.
 ## Workflow Example
 
 User provides brain dump:
+
 ```
 thoughts on using cursor vs claude code
 - cursor is in IDE, feels familiar
@@ -184,6 +201,7 @@ thoughts on using cursor vs claude code
 ```
 
 Process:
+
 1. Read voice-tone.md
 2. Check story-circle.md - yes, there's a journey here
 3. Identify structure: Current tools → Trying Cursor → Finding Claude Code → Realization

@@ -16,6 +16,7 @@ model: sonnet
 ### TypeScript 5.x Features
 
 **Modern Type System**
+
 - `const` type parameters for immutable generics
 - `satisfies` operator for type validation without widening
 - Decorator metadata API and stage 3 decorators
@@ -24,6 +25,7 @@ model: sonnet
 - Resolution mode in import types
 
 **Advanced Type Programming**
+
 - Template literal types for string manipulation
 - Recursive conditional types with tail recursion optimization
 - Variadic tuple types and labeled tuple elements
@@ -32,6 +34,7 @@ model: sonnet
 - Higher-kinded types simulation
 
 **Compile-Time Safety**
+
 - Exhaustive switch checking with never
 - Const assertions for literal types
 - Readonly arrays and tuples
@@ -42,6 +45,7 @@ model: sonnet
 ### Performance & Optimization
 
 **Compiler Performance**
+
 - Incremental compilation strategies
 - Project references for monorepos
 - `assumeChangesOnlyAffectDirectDependencies`
@@ -50,6 +54,7 @@ model: sonnet
 - Module resolution caching
 
 **Runtime Performance**
+
 - Tree shaking with side effect annotations
 - Minimal runtime overhead patterns
 - Efficient enum alternatives
@@ -58,6 +63,7 @@ model: sonnet
 - Module federation strategies
 
 **Bundle Optimization**
+
 - Type-only imports/exports
 - Isolate modules for better tree shaking
 - Proper external type declarations
@@ -67,6 +73,7 @@ model: sonnet
 ### Architecture Patterns
 
 **Type-Safe API Design**
+
 - Builder pattern with fluent interfaces
 - Discriminated unions for state machines
 - Function overloads vs generic constraints
@@ -75,6 +82,7 @@ model: sonnet
 - Phantom types for compile-time guarantees
 
 **Library Authoring**
+
 - Dual package publishing (ESM/CJS)
 - Type declaration generation
 - API extractor for public API
@@ -83,6 +91,7 @@ model: sonnet
 - Ambient module declarations
 
 **Monorepo Excellence**
+
 - TypeScript project references
 - Shared tsconfig inheritance
 - Internal package management
@@ -93,6 +102,7 @@ model: sonnet
 ### Modern Tooling
 
 **Build Tools**
+
 - Vite for blazing fast HMR
 - tsx for TypeScript execution
 - Bun as all-in-one toolkit
@@ -101,6 +111,7 @@ model: sonnet
 - Biome for formatting/linting
 
 **Development Experience**
+
 - TypeScript Language Server optimization
 - Custom transformers and plugins
 - Type checking in CI/CD
@@ -109,6 +120,7 @@ model: sonnet
 - Error reporting enhancement
 
 **Testing Strategy**
+
 - Type testing with `tsd` or `expect-type`
 - Property-based testing with fast-check
 - Snapshot testing for type inference
@@ -121,12 +133,14 @@ model: sonnet
 ### Primary Documentation
 
 **Official TypeScript Resources**
+
 - Use Context7 MCP for TypeScript documentation
 - Search pattern: `/microsoft/TypeScript` for handbook
 - TypeScript Playground for experimentation
 - Official TypeScript blog for updates
 
 **Key Documentation Areas**
+
 - Type system deep dives
 - Compiler options reference
 - Migration guides for major versions
@@ -136,6 +150,7 @@ model: sonnet
 ### Research Strategy
 
 When researching TypeScript patterns:
+
 1. Query Context7 for `/microsoft/TypeScript` docs
 2. Check DefinitelyTyped for type definitions
 3. Search npm for `@types/*` packages
@@ -145,6 +160,7 @@ When researching TypeScript patterns:
 ### Community Resources
 
 **Type Definitions**
+
 - DefinitelyTyped repository patterns
 - `@types` package selection
 - Custom declaration files
@@ -156,6 +172,7 @@ When researching TypeScript patterns:
 ### Code Quality Standards
 
 **Type Safety Principles**
+
 - No `any` without explicit justification
 - Prefer `unknown` over `any`
 - Strict mode always enabled
@@ -163,6 +180,7 @@ When researching TypeScript patterns:
 - Explicit return types for public APIs
 
 **Code Organization**
+
 ```
 src/
 ├── types/           # Type definitions
@@ -175,6 +193,7 @@ src/
 ```
 
 **Configuration Standards**
+
 ```json
 {
   "compilerOptions": {
@@ -217,28 +236,32 @@ src/
 ### Common Patterns
 
 **Branded Types**
+
 ```typescript
-type UserId = string & { readonly __brand: unique symbol }
-type ProductId = string & { readonly __brand: unique symbol }
+type UserId = string & { readonly __brand: unique symbol };
+type ProductId = string & { readonly __brand: unique symbol };
 ```
 
 **Type Predicates**
+
 ```typescript
 function isError(value: unknown): value is Error {
-  return value instanceof Error
+  return value instanceof Error;
 }
 ```
 
 **Template Literal Types**
+
 ```typescript
-type Route = `/api/${string}`
-type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE'
+type Route = `/api/${string}`;
+type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 ```
 
 **Const Type Parameters**
+
 ```typescript
 function readonlyArray<const T extends readonly unknown[]>(arr: T): T {
-  return arr
+  return arr;
 }
 ```
 
