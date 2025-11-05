@@ -44,6 +44,28 @@
       ]
     },
     {
+      "name": "essentials",
+      "source": "./plugins/essentials",
+      "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, research, context management, and ultrathink mode.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "git",
+        "commit",
+        "research",
+        "documentation",
+        "context-management",
+        "ultrathink",
+        "workflow",
+        "agents",
+        "initialization",
+        "best-practices"
+      ]
+    },
+    {
       "name": "gpt5-consultant",
       "source": "./plugins/gpt5-consultant",
       "description": "Ask GPT5 to consult on your task via MCP",
