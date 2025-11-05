@@ -7,6 +7,7 @@ Execute feature specifications with intelligent automation, comprehensive valida
 ## Pre-Execution Setup
 
 ### 1. Load and Validate Specification
+
 ```bash
 # Load specification
 SPEC_FILE="$ARGUMENTS"
@@ -25,6 +26,7 @@ ESTIMATED_EFFORT=$(grep "Estimated Effort:" "$SPEC_FILE" | cut -d: -f2)
 ```
 
 ### 2. Project Context Discovery
+
 ```bash
 # Discover project structure and conventions
 find . -maxdepth 3 -name "*.config.*" -o -name "*rc.*" -o -name "Makefile"
@@ -37,7 +39,9 @@ grep -r "similar_pattern" --include="*.ts" --include="*.js" --include="*.py"
 ```
 
 ### 3. Execution Plan Generation
+
 Based on spec complexity score:
+
 - **1-3 (Simple)**: Direct implementation with minimal checkpoints
 - **4-6 (Medium)**: Phased approach with validation points
 - **7-10 (Complex)**: Incremental delivery with extensive validation
@@ -45,6 +49,7 @@ Based on spec complexity score:
 ## Spec-Driven Execution Phases
 
 ### Phase 1: Foundation
+
 **From Spec Section: Technical Architecture**
 
 1. **Database Changes** (if specified in spec)
@@ -63,26 +68,31 @@ Based on spec complexity score:
    - Set up state management
 
 **Validation Checkpoint:**
+
 - Verify all foundation elements exist
 - Check that types/interfaces compile
 - Confirm database changes applied
 
 ### Phase 2: Core Implementation
+
 **From Spec Section: Implementation Checklist**
 
 Work through each item in the spec's implementation checklist:
+
 1. Read the specific requirement
 2. Implement exactly as specified
 3. Validate implementation works
 4. Mark item complete in tracking
 
 **Continuous Validation:**
+
 - After each file modification
 - Check for syntax errors
 - Verify imports resolve
 - Ensure no breaking changes
 
 ### Phase 3: Integration
+
 **From Spec Section: Dependencies and Integration**
 
 1. **Connect Components**
@@ -96,24 +106,29 @@ Work through each item in the spec's implementation checklist:
    - Set up event handlers
 
 **Validation Checkpoint:**
+
 - Test integration points work
 - Verify data flows correctly
 - Check error handling
 
 ### Phase 4: Testing & Validation
+
 **From Spec Section: Testing Strategy**
 
 Execute test plan from specification:
+
 1. Create tests for acceptance criteria
 2. Implement test scenarios from spec
 3. Validate success metrics
 
 **Coverage Areas:**
+
 - Unit tests for new functions
 - Integration tests for workflows
 - Manual testing checklist items
 
 ### Phase 5: Documentation & Polish
+
 **From Spec Section: User Stories**
 
 1. **Code Documentation**
@@ -129,7 +144,9 @@ Execute test plan from specification:
 ## Progress Tracking
 
 ### Implementation Checklist Tracking
+
 Track progress through spec requirements:
+
 ```
 [✓] Database schema created
 [✓] API endpoints defined
@@ -140,22 +157,28 @@ Track progress through spec requirements:
 ```
 
 ### Execution Report Template
+
 ```markdown
 ## Implementation Progress
 
 ### Completed
+
 - [List completed spec requirements]
 
-### In Progress  
+### In Progress
+
 - [Current work items]
 
 ### Remaining
+
 - [Outstanding spec requirements]
 
 ### Issues & Blockers
+
 - [Any problems encountered]
 
 ### Validation Results
+
 - [Test results if available]
 - [Manual testing outcomes]
 ```
@@ -163,6 +186,7 @@ Track progress through spec requirements:
 ## Control Commands
 
 ### During Execution
+
 - `continue` - Proceed to next phase
 - `status` - Show current progress
 - `validate` - Run validation checks
@@ -171,11 +195,13 @@ Track progress through spec requirements:
 - `retry` - Retry failed operation
 
 ### Validation Commands
+
 - `check-spec` - Verify against specification
 - `test` - Run relevant tests
 - `lint` - Check code quality
 
 ### Reporting
+
 - `report` - Generate progress report
 - `checklist` - Show implementation checklist
 - `metrics` - Display execution metrics
@@ -183,13 +209,17 @@ Track progress through spec requirements:
 ## Smart Checkpoints
 
 ### Automatic Progression
+
 Continue automatically when:
+
 - Current phase implementation complete
 - No errors detected
 - Spec requirements met for phase
 
 ### Manual Checkpoint Required
+
 Pause for confirmation when:
+
 - Complexity score > 7
 - Errors or warnings detected
 - Spec has explicit "manual review" notes
@@ -198,13 +228,16 @@ Pause for confirmation when:
 ## Error Recovery
 
 ### Common Recovery Actions
+
 1. **Missing Dependencies**: Note what's needed
 2. **Type/Syntax Errors**: Attempt fixes
 3. **Test Failures**: Isolate and document
 4. **Integration Issues**: Rollback and retry
 
 ### Manual Intervention
+
 Required for:
+
 - Spec ambiguities
 - Architectural decisions
 - Security concerns
@@ -213,12 +246,14 @@ Required for:
 ## Spec Compliance Validation
 
 ### Continuous Checks
+
 - Are we following the spec's Technical Architecture?
 - Have we completed Implementation Checklist items?
 - Do changes match the API Design?
 - Are Success Metrics being met?
 
 ### Final Validation
+
 1. **Spec Requirements**: Check all requirements implemented
 2. **Acceptance Criteria**: Verify all criteria met
 3. **Test Coverage**: Ensure test scenarios covered
@@ -227,13 +262,16 @@ Required for:
 ## Configuration
 
 ### Project-Specific Settings
+
 The command adapts to project conventions:
+
 - Reads existing config files
 - Follows established patterns
 - Uses project's test framework
 - Respects code style rules
 
 ### Execution Modes
+
 - **Guided**: Step-by-step with confirmations
 - **Auto**: Automatic progression where safe
 - **Review**: Implementation with detailed review points

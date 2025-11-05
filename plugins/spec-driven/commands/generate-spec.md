@@ -7,6 +7,7 @@ Create a comprehensive, actionable feature specification with automated codebase
 ## Phase 1: Automated Discovery
 
 ### Codebase Pattern Analysis
+
 ```bash
 # Find similar features
 rg -l "similar_feature_keywords" --type ts --type tsx
@@ -19,6 +20,7 @@ find . -name "*.prisma" -o -name "*.sql" -o -name "*migration*"
 ```
 
 ### Dependency Mapping
+
 - Search for related imports: `rg "import.*{feature_related}" --type ts`
 - Check existing API endpoints: `rg "router\.(get|post|put|delete)" --type ts`
 - Find UI components: `find ./src/components -name "*.tsx" | grep -i feature_area`
@@ -26,22 +28,27 @@ find . -name "*.prisma" -o -name "*.sql" -o -name "*migration*"
 ## Phase 2: Requirements Analysis
 
 ### User Story Mining
+
 **Format**: As a [user_type], I want [capability] so that [business_value]
 
 **Required Classifications**:
+
 - Critical path (blocks other features)
 - Core functionality (MVP)
 - Enhancement (can ship without)
 - Future consideration (v2)
 
 ### Technical Complexity Scoring
+
 Calculate automatically:
+
 - Files to modify: `git ls-files | xargs grep -l "pattern" | wc -l`
 - New dependencies: Check against package.json
 - Database changes: Schema modifications needed
 - API surface: New endpoints required
 
-**Complexity Score**: 
+**Complexity Score**:
+
 - 1-3: Simple (< 5 files, no deps, no DB)
 - 4-6: Medium (5-15 files, deps OR DB)
 - 7-10: Complex (> 15 files, deps AND DB)
@@ -49,6 +56,7 @@ Calculate automatically:
 ## Phase 3: Specification Generation
 
 ### 1. Executive Summary
+
 - **Feature Name**: [Descriptive, searchable name]
 - **Business Value**: [Specific metric improvement expected]
 - **Complexity Score**: [Auto-calculated from above]
@@ -57,6 +65,7 @@ Calculate automatically:
 ### 2. Technical Architecture
 
 #### Database Schema
+
 ```sql
 -- Required changes
 ALTER TABLE existing_table ADD COLUMN new_field TYPE;
@@ -64,6 +73,7 @@ CREATE TABLE IF NOT EXISTS new_table (...);
 ```
 
 #### API Design
+
 ```typescript
 // New endpoints
 POST /api/feature
@@ -77,6 +87,7 @@ interface FeatureResponse { ... }
 ```
 
 #### Frontend Components
+
 ```typescript
 // Component hierarchy
 <FeatureContainer>
@@ -89,12 +100,14 @@ interface FeatureResponse { ... }
 ### 3. Implementation Checklist
 
 #### Pre-Implementation
+
 - [ ] Review existing patterns in: [list similar files]
 - [ ] Confirm database migrations approach
 - [ ] Validate API design with team
 - [ ] Check accessibility requirements
 
 #### Core Implementation
+
 - [ ] Database schema and migrations
 - [ ] API endpoints with validation
 - [ ] Frontend components with tests
@@ -102,6 +115,7 @@ interface FeatureResponse { ... }
 - [ ] Error handling and logging
 
 #### Validation
+
 - [ ] Unit tests (minimum 80% coverage)
 - [ ] Integration tests for API
 - [ ] E2E tests for critical paths
@@ -111,11 +125,13 @@ interface FeatureResponse { ... }
 ### 4. Risk Analysis
 
 #### Technical Risks
+
 - **Breaking Changes**: [List any backward compatibility issues]
 - **Performance Impact**: [Database queries, API load]
 - **Security Concerns**: [Data exposure, permission gaps]
 
 #### Mitigation Strategies
+
 - Feature flags for gradual rollout
 - Database indexes for performance
 - Rate limiting for API endpoints
@@ -124,6 +140,7 @@ interface FeatureResponse { ... }
 ### 5. Dependencies and Integration
 
 #### External Dependencies
+
 ```json
 {
   "new-package": "^1.0.0",
@@ -132,6 +149,7 @@ interface FeatureResponse { ... }
 ```
 
 #### Internal Dependencies
+
 - Services: [List services that need updates]
 - Shared components: [List reusable components]
 - Configuration: [Environment variables needed]
@@ -139,6 +157,7 @@ interface FeatureResponse { ... }
 ### 6. Testing Strategy
 
 #### Unit Tests
+
 ```typescript
 describe('Feature', () => {
   test('core functionality', () => { ... });
@@ -148,11 +167,13 @@ describe('Feature', () => {
 ```
 
 #### Integration Tests
+
 - API endpoint testing with supertest
 - Database transaction testing
 - Authentication/authorization flows
 
 #### Manual Testing Checklist
+
 - [ ] Happy path user flow
 - [ ] Error state handling
 - [ ] Mobile responsiveness
@@ -162,16 +183,19 @@ describe('Feature', () => {
 ### 7. Rollout Plan
 
 #### Phase 1: Internal Testing
+
 - Deploy behind feature flag
 - Limited access to internal users
 - Monitor error rates and performance
 
 #### Phase 2: Beta Release
+
 - Enable for % of users
 - Gather feedback and metrics
 - Fix critical issues
 
 #### Phase 3: General Availability
+
 - Full rollout
 - Documentation updates
 - Support team training
@@ -179,11 +203,13 @@ describe('Feature', () => {
 ### 8. Success Metrics
 
 #### Quantitative
+
 - Feature adoption rate: [target %]
 - Performance metrics: [response time targets]
 - Error rate: [< threshold]
 
 #### Qualitative
+
 - User satisfaction score
 - Support ticket reduction
 - Developer experience feedback
@@ -191,18 +217,22 @@ describe('Feature', () => {
 ## Phase 4: PRP Preparation
 
 ### Research Links
+
 Collect during analysis:
+
 - API documentation: [urls]
 - Library docs: [urls]
 - Design patterns: [urls]
 - Security best practices: [urls]
 
 ### Code References
+
 - Similar implementations: `path/to/file.ts:line`
 - Pattern examples: `path/to/example.ts:line`
 - Test examples: `path/to/test.spec.ts:line`
 
 ### Outstanding Questions
+
 - [ ] Technical decisions needed
 - [ ] Architecture review required
 - [ ] Performance optimization approach
@@ -210,15 +240,19 @@ Collect during analysis:
 ## Output
 
 ### Primary Spec
+
 Save to: `docs/specs/{feature-name}-spec.md`
 
 ### Supporting Artifacts
+
 - `docs/specs/{feature-name}-api.yaml` - OpenAPI spec
 - `docs/specs/{feature-name}-db.sql` - Database changes
 - `docs/specs/{feature-name}-tests.md` - Test plan
 
 ### Validation
+
 Run after generation:
+
 ```bash
 # Validate spec completeness
 grep -c "TODO\|TBD\|FIXME" docs/specs/{feature-name}-spec.md
@@ -232,6 +266,7 @@ done
 ## Usage Notes
 
 This command now:
+
 1. Automatically analyzes your codebase for patterns
 2. Calculates complexity scores
 3. Generates actionable, specific specifications

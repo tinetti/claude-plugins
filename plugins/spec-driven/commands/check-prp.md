@@ -7,24 +7,28 @@ Review a PRP (Pre-Requirements Plan) file for completeness and implementation re
 ## Validation Checklist
 
 ### Research and Context
+
 - [ ] All research context included with URLs
 - [ ] Tech stack properly identified (framework, build tools, testing)
 - [ ] External documentation links provided
 - [ ] Code examples from codebase referenced
 
 ### Implementation Planning
+
 - [ ] Implementation phases clearly defined
 - [ ] Each phase has specific deliverables
 - [ ] Validation commands match project setup
 - [ ] Manual testing steps provided for each phase
 
 ### Technical Details
+
 - [ ] Error handling strategy documented
 - [ ] Existing patterns properly referenced
 - [ ] Incremental milestones defined
 - [ ] Edge cases considered
 
 ### Execution Readiness
+
 - [ ] All TODOs and placeholders resolved
 - [ ] Dependencies clearly listed
 - [ ] Environment setup documented
@@ -50,19 +54,23 @@ Review a PRP (Pre-Requirements Plan) file for completeness and implementation re
 ## Output
 
 ### Quality Score (1-10)
+
 Rate the PRP's readiness for execution:
+
 - **1-3**: Major gaps, needs significant work
 - **4-6**: Good foundation, some areas need completion
 - **7-8**: Well-defined, minor improvements possible
 - **9-10**: Comprehensive and execution-ready
 
 ### Feedback Report
+
 - **Strengths**: What the PRP does well
 - **Missing Elements**: Critical gaps to address
 - **Research Gaps**: Areas needing more documentation
 - **Implementation Concerns**: Potential execution challenges
 
 ### Recommended Actions
+
 - **Ready to execute**: Proceed with `/execute-prp`
 - **Needs completion**: Specific sections to enhance
 - **Requires validation**: Commands to verify first

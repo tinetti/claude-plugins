@@ -7,6 +7,7 @@ Execute a PRP (Pre-Requirements Plan) in phases with validation points between e
 ## Execution Process
 
 ### 1. Load and Plan
+
 - Read the PRP file completely to understand all requirements
 - Extract research context, tech stack, and validation commands
 - Create implementation plan using TodoWrite tool
@@ -15,6 +16,7 @@ Execute a PRP (Pre-Requirements Plan) in phases with validation points between e
 ### 2. Phase-by-Phase Execution
 
 For each phase in the PRP:
+
 1. **Announce Phase Start**
    - Clear statement of which phase is beginning
    - List the specific deliverables for this phase
@@ -41,6 +43,7 @@ For each phase in the PRP:
 ### 3. Phase Structure
 
 Standard progression (from PRP template):
+
 - **Setup Phase**: File structure, types, interfaces, configuration
 - **Core Phase**: Main functionality implementation
 - **Integration Phase**: Connect with existing systems
@@ -48,6 +51,7 @@ Standard progression (from PRP template):
 - **Polish Phase**: Error handling, edge cases, documentation
 
 Each phase should:
+
 - Output working, testable code
 - Have clear success criteria
 - Include manual testing instructions
@@ -73,12 +77,14 @@ echo "⚠ 2 tests pending implementation"
 ### 5. User Checkpoints
 
 After completing each phase:
+
 - **Implementation Summary**: List all files created/modified
 - **Validation Results**: Show output from validation commands
 - **Manual Testing**: Provide specific steps for user to test
 - **Next Phase Preview**: Brief description of what comes next
 
 Wait for user response:
+
 - "continue" → Proceed to next phase
 - "fix [issue]" → Address specific problem
 - Other feedback → Incorporate before continuing
@@ -86,6 +92,7 @@ Wait for user response:
 ## Control Commands During Execution
 
 ### Navigation Commands
+
 - `continue` - Proceed to next phase
 - `pause` - Stop for manual intervention
 - `status` - Show current phase and progress
@@ -93,12 +100,14 @@ Wait for user response:
 - `skip to [phase]` - Jump to specific phase (with warning)
 
 ### Correction Commands
+
 - `fix [issue]` - Address specific problem
 - `rollback` - Undo current phase changes
 - `validate` - Re-run validation commands
 - `debug` - Show detailed error information
 
 ### Information Commands
+
 - `show plan` - Display full implementation plan
 - `show prp` - Display relevant PRP section
 - `progress` - Show overall completion status
@@ -107,16 +116,19 @@ Wait for user response:
 ## Execution Modes
 
 ### Standard Mode (Default)
+
 - Stop at each checkpoint for user confirmation
 - Show all validation results
 - Require explicit "continue" to proceed
 
 ### Auto Mode (When specified)
+
 - Continue automatically if validation passes
 - Stop only on errors or warnings
 - Still show progress updates
 
 ### Debug Mode
+
 - Extra verbose output
 - Show all command executions
 - Detailed error traces
@@ -124,18 +136,21 @@ Wait for user response:
 ## Error Handling
 
 ### Validation Failures
+
 1. Stop execution immediately
 2. Show clear error message
 3. Suggest fix if possible
 4. Wait for user instruction
 
 ### Missing Dependencies
+
 1. Identify what's missing
 2. Suggest installation command
 3. Pause for user to install
 4. Retry after installation
 
 ### Ambiguous Requirements
+
 1. Flag the ambiguity
 2. Show PRP section in question
 3. Ask for clarification
@@ -144,18 +159,21 @@ Wait for user response:
 ## Completion
 
 ### Final Validation
+
 - Run complete test suite
 - Verify all PRP requirements met
 - Check success criteria achieved
 - Generate coverage report if applicable
 
 ### Deliverables
+
 - Summary of all changes made
 - Documentation updates completed
 - Usage examples created
 - Any remaining TODOs noted
 
 ### Handoff
+
 - Provide clear usage documentation
 - List any manual steps needed
 - Note any deferred items
@@ -170,4 +188,3 @@ Wait for user response:
 - **Test incrementally** rather than waiting until the end
 
 The goal is controlled, validated, incremental delivery that builds confidence at each step.
-

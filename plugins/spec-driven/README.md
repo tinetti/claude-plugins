@@ -21,6 +21,7 @@ Each step builds on the previous one, progressively refining requirements into i
 Creates a comprehensive, actionable feature specification with automated codebase analysis.
 
 **Key Features:**
+
 - Automated discovery of existing patterns and similar features
 - Complexity scoring based on codebase analysis
 - Technical architecture with database schemas and API designs
@@ -29,6 +30,7 @@ Creates a comprehensive, actionable feature specification with automated codebas
 - Success metrics and rollout planning
 
 **Example:**
+
 ```
 /generate-spec user authentication with OAuth2 and role-based permissions
 ```
@@ -40,6 +42,7 @@ Creates a comprehensive, actionable feature specification with automated codebas
 Reviews a feature specification for completeness and implementation readiness.
 
 **Validates:**
+
 - Requirements clarity and measurability
 - User experience considerations
 - Technical specifications completeness
@@ -47,12 +50,14 @@ Reviews a feature specification for completeness and implementation readiness.
 - Project management aspects
 
 **Output:**
+
 - Quality score (1-10)
 - Strengths and gaps analysis
 - Specific recommendations for improvement
 - Risk assessment
 
 **Example:**
+
 ```
 /check-spec docs/specs/user-auth-spec.md
 ```
@@ -62,12 +67,14 @@ Reviews a feature specification for completeness and implementation readiness.
 Generates a Pre-Requirements Plan (PRP) from a specification with thorough research.
 
 **Research Process:**
+
 1. Analyzes codebase for patterns and conventions
 2. Gathers external documentation and best practices
 3. Identifies project context (framework, testing, build tools)
 4. Creates phased implementation plan
 
 **Output:** `PRPs/{feature-name}.md` with:
+
 - Research context and documentation URLs
 - Implementation phases with clear deliverables
 - Validation commands for each phase
@@ -75,6 +82,7 @@ Generates a Pre-Requirements Plan (PRP) from a specification with thorough resea
 - Error handling strategies
 
 **Example:**
+
 ```
 /generate-prp docs/specs/user-auth-spec.md
 ```
@@ -84,6 +92,7 @@ Generates a Pre-Requirements Plan (PRP) from a specification with thorough resea
 Validates a PRP for completeness and execution readiness.
 
 **Checks:**
+
 - Research context completeness
 - Tech stack identification accuracy
 - Validation commands compatibility
@@ -91,12 +100,14 @@ Validates a PRP for completeness and execution readiness.
 - Testing coverage
 
 **Output:**
+
 - Quality score (1-10)
 - Missing elements identification
 - Improvement suggestions
 - Execution readiness assessment
 
 **Example:**
+
 ```
 /check-prp PRPs/user-auth.md
 ```
@@ -106,6 +117,7 @@ Validates a PRP for completeness and execution readiness.
 Executes a feature specification with intelligent automation and comprehensive validation.
 
 **Execution Features:**
+
 - Auto-generates or updates PRP if needed
 - Adapts to project complexity (simple/medium/complex)
 - Provides phase-by-phase implementation
@@ -114,6 +126,7 @@ Executes a feature specification with intelligent automation and comprehensive v
 - Smart checkpoints based on complexity
 
 **Control Commands During Execution:**
+
 - `continue` - Proceed to next phase
 - `status` - Show current progress
 - `validate` - Run validation checks
@@ -121,6 +134,7 @@ Executes a feature specification with intelligent automation and comprehensive v
 - `report` - Generate progress report
 
 **Example:**
+
 ```
 /execute-spec specs/user-auth-spec.md
 /execute-spec specs/feature-spec.md --auto  # Auto-progression mode
@@ -131,15 +145,18 @@ Executes a feature specification with intelligent automation and comprehensive v
 Executes a PRP with controlled, incremental validation.
 
 **Process:**
+
 1. Creates implementation plan using TodoWrite
 2. Executes phase-by-phase with user checkpoints
 3. Runs validation after each phase
 4. Waits for confirmation before proceeding
 
 **Phase Structure:**
+
 - Setup → Core → Integration → Testing → Polish
 
 **Control Commands:**
+
 - `continue` - Proceed to next phase
 - `fix [issue]` - Address specific problem
 - `pause` - Stop for manual intervention
@@ -147,6 +164,7 @@ Executes a PRP with controlled, incremental validation.
 - `validate` - Re-run validation
 
 **Example:**
+
 ```
 /execute-prp PRPs/user-auth.md
 ```
@@ -156,6 +174,7 @@ Executes a PRP with controlled, incremental validation.
 ### Specifications as Executable Artifacts
 
 Specifications aren't just documentation - they're blueprints that:
+
 - Include automated codebase analysis
 - Calculate complexity scores
 - Define validation criteria
@@ -165,6 +184,7 @@ Specifications aren't just documentation - they're blueprints that:
 ### Pre-Requirements Plans (PRPs)
 
 PRPs bridge the gap between specifications and code by:
+
 - Gathering all necessary research and context
 - Breaking implementation into validated phases
 - Providing validation commands for each step
@@ -174,6 +194,7 @@ PRPs bridge the gap between specifications and code by:
 ### Validation-Driven Development
 
 Every phase includes:
+
 - Automated validation commands
 - Manual testing steps
 - Success criteria
@@ -183,6 +204,7 @@ Every phase includes:
 ### Adaptive Execution
 
 The plugin adapts to:
+
 - Project complexity (simple/medium/complex)
 - Existing codebase patterns
 - Framework and tooling choices
@@ -218,28 +240,33 @@ The plugin adapts to:
 ## Example Workflow
 
 ### 1. Generate Initial Specification
+
 ```
 /generate-spec payment processing with Stripe integration
 ```
 
 ### 2. Review and Refine
+
 ```
 /check-spec docs/specs/payment-processing-spec.md
 # Address any gaps identified
 ```
 
 ### 3. Create Implementation Plan
+
 ```
 /generate-prp docs/specs/payment-processing-spec.md
 ```
 
 ### 4. Validate Plan
+
 ```
 /check-prp PRPs/payment-processing.md
 # Ensure all research is complete
 ```
 
 ### 5. Execute Implementation
+
 ```
 /execute-spec docs/specs/payment-processing-spec.md
 # Or use PRP directly:
@@ -251,6 +278,7 @@ The plugin adapts to:
 ### Complexity Scoring
 
 Automatically calculates based on:
+
 - Files to modify
 - New dependencies required
 - Database changes needed
@@ -260,6 +288,7 @@ Automatically calculates based on:
 ### Codebase Pattern Analysis
 
 Discovers and uses:
+
 - Similar feature implementations
 - Testing patterns
 - Authentication/authorization approaches
@@ -269,6 +298,7 @@ Discovers and uses:
 ### Rollout Planning
 
 Includes:
+
 - Feature flag strategies
 - Phased deployment plans
 - Performance monitoring
@@ -278,6 +308,7 @@ Includes:
 ## Integration with Other Tools
 
 The spec-driven plugin works well with:
+
 - **TodoWrite**: Automatically creates task lists during execution
 - **Git commands**: Commits at phase boundaries
 - **Testing tools**: Runs project-specific test suites
@@ -307,6 +338,7 @@ The spec-driven plugin works well with:
 ## Philosophy
 
 This plugin embodies the principle that specifications should be:
+
 - **Actionable**: Direct implementation guidance
 - **Validated**: Built-in success criteria
 - **Incremental**: Phased delivery with checkpoints

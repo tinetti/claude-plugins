@@ -28,18 +28,21 @@ Generate a complete PRP for feature implementation with thorough research. Read 
 Using PRPs/templates/prp_base.md as template:
 
 ### Critical Context
+
 - **Documentation URLs**: Specific sections for libraries/frameworks
 - **Code Examples**: Real patterns from the codebase
 - **Tech Stack**: Framework, build tools, testing setup
 - **Patterns**: Existing approaches to mirror
 
 ### Implementation Blueprint
+
 - Pseudocode showing the approach
 - Reference files for patterns to follow
 - Error handling strategy
 - **Incremental milestones** for step-by-step validation
 
 ### Validation Gates (Tech Stack Specific)
+
 ```bash
 # TypeScript/Build validation
 npm run type-check
@@ -68,3 +71,4 @@ Manual testing instructions
 Output
 Save as: PRPs/{feature-name}.md
 Score the PRP on confidence level (1-10) for successful incremental implementation.
+```
