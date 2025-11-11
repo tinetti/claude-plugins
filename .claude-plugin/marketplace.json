@@ -69,7 +69,7 @@
       "name": "gpt5-consultant",
       "source": "./plugins/gpt5-consultant",
       "description": "Ask GPT5 to consult on your task via MCP",
-      "version": "0.3.1",
+      "version": "0.4.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"

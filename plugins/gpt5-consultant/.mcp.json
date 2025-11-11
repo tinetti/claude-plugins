@@ -6,6 +6,16 @@
       "env": {
         "OPENAI_API_KEY": "${OPENAI_API_KEY}"
       }
+    },
+    "codex": {
+      "command": "codex",
+      "args": [
+        "-m",
+        "gpt-5-codex",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "mcp-server"
+      ]
     }
   }
 }
