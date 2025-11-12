@@ -21,7 +21,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  plugins/gpt5-consultant/mcp-server:
+  plugins/consultant/mcp-server:
     dependencies:
       '@modelcontextprotocol/sdk':
         specifier: 0.6.0
