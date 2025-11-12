@@ -85,6 +85,28 @@
       ]
     },
     {
+      "name": "researcher",
+      "source": "./plugins/researcher",
+      "description": "Multi-source research using Perplexity, Gemini, Grok, and Claude WebSearch with parallel agent orchestration (3-24 agents)",
+      "version": "0.1.1",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "research",
+        "perplexity",
+        "gemini",
+        "grok",
+        "web-search",
+        "multi-agent",
+        "parallel",
+        "information-gathering",
+        "fact-checking",
+        "synthesis"
+      ]
+    },
+    {
       "name": "sandbox",
       "source": "./plugins/sandbox",
       "description": "Experimental agents, skills, and output styles for unconventional interaction patterns",
