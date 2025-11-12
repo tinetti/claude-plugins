@@ -85,6 +85,21 @@
       ]
     },
     {
+      "name": "sandbox",
+      "source": "./plugins/sandbox",
+      "description": "Experimental agents, skills, and output styles for unconventional interaction patterns",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "experimental",
+        "cunningham",
+        "output-styles"
+      ]
+    },
+    {
       "name": "spec-driven",
       "source": "./plugins/spec-driven",
       "description": "Transform specifications into executable code with automated analysis, validation checkpoints, and incremental delivery",
