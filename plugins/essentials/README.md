@@ -167,6 +167,29 @@ The command orchestrates five specialized agents:
 4. **Testing Agent** - Test patterns and quality gates
 5. **Git History Analyst** - Evolution, decisions, common issues
 
+#### `/de-slopify` - Remove AI Code Slop
+
+Remove AI-generated code slop from your current branch by comparing against a base branch.
+
+**When to use:**
+
+- After AI-assisted coding sessions
+- Before code review
+- When code feels over-engineered or inconsistent
+
+**What it removes:**
+
+- Unnecessary comments that a human wouldn't add
+- Excessive defensive checks or try/catch blocks
+- Type casts to `any` that work around issues
+- Style inconsistencies with the rest of the file
+
+**Example:**
+
+```bash
+/de-slopify main
+```
+
 ## Installation
 
 Add this marketplace to Claude Code:
