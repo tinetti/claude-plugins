@@ -90,6 +90,24 @@
       ]
     },
     {
+      "name": "ideation",
+      "source": "./plugins/ideation",
+      "description": "Transform brain dumps into structured implementation artifacts: contracts, phased PRDs, and implementation specs",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "ideation",
+        "brain-dump",
+        "planning",
+        "prd",
+        "specification"
+      ],
+      "category": "planning"
+    },
+    {
       "name": "sandbox",
       "source": "./plugins/sandbox",
       "description": "Experimental agents, skills, and output styles for unconventional interaction patterns",

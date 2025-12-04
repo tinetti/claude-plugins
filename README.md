@@ -28,6 +28,7 @@ Then install plugins:
 - [content](plugins/content/README.md) - Tools for bootstrapping content creation
 - [developer-experience](plugins/developer-experience/README.md) - Tools for the experienced developer experience engineer
 - [essentials](plugins/essentials/README.md) - Core productivity tools and workflows for Claude Code
+- [ideation](plugins/ideation/README.md) - Transform brain dumps into structured contracts, phased PRDs, and implementation specs
 - [sandbox](plugins/sandbox/README.md) - Experimental agents, skills, and output styles for unconventional interaction patterns
 - [spec-driven](plugins/spec-driven/README.md) - Transform specifications into executable code with validation-driven development
 - [workos](plugins/workos/README.md) - Enterprise authentication and SSO integration toolkit
