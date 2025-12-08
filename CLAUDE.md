@@ -45,7 +45,8 @@ plugins/{name}/
      "author": {
        "name": "Nick Nisi",
        "email": "nick@nisi.org"
-     }
+     },
+     "keywords": ["optional", "search", "terms"]
    }
    ```
 

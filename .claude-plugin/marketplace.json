@@ -93,7 +93,7 @@
       "name": "ideation",
       "source": "./plugins/ideation",
       "description": "Transform brain dumps into structured implementation artifacts: contracts, phased PRDs, and implementation specs",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
@@ -104,8 +104,7 @@
         "planning",
         "prd",
         "specification"
-      ],
-      "category": "planning"
+      ]
     },
     {
       "name": "sandbox",
