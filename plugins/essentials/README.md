@@ -231,13 +231,13 @@ Remove AI-generated code slop from your current branch by comparing against a ba
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add /Users/nicknisi/Developer/claude-plugins
+/plugin marketplace add nicknisi/claude-plugins
 ```
 
 Then install the essentials plugin:
 
 ```bash
-/plugin install essentials
+/plugin install essentials@nicknisi
 ```
 
 ## Usage Examples

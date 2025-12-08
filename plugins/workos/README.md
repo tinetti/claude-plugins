@@ -24,7 +24,8 @@ Enterprise authentication and SSO integration toolkit for WorkOS.
 ## Installation
 
 ```bash
-/plugin install workos
+/plugin marketplace add nicknisi/claude-plugins
+/plugin install workos@nicknisi
 ```
 
 The plugin bundles the WorkOS specialist agent with context7 MCP pre-configured for WorkOS docs, so the agent always has current API reference available.

@@ -78,7 +78,8 @@ Strips away hedging, apologies, and excessive politeness for direct, assertive r
 ## Installation
 
 ```bash
-/plugin install sandbox
+/plugin marketplace add nicknisi/claude-plugins
+/plugin install sandbox@nicknisi
 ```
 
 ## Usage

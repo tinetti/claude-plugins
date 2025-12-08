@@ -75,10 +75,10 @@ export GROK_API_KEY="..."        # For Grok
 
 ## Installation
 
-1. Install via Claude Code marketplace:
+1. Add the marketplace and install the plugin:
 ```bash
-/plugin
-# Select "consultant" from nicknisi marketplace
+/plugin marketplace add nicknisi/claude-plugins
+/plugin install consultant@nicknisi
 ```
 
 2. Restart Claude Code

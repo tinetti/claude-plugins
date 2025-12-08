@@ -7,19 +7,13 @@ My personal collection of Claude Code plugins.
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add /Users/nicknisi/Developer/claude-plugins
-```
-
-Or if you're setting it up from GitHub:
-
-```bash
 /plugin marketplace add nicknisi/claude-plugins
 ```
 
 Then install plugins:
 
 ```bash
-/plugin install consultant
+/plugin install consultant@nicknisi
 ```
 
 ## Plugins

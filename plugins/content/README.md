@@ -73,7 +73,10 @@ This structure helps create compelling narratives that engage audiences through 
 
 ## Installation
 
-This plugin is located at `@plugins/content/` in your Claude plugins directory.
+```bash
+/plugin marketplace add nicknisi/claude-plugins
+/plugin install content@nicknisi
+```
 
 ## Version
 
