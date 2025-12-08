@@ -1,6 +1,7 @@
 ---
 name: code-simplifier
 description: Use this agent when you need to refactor code to improve readability, reduce complexity, or enhance maintainability without altering functionality. This includes simplifying complex logic, removing redundancy, improving naming, extracting methods, reducing nesting, and applying clean code principles. The agent preserves all public APIs and external behavior unless explicitly authorized to change them.
+tools: Read, Edit, Grep, Glob, Bash
 color: green
 model: opus
 ---

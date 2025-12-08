@@ -71,7 +71,7 @@
       "name": "essentials",
       "source": "./plugins/essentials",
       "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, research, context management, and ultrathink mode.",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
