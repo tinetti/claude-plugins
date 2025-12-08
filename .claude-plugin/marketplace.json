@@ -51,7 +51,7 @@
       "name": "developer-experience",
       "source": "./plugins/developer-experience",
       "description": "Tools for the experienced developer experience engineer.",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
@@ -71,7 +71,7 @@
       "name": "essentials",
       "source": "./plugins/essentials",
       "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, research, context management, and ultrathink mode.",
-      "version": "0.2.0",
+      "version": "0.4.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"

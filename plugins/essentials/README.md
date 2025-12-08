@@ -99,6 +99,42 @@ You: "We've been working on this authentication system for a while,
 Claude: *uses context-manager to prepare a focused briefing*
 ```
 
+#### 🧹 Code Simplifier Agent
+
+Refactor code to improve readability, reduce complexity, and enhance maintainability without altering functionality.
+
+**When to use:**
+
+- Simplifying complex logic with nested conditionals
+- Removing code redundancy
+- Improving naming conventions
+- Extracting methods from large functions
+- Removing AI-generated "slop" patterns
+
+**Features:**
+
+- Preserves all public APIs and external behavior
+- Reduces complexity through early returns and simpler conditionals
+- Eliminates redundant code and applies DRY principles
+- Improves naming to reveal intent
+- Removes unnecessary defensive checks and type workarounds
+- Extracts smaller, focused methods from large functions
+- Removes dead code and clarifies logic flow
+
+**What it removes:**
+
+- Extra comments inconsistent with codebase style
+- Excessive try/catch blocks in trusted codepaths
+- Type casts to `any` that work around issues
+- Style inconsistencies within files
+
+**Example:**
+
+```
+You: "This function is hard to read, can you simplify it?"
+Claude: *code-simplifier agent refactors while preserving behavior*
+```
+
 ### Commands
 
 #### `/ultrathink` - Deep Thinking Mode
