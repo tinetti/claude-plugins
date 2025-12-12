@@ -226,6 +226,40 @@ Remove AI-generated code slop from your current branch by comparing against a ba
 /de-slopify main
 ```
 
+#### `/pr` - Create Pull Request
+
+Create a pull request with a structured template.
+
+**When to use:**
+
+- Ready to open a PR for your branch
+- Want consistent PR formatting
+
+**Features:**
+
+- Auto-creates feature branch (`nicknisi/${feature}`) if on `main`
+- Enforces concise titles (< 72 chars)
+- Structured body template
+
+**Template includes:**
+
+- Summary (1-3 bullets on what changed)
+- Why (context for the change)
+- Notes (optional reviewer info)
+
+**Process:**
+
+1. Analyzes `git status` and `git log` for branch changes
+2. Drafts title and body following template
+3. Creates PR via `gh pr create`
+4. Returns PR URL
+
+**Example:**
+
+```bash
+/pr
+```
+
 ## Installation
 
 Add this marketplace to Claude Code:
