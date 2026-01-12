@@ -6,32 +6,6 @@ Experimental agents, skills, and output styles for unconventional interaction pa
 
 This plugin contains experimental approaches to AI interaction that break from typical assistant patterns:
 
-### Claude Code Analyzer Skill
-
-Analyzes Claude Code usage patterns and provides comprehensive recommendations. This skill provides a complete workflow optimization by:
-
-- Analyzing tool usage from your JSONL history
-- Discovering GitHub community resources automatically
-- Detecting your project tech stack
-- Fetching latest Claude Code docs on-demand
-- Suggesting CLAUDE.md improvements
-
-**When to use:**
-
-- Optimizing your Claude Code workflow
-- Creating agents, skills, or slash commands
-- Setting up project documentation
-- Finding community resources
-
-**Example:**
-
-```
-user: Help me optimize my Claude Code setup
-assistant: I'll invoke the claude-code-analyzer skill to analyze your usage patterns
-```
-
-The skill runs usage analysis, project detection, and GitHub discovery to provide actionable recommendations for improving your Claude Code experience.
-
 ### Cunningham Agent
 
 Uses Cunningham's Law ("the best way to get the right answer is to post the wrong answer") to elicit detailed explanations. Instead of asking questions directly, it makes strategically incorrect assertions that provoke comprehensive corrections.
