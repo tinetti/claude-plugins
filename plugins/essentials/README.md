@@ -135,6 +135,48 @@ You: "This function is hard to read, can you simplify it?"
 Claude: *code-simplifier agent refactors while preserving behavior*
 ```
 
+#### 🔐 Security Auditor Agent
+
+Find critical vulnerabilities through invariant-binding analysis across trust boundaries.
+
+**When to use:**
+
+- Explicit security audit requests
+- Penetration testing preparation
+- Vulnerability assessments
+- Pre-deployment security review
+
+**Not for:** General code review — only dedicated security analysis.
+
+**Features:**
+
+- 6-phase methodology (Context → Threat Model → Hypotheses → Testing → Validation → Output)
+- Invariant-binding analysis across trust boundaries
+- Subagent deployment for coverage and bias reduction
+- Built-in anti-hallucination rules
+- Detection heuristics for auth bypass, IDOR, injection, race conditions
+
+**What it finds:**
+
+- Authentication/authorization bypass
+- IDOR and access control flaws
+- Injection vulnerabilities (SQL, command, template)
+- Trust boundary violations
+- State and race conditions
+
+**What it ignores:**
+
+- Low-severity issues (open redirects, CSS injection)
+- Bugs requiring attacker to guess UUIDs
+- Issues outside the threat model
+
+**Example:**
+
+```
+You: "Run a security audit on src/api/"
+Claude: *security-auditor agent performs 6-phase analysis, reports critical findings*
+```
+
 ### Commands
 
 #### `/ultrathink` - Deep Thinking Mode
