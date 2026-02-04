@@ -122,12 +122,14 @@ Apply? [y/n]"
 **What counts as "new information":**
 
 ✅ **Worth capturing:**
+
 - Project-specific conventions ("we use `cn()` not `clsx()` here")
 - Custom component/utility locations ("buttons are in `@/components/ui`")
 - Team preferences that differ from defaults ("we prefer explicit returns")
 - Non-obvious architectural decisions ("auth logic lives in middleware")
 
 ❌ **NOT worth capturing:**
+
 - General best practices (DRY, separation of concerns)
 - Language/framework conventions (React hooks rules, TypeScript basics)
 - Common library usage (standard Tailwind classes)

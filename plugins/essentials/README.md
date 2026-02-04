@@ -333,6 +333,7 @@ Automatically detects your project stack from manifest files (`package.json`, `G
 **CLAUDE.md integration:**
 
 For best results, define in your project's CLAUDE.md:
+
 - Test commands (`npm test`, `pytest`, etc.)
 - Lint/typecheck commands
 - Test credentials (for integration tests)

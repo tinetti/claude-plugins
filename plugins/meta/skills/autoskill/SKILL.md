@@ -27,17 +27,20 @@ Do NOT activate for one-off corrections or when the user declines skill modifica
 Distinguish between skill-specific behavior and project-wide conventions:
 
 **Update Skills when:**
+
 - Signal relates to how a specific skill should behave
 - Preference affects skill trigger conditions or outputs
 - Pattern is about the skill's decision-making process
 
 **Update CLAUDE.md when:**
+
 - Project-wide conventions (naming, file structure, architecture)
 - Tool/library preferences that span multiple skills
 - Team style preferences (spacing, comments, error handling)
 - Domain-specific terminology used across the codebase
 
 **Example:**
+
 - "Don't add error handling for internal functions" → code-simplifier skill (how to simplify)
 - "We use `cn()` utility for className merging" → CLAUDE.md (project convention)
 - "Auth logic lives in middleware, not components" → CLAUDE.md (architecture decision)
@@ -83,6 +86,7 @@ When signals contradict each other, resolve using this priority order:
 If contradictory signals have equal scores, ask user for clarification before proposing changes.
 
 **Example conflict:**
+
 - Session 1: "Add error handling everywhere" (2 points)
 - Session 3 (current): "Don't add error handling for internal functions" (5 points - explicit + "don't")
 - Resolution: Use current session's explicit rule
@@ -124,26 +128,31 @@ If I'd give the same advice to any project, it doesn't belong in a skill.
 Match each signal to the Skill that was active and relevant during the session:
 
 **Update existing Skill when:**
+
 - Signal relates to a Skill that was used in the session
 - Total confidence score for that Skill ≥ 3 points
 - Signal affects how the skill should behave or trigger
 
 **Propose new Skill when:**
+
 - Multiple related signals (total score ≥ 5 points) don't fit any active Skill
 - Pattern spans multiple sessions with consistent behavior
 - Signals describe a reusable, well-defined capability
 
 **Update CLAUDE.md instead when:**
+
 - Signals describe project conventions, not skill behavior
 - Total score < 5 points for new skill creation
 - Pattern is too specific to one context
 
 **Ignore signals when:**
+
 - Don't map to any Skill used in the session
 - Total confidence score < 2 points
 - Contradict existing, well-established patterns without strong justification
 
 **Scoring example:**
+
 - 2 explicit corrections about error handling (2×2=4 points) → Update code-simplifier
 - 1 approval + 1 pattern about naming (1+3=4 points) → Needs one more signal or higher confidence
 - 3 corrections about auth flow (3×2=6 points) → Could propose new auth-specialist skill
@@ -176,11 +185,13 @@ Group proposals by file. Present HIGH confidence changes first.
 **Session context:** User corrected error handling twice during code-simplifier usage
 
 **Detected signals:**
+
 1. "Don't add try-catch blocks for internal functions" (explicit correction: 5 points)
 2. Removed error handling from internal utility functions (pattern: 3 points)
 3. Total: 8 points → HIGH confidence
 
 **Proposed change:**
+
 ```
 File: plugins/essentials/skills/code-simplifier/SKILL.md
 Section: ## When NOT to simplify
@@ -231,6 +242,7 @@ When proposing changes to multiple files:
 5. **Skill updates in order of usage frequency** (most-used skills first)
 
 **Example order:**
+
 1. CLAUDE.md: Add `cn()` utility convention (HIGH, 8 points)
 2. code-simplifier: Error handling rule (HIGH, 8 points)
 3. code-simplifier: Variable naming pattern (MEDIUM, 4 points)
@@ -249,16 +261,19 @@ When approved:
 All autoskill changes are reversible:
 
 **If git is available:**
+
 1. Find commit: `git log --grep="autoskill" --oneline`
 2. Revert specific commit: `git revert <commit-hash>`
 3. Or revert all autoskill changes: `git log --grep="autoskill" --format="%H" | xargs -n1 git revert`
 
 **Manual rollback:**
+
 1. Each edit is minimal and focused (easy to identify)
 2. Use git diff to see exact changes: `git show <commit-hash>`
 3. Manually undo the specific section that caused issues
 
 **Prevention:**
+
 - Always commit each skill change separately (never batch)
 - Use descriptive commit messages: `chore(autoskill): add error handling rule to code-simplifier`
 - Test after each change before proceeding to next
@@ -268,26 +283,31 @@ All autoskill changes are reversible:
 Use the AskUserQuestion tool when:
 
 **Ambiguous signals:**
+
 - Correction doesn't clearly specify what to do instead
 - Pattern observed but unclear if intentional or coincidental
 - Signal could apply to multiple skills
 
 **Contradictory feedback:**
+
 - Equal confidence scores for contradicting signals
 - User's recent correction conflicts with established pattern
 - Unclear which rule should take precedence
 
 **Boundary decisions:**
+
 - Uncertain whether change belongs in CLAUDE.md or Skill
 - Score is near threshold (4-6 points for new skill creation)
 - Signal could be project-wide convention OR skill-specific behavior
 
 **Scope uncertainty:**
+
 - Unclear if correction applies to all cases or specific context
 - Signal mentions "here" or "this case" without "always/never"
 - Need to verify if pattern should be generalized
 
 **Example questions:**
+
 ```
 "I detected two corrections about error handling:
 1. 'Don't add try-catch for internal functions'

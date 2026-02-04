@@ -32,11 +32,13 @@ plugins/{name}/
 ## Adding a Plugin
 
 1. **Create plugin directory:**
+
    ```bash
    mkdir -p plugins/my-plugin/.claude-plugin
    ```
 
 2. **Create `plugin.json`:**
+
    ```json
    {
      "name": "my-plugin",
