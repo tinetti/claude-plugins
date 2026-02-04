@@ -5,11 +5,11 @@
 Before starting, check the git history to determine if this is a follow-up review:
 
 ```bash
-git log --oneline -10 | grep -i "Co-Authored-By: Claude"
+git log --oneline -10 | grep -iE "(final-review|review pass|code review fixes)"
 ```
 
-- **First pass**: No recent Claude co-authored commits on this branch, or the Claude commits are from a different feature.
-- **Follow-up pass**: Recent Claude co-authored commits exist from a previous `/final-review` run on this same feature.
+- **First pass**: No recent commits mention review-related changes.
+- **Follow-up pass**: Recent commits reference `/final-review` or contain review-related fixes.
 
 If this is a follow-up pass:
 
