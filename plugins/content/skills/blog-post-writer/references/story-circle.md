@@ -1,107 +1,100 @@
-# Tech Talk Story Circle Framework
+# Story Circle Framework
 
-The Story Circle is an eight-step framework adapted from Dan Harmon's storytelling technique. It structures tech talks to create engaging narratives.
+The Story Circle is an eight-step framework adapted from Dan Harmon's storytelling technique. It structures blog posts as engaging narratives where the author starts in a familiar place, ventures into the unknown, and returns changed.
+
+## Best For
+
+- Personal journey posts ("How I went from X to Y")
+- Career reflections and transitions
+- "I was wrong about X" posts
+- Posts where the author's perspective fundamentally shifts
 
 ## The Eight Steps
 
 ### 1. Introduction (You)
 
-**Top half - Order**
+**Order** — Introduce yourself and the status quo.
 
-Introduce yourself and the current status quo of your project.
-
-- Set the scene with the existing workflow or technology stack
+- Set the scene with the existing workflow, stack, or belief
 - Establish the baseline before disruption
-- Make the audience understand the familiar ground
+- Ground the reader in familiar territory
 
 ### 2. Problem Statement (Need)
 
-**Top half - Order**
+**Order** — Identify what's not working or what prompted change.
 
-Identify and explain the problem you're trying to solve.
-
-- Clearly articulate what's not working
-- Help the audience feel the pain point
-- Create the motivation for change
+- Clearly articulate the pain point or curiosity
+- Help the reader feel the tension
+- Create the motivation for the journey
 
 ### 3. Exploration (Go)
 
-**Crossing to bottom half - Chaos**
+**Crossing into chaos** — Describe the steps taken to address the problem.
 
-Describe the steps taken to address the problem.
-
-- What did you try?
-- What worked?
-- What didn't work?
-- Show the journey into the unknown
+- What did you try? What worked? What didn't?
+- Show the journey into unfamiliar territory
+- Be honest about hesitation or discomfort
 
 ### 4. Experimentation (Search)
 
-**Bottom half - Chaos**
+**Chaos** — Detail the messy middle of problem-solving.
 
-Detail the process of digging into the actual problem.
-
-- What did you learn?
+- What did you learn along the way?
 - What experiments did you run?
-- What discoveries did you make?
-- Share the messy middle of problem-solving
+- Share the wrong turns and dead ends — this is where vulnerability lives
 
 ### 5. Solution (Find)
 
-**Bottom half - Chaos**
+**Chaos** — Explain how you found the breakthrough.
 
-Explain how you found the solution or made progress.
-
-- Present the breakthrough moment
-- Show what finally clicked
-- Explain the technical approach that worked
+- Present the moment it clicked
+- Show what finally worked
+- Explain the technical approach or insight
 
 ### 6. Challenges (Take)
 
-**Bottom half - Chaos**
-
-Discuss the actual implementation of the project.
+**Chaos** — Discuss the real cost of implementation.
 
 - Emphasize the disruption to the status quo
-- Share the difficulties and tradeoffs
-- Be honest about the cost of change
+- Share the difficulties and trade-offs
+- Be honest about what you gave up
 
 ### 7. Apply Knowledge (Return)
 
-**Crossing to top half - Order**
+**Crossing back to order** — Describe how the solution integrated into your world.
 
-Describe the results and how the solution was integrated.
-
-- Show how you brought the solution back to your project
-- Demonstrate the practical application
-- Return to the familiar with new tools
+- Show how you brought the insight back to your project or workflow
+- Demonstrate practical application
+- Return to the familiar, but with new tools
 
 ### 8. Results & Insights (Change)
 
-**Top half - Order**
+**Order** — Conclude with what changed.
 
-Conclude with lessons learned and how things changed.
-
-- Share metrics or outcomes
-- Explain what changed in your workflow or perspective
-- Leave the audience with actionable insights
+- Share metrics, outcomes, or perspective shifts
+- Explain what's different in your workflow or thinking
+- Leave the reader with actionable insights
 
 ## Structure Notes
 
-**Top half (steps 1, 2, 7, 8)**: Represents established practices and order
-**Bottom half (steps 3, 4, 5, 6)**: Represents disruption and experimentation
+**Top half (steps 1-2 departure, 7-8 return):** Established practices and order.
+**Bottom half (steps 3-6):** Disruption and experimentation.
 
-The character (you) starts in the top half, enters the bottom half to experiment and disrupt, then returns to the top half with new knowledge, changing the status quo.
+The author starts in the top half, enters the bottom half to experiment, then returns to the top half with new understanding. The status quo is changed.
 
 ## Example
 
-From "Unleashing the TypeScript Compiler":
+From a post about adopting AI coding tools:
 
-1. Status quo of a TypeScript/React project using Material-UI
-2. Challenges faced with the project
-3. Solutions tried to work around issues
-4. Exploring the TypeScript compiler and codemods
-5. Using new knowledge to solve problems
-6. Challenges implementing the solution for every scenario
-7. Applying knowledge to the project
-8. Results and changed team perspective on codemods
+1. Status quo — writing all code by hand, skeptical of AI tools
+2. Pressure to try them — team adopting Copilot, industry shifting
+3. First experiments — trying Copilot, then Cursor, mixed results
+4. Deeper exploration — Claude Code in the terminal, unexpected fit
+5. Breakthrough — watching it use `rg` and `npm test` like a pair programmer
+6. Challenges — trust issues, code review overhead, learning when NOT to use it
+7. Integration — building `CLAUDE.md` files, incorporating into daily workflow
+8. Changed perspective — "You're not being replaced; you're being amplified"
+
+## When NOT to Use This
+
+If the post doesn't involve a personal journey or transformation, another framework is likely a better fit. Story Circle works poorly for pure tutorials, tool comparisons, or incident reports — it needs an author who changes through the experience.

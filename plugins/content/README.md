@@ -20,15 +20,26 @@ Use this when you have scattered ideas, talking points, and conclusions that nee
 
 The skill will:
 
-- Structure your unorganized thoughts
-- Apply Nick's writing voice and tone
-- Use Story Circle narrative framework when appropriate
-- Create a complete blog post with proper pacing and flow
+- Gather constraints (target length, audience, draft vs revision)
+- Fetch your latest posts from nicknisi.com for live voice calibration
+- Choose the best narrative framework for the content
+- Structure your unorganized thoughts into a post with proper Astro frontmatter
+- Apply Nick's writing voice and tone throughout
+
+**Narrative frameworks** (auto-selected based on content):
+
+- **Story Circle** - Personal journey or transformation
+- **SCQA** - Analytical problem-solving
+- **Progressive Disclosure** - Teaching a concept
+- **Compare & Contrast** - Evaluating trade-offs
+- **Post-mortem** - Incident or failure retrospective
+- **PAS** - Short, punchy fix stories
 
 **Bundled references:**
 
 - `voice-tone.md` - Writing style guide
-- `story-circle.md` - Narrative framework
+- `post-template.md` - Astro frontmatter schema and output format
+- 6 narrative framework references (loaded selectively)
 
 ### conference-talk-builder
 
@@ -56,20 +67,9 @@ The skill will:
 - `story-circle.md` - Eight-step narrative structure
 - `ia-presenter-syntax.md` - iA Presenter markdown syntax
 
-## Story Circle Framework
+## Narrative Frameworks
 
-Both skills leverage the Story Circle narrative framework, which maps content to an eight-step journey:
-
-1. Introduction - Current status quo
-2. Problem Statement - What needs solving
-3. Exploration - Initial attempts
-4. Experimentation - Deep investigation
-5. Solution - The breakthrough
-6. Challenges - Implementation difficulties
-7. Apply Knowledge - Integration
-8. Results & Insights - Lessons learned
-
-This structure helps create compelling narratives that engage audiences through a relatable journey.
+The blog-post-writer skill supports six narrative frameworks, auto-selected based on content type. The conference-talk-builder uses the Story Circle framework. See individual reference files in `skills/blog-post-writer/references/` and `skills/conference-talk-builder/references/` for details.
 
 ## Installation
 
@@ -80,4 +80,4 @@ This structure helps create compelling narratives that engage audiences through 
 
 ## Version
 
-0.1.0
+0.2.0

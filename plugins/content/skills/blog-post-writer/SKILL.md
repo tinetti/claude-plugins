@@ -1,6 +1,6 @@
 ---
 name: blog-post-writer
-description: Transform brain dumps into polished blog posts in Nick Nisi's voice. Use when the user wants to write a blog post with scattered ideas, talking points, and conclusions that need organization into a cohesive narrative with Nick's conversational, authentic, and thoughtful tone.
+description: Transform brain dumps into polished blog posts in Nick Nisi's voice. Use when the user says "write a blog post," "draft a post," "write about [topic]," "turn my notes into a blog post," or provides scattered ideas, talking points, or conclusions that need shaping into a cohesive narrative.
 ---
 
 # Nick Nisi Blog Writer
@@ -22,11 +22,26 @@ Accept whatever the user provides:
 
 Don't require organization. The mess is the input.
 
+**Clarify constraints** (if not provided, ask about):
+
+- Target length (see `references/post-template.md` for word count ranges)
+- Target audience (if different from general developer peers)
+- Whether this is a first draft or revision of existing content
+- Any specific sections, topics, or angles to include or exclude
+
 ### 2. Read Voice and Tone
 
-Load `references/voice-tone.md` to understand Nick's writing style.
+Load `references/voice-tone.md` as the baseline voice guide.
 
-Key characteristics:
+**Then calibrate against recent writing:**
+
+1. Fetch `https://nicknisi.com/posts` to find the 2-3 most recent posts
+2. Fetch and read those posts
+3. Note any patterns that extend or differ from the static reference — new phrases, tone shifts, topic-specific voice adjustments
+
+The static reference captures established patterns. The live fetch catches evolution. When they conflict, prefer the recent posts — voice is a living thing. If the site cannot be fetched, rely on the static voice guide alone.
+
+Key characteristics (read the full reference for details and examples):
 
 - Conversational yet substantive
 - Vulnerable and authentic
@@ -35,30 +50,41 @@ Key characteristics:
 - Specific examples and real details
 - Self-aware humor
 
-### 3. Check for Story Potential
+### 3. Choose a Narrative Framework
 
-Read `references/story-circle.md` to understand the narrative framework.
+Match the content to the best framework. Read the corresponding reference file before writing.
 
-Determine if the content fits a story structure:
+| Framework | Reference | Best when... |
+|---|---|---|
+| **Story Circle** | `references/story-circle.md` | There's a personal journey or transformation |
+| **SCQA** | `references/scqa.md` | Solving a technical problem analytically |
+| **Progressive Disclosure** | `references/progressive-disclosure.md` | Teaching a concept or introducing a tool |
+| **Compare & Contrast** | `references/compare-contrast.md` | Evaluating options or trade-offs |
+| **Post-mortem** | `references/post-mortem.md` | Recounting an incident, migration, or failure |
+| **PAS** | `references/problem-agitation-solution.md` | Short, punchy fix or optimization story |
 
-- Is there a journey from one understanding to another?
-- Can you identify a problem and resolution?
-- Does it follow: comfort → disruption → return changed?
+**How to choose:**
 
-Not every post needs the full Story Circle, but look for narrative opportunities.
+- Is there a personal journey? → **Story Circle**
+- Is the reader making a decision? → **Compare & Contrast**
+- Is the goal to teach? → **Progressive Disclosure**
+- Is it a bug fix or performance win? → **PAS** (short) or **SCQA** (detailed)
+- Did something go wrong? → **Post-mortem**
 
-### 4. Organize Content
+Not every post maps cleanly to one framework. Hybrid approaches are fine — use a framework as a starting structure, not a straitjacket.
 
-Structure the material into sections:
+`voice-tone.md` and `post-template.md` are always loaded. Load only one framework reference in addition — do not preload all six.
 
-**Common structures:**
+### 4. Outline the Post
 
-- Problem/experience → Journey → Results → Lessons
-- Setup → Challenge → Discovery → Application
-- Philosophy → How-to → Reflection
-- Current state → Past → Learning → Future
+Apply the chosen framework to the brain dump material:
 
-Choose the structure that fits the content.
+- Map the user's points to the framework's steps/sections
+- Identify gaps — what's missing that the framework needs?
+- Decide section headers (descriptive and specific, not generic placeholders)
+- Determine where code examples and specific details will land
+
+If the content doesn't fit the framework cleanly, adapt — the framework is scaffolding, not a cage.
 
 ### 5. Write in Nick's Voice
 
@@ -113,28 +139,18 @@ Check the post:
 
 Show the post to the user for feedback and iterate.
 
-## Voice Guidelines
+**Revision strategy:**
 
-### Do:
+- Re-read `references/voice-tone.md` before revising to recalibrate
+- Focus changes on the specific feedback — don't rewrite unrelated sections
+- Preserve the overall narrative structure unless the user explicitly requests restructuring
+- If feedback is vague ("make it better"), ask what specifically feels off
 
-- Write like talking to a peer over coffee
-- Admit uncertainty or being wrong
-- Use specific examples with details
-- Vary sentence and paragraph length
-- Include inline code naturally
-- Show the journey, not just the destination
-- Use humor sparingly and self-aware
-- End with forward momentum
+## Output Format
 
-### Don't:
+Format posts using `references/post-template.md` as the structural template. This defines the frontmatter schema and file format for Nick's site.
 
-- Use corporate or marketing speak
-- Pretend to have all answers
-- Be preachy or condescending
-- Over-explain basic concepts
-- Force humor or emojis
-- Hide mistakes or uncertainty
-- Write without specific examples
+For detailed voice do's and don'ts, see `references/voice-tone.md`.
 
 ## Example Patterns
 
@@ -182,7 +198,16 @@ You're not being replaced; you're being amplified.
 ### References
 
 - `references/voice-tone.md` - Complete voice and tone guide. Read this first to capture Nick's style.
-- `references/story-circle.md` - Story Circle narrative framework. Check if content fits a story structure.
+- `references/post-template.md` - Output format template with frontmatter schema and structural skeleton.
+
+**Narrative frameworks** (read the one that matches the content):
+
+- `references/story-circle.md` - Journey/transformation narrative
+- `references/scqa.md` - Situation-Complication-Question-Answer for analytical problem-solving posts
+- `references/progressive-disclosure.md` - Simple-to-complex layering for teaching concepts
+- `references/compare-contrast.md` - Structured evaluation of trade-offs between options
+- `references/post-mortem.md` - Incident/migration retrospective with timeline and lessons
+- `references/problem-agitation-solution.md` - Punchy three-act structure for fix/optimization stories
 
 ## Workflow Example
 
@@ -203,10 +228,31 @@ thoughts on using cursor vs claude code
 Process:
 
 1. Read voice-tone.md
-2. Check story-circle.md - yes, there's a journey here
-3. Identify structure: Current tools → Trying Cursor → Finding Claude Code → Realization
+2. Choose framework — this is a personal journey, so **Compare & Contrast** with Story Circle elements
+3. Outline: Current tools → Trying Cursor → Finding Claude Code → Realization
 4. Write opening hook about tool debates
 5. Show vulnerability about trying new things
 6. Include specific terminal commands naturally
 7. Conclude with "meet yourself where you are" message
 8. Review for conversational tone and specific details
+
+Sample output (opening paragraphs):
+
+```markdown
+"Which AI coding tool should I use?"
+
+I must get asked that question weekly at this point. And honestly? I tried to answer it
+the wrong way for months.
+
+When Cursor started blowing up, I did what any curious developer would do — I installed
+it and gave it a shot. It's impressive. The inline completions, the chat panel, the way
+it weaves right into VS Code. I get why people love it.
+
+But here's the thing: I'm not a VS Code person. I live in the terminal. Vim, tmux,
+`rg` piped into `fzf` — that's my happy place. And every time I opened Cursor, I felt
+like I was visiting someone else's apartment. Nice place, but not *mine*.
+
+Then I found Claude Code.
+```
+
+Notice: conversational hook, specific tool names, vulnerability about trying something new, short paragraph for emphasis at the end.
