@@ -33,7 +33,7 @@
       "name": "content",
       "source": "./plugins/content",
       "description": "Tools for bootstrapping content creation such as blog posts and conference talks",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
@@ -163,24 +163,6 @@
         "execution",
         "testing",
         "architecture"
-      ]
-    },
-    {
-      "name": "workos",
-      "source": "./plugins/workos",
-      "description": "WorkOS authentication and enterprise SSO integration toolkit",
-      "version": "0.1.1",
-      "author": {
-        "name": "Nick Nisi",
-        "email": "nick@nisi.org"
-      },
-      "keywords": [
-        "workos",
-        "authentication",
-        "sso",
-        "saml",
-        "oidc",
-        "enterprise"
       ]
     }
   ]

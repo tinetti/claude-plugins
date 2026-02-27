@@ -58,6 +58,13 @@ SCQA is inherently top-down — it leads with context and builds to the answer. 
 
 The Complication is where the energy lives. If the complication doesn't create genuine tension, the post will feel flat.
 
+## Combination Notes
+
+- **+ The Sparkline:** Use SCQA as the logical backbone, layer sparkline oscillations ("what is" vs "what could be") over the Complication and Answer sections for emotional momentum.
+- **+ Socratic Path:** Replace the linear Complication→Question flow with a Socratic chain of progressively deeper questions. Works well for root cause analyses.
+- **+ The Rashomon:** Present multiple perspectives within the Answer section — especially when the "right" answer depends on stakeholder viewpoint.
+- **+ Story Circle:** When the SCQA problem-solving narrative also involves personal transformation, nest the SCQA within a Story Circle's chaos phase (steps 3-6).
+
 ## When NOT to Use This
 
 If the post is more about a personal journey or transformation than the technical solution, SCQA will feel too clinical. If the post is very short and punchy, PAS is more compact.

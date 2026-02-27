@@ -71,6 +71,13 @@ Vulnerability is the currency of a good post-mortem. Readers relate to mistakes,
 
 The Timeline section is what makes post-mortems compelling. Don't skip straight to the root cause — the detective work IS the story.
 
+## Combination Notes
+
+- **+ Reverse Chronology:** Start with the resolution, then work backwards through the timeline to the root cause. Creates a detective-story feel where each section answers "but how did we get here?"
+- **+ In Medias Res:** Open with the 2am alert firing, then rewind to establish context before continuing the timeline. Hooks the reader with the crisis immediately.
+- **+ Freytag's Pyramid:** Map the incident timeline to the dramatic arc — the root cause discovery is the climax, the fix is falling action, lessons are denouement.
+- **+ Sisyphean Arc:** When the post-mortem is about something that keeps happening — the incident that recurs despite fixes. The post-mortem structure provides the narrative; Sisyphean Arc provides the philosophical frame.
+
 ## When NOT to Use This
 
 If nothing actually went wrong or failed, this framework will feel forced. Also a poor fit for posts where the interesting part is the solution, not the incident — use SCQA or PAS instead.

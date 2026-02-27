@@ -67,6 +67,13 @@ Use code blocks heavily — this framework lives and dies on concrete examples. 
 
 Headers should signal complexity level so readers can jump to their depth: "The Basics," "Going Further," "Advanced Patterns."
 
+## Combination Notes
+
+- **+ The Spiral:** Progressive Disclosure moves forward (simple→complex); The Spiral revisits the same concept with deepening understanding. Combine by returning to your "simplest version" at each layer to show how understanding has evolved.
+- **+ Nested Loops:** Wrap each disclosure layer in a mini-narrative. The technical content still builds simple-to-complex, but each layer is told as a story rather than a tutorial step.
+- **+ Kishotenketsu:** Use Progressive Disclosure for layers 1-2 (Ki, Shō), then introduce the twist (Ten) as a recontextualization that makes earlier layers look different.
+- **+ The Petal:** Each "petal" can be a progressive disclosure sequence — multiple parallel paths from simple to complex, all supporting one central theme.
+
 ## When NOT to Use This
 
 If the post is telling a story rather than teaching a concept, Progressive Disclosure will feel like a tutorial when it should feel like a narrative. Also a poor fit for opinion pieces or comparisons where there's no clear simple-to-complex gradient.

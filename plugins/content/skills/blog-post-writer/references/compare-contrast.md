@@ -65,6 +65,13 @@ The strength of this framework is fairness. If the reader can tell which option 
 
 Tables work well for criterion-by-criterion summaries but should supplement prose, not replace it. The nuance lives in the paragraphs.
 
+## Combination Notes
+
+- **+ The Rashomon:** Instead of comparing options abstractly, present each option as a perspective from a different stakeholder (developer, ops, PM). The comparison becomes multi-dimensional.
+- **+ The Sparkline:** Alternate between "what is" (current option's reality) and "what could be" (alternative's promise) for emotional contrast within each criterion.
+- **+ Converging Ideas:** Start with seemingly unrelated threads (different projects, different problems) that converge on the same comparison — the reader discovers the trade-off rather than being told it.
+- **+ Story Circle:** When the comparison is really about your journey of choosing, use Story Circle as the wrapper with Compare & Contrast for the structured evaluation in the middle.
+
 ## When NOT to Use This
 
 If there aren't genuinely two or more valid options, this framework forces a false balance. Also a poor fit when the post is really about your personal journey of choosing — that's a Story Circle post that happens to involve a comparison, not a Compare & Contrast post.

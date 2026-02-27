@@ -54,26 +54,80 @@ Key characteristics (read the full reference for details and examples):
 
 Match the content to the best framework. Read the corresponding reference file before writing.
 
-| Framework | Reference | Best when... |
+**Quick-match shortcuts** (covers ~80% of posts):
+
+- Personal journey → **Story Circle** (`references/story-circle.md`)
+- Teaching a concept → **Progressive Disclosure** (`references/progressive-disclosure.md`)
+- Bug fix story → **PAS** (`references/problem-agitation-solution.md`)
+- Tool comparison → **Compare & Contrast** (`references/compare-contrast.md`)
+- Something broke → **Post-mortem** (`references/post-mortem.md`)
+- Technical decision → **SCQA** (`references/scqa.md`)
+- Contrarian take → **The Sparkline** (`references/the-sparkline.md`)
+- Absurd complexity → **Kafkaesque Labyrinth** (`references/kafkaesque-labyrinth.md`)
+
+**Category decision tree** (for the other 20%):
+
+- "I changed through this" → **Journey & Transformation**
+- "The structure IS the story" → **Structural Techniques**
+- "There's a surprise or tension" → **Tension & Contrast**
+- "Making a logical case" → **Analytical & Persuasive**
+- "Mood/feeling drives the piece" → **Atmospheric & Experimental**
+
+#### Journey & Transformation
+
+| Framework | Reference | One-liner |
 |---|---|---|
-| **Story Circle** | `references/story-circle.md` | There's a personal journey or transformation |
-| **SCQA** | `references/scqa.md` | Solving a technical problem analytically |
-| **Progressive Disclosure** | `references/progressive-disclosure.md` | Teaching a concept or introducing a tool |
-| **Compare & Contrast** | `references/compare-contrast.md` | Evaluating options or trade-offs |
-| **Post-mortem** | `references/post-mortem.md` | Recounting an incident, migration, or failure |
-| **PAS** | `references/problem-agitation-solution.md` | Short, punchy fix or optimization story |
+| Story Circle | `references/story-circle.md` | 8-step hero's journey for personal transformation arcs |
+| Three-Act | `references/three-act.md` | Classic setup/confrontation/resolution narrative spine |
+| Freytag's Pyramid | `references/freytags-pyramid.md` | 5-phase dramatic arc with explicit climax mapping |
+| The Metamorphosis | `references/the-metamorphosis.md` | Identity-level change — the author becomes someone different |
+| Existential Awakening | `references/existential-awakening.md` | Profound realization that shifts relationship to work |
 
-**How to choose:**
+#### Structural Techniques
 
-- Is there a personal journey? → **Story Circle**
-- Is the reader making a decision? → **Compare & Contrast**
-- Is the goal to teach? → **Progressive Disclosure**
-- Is it a bug fix or performance win? → **PAS** (short) or **SCQA** (detailed)
-- Did something go wrong? → **Post-mortem**
+| Framework | Reference | One-liner |
+|---|---|---|
+| In Medias Res | `references/in-medias-res.md` | Start in the middle of the action, backfill context |
+| Reverse Chronology | `references/reverse-chronology.md` | Tell it backwards — outcome first, origin last |
+| Nested Loops | `references/nested-loops.md` | Layer stories inside each other like Russian dolls |
+| The Spiral | `references/the-spiral.md` | Revisit the same concept with deeper understanding each pass |
+| The Petal | `references/the-petal.md` | Multiple stories radiating from a central theme |
 
-Not every post maps cleanly to one framework. Hybrid approaches are fine — use a framework as a starting structure, not a straitjacket.
+#### Tension & Contrast
 
-`voice-tone.md` and `post-template.md` are always loaded. Load only one framework reference in addition — do not preload all six.
+| Framework | Reference | One-liner |
+|---|---|---|
+| Kishōtenketsu | `references/kishotenketsu.md` | 4-act twist without conflict — recontextualize, don't confront |
+| The Sparkline | `references/the-sparkline.md` | Oscillate between "what is" and "what could be" |
+| The False Start | `references/the-false-start.md` | Begin with the wrong story, then restart with truth |
+| Converging Ideas | `references/converging-ideas.md` | Unrelated threads that connect to a single insight |
+| Catch-22 | `references/catch-22.md` | Paradox where the rules create an impossible situation |
+| The Rashomon | `references/the-rashomon.md` | Same event from multiple contradictory perspectives |
+
+#### Analytical & Persuasive
+
+| Framework | Reference | One-liner |
+|---|---|---|
+| SCQA | `references/scqa.md` | Situation-Complication-Question-Answer for logical problem-solving |
+| Progressive Disclosure | `references/progressive-disclosure.md` | Simple-to-complex layering for teaching concepts |
+| Compare & Contrast | `references/compare-contrast.md` | Structured evaluation of trade-offs between options |
+| PAS | `references/problem-agitation-solution.md` | Punchy problem→pain→fix for short optimization stories |
+| Post-mortem | `references/post-mortem.md` | Incident retrospective with timeline and lessons |
+| Socratic Path | `references/socratic-path.md` | Chain of questions leading to self-discovered conclusions |
+
+#### Atmospheric & Experimental
+
+| Framework | Reference | One-liner |
+|---|---|---|
+| Comedian's Set | `references/comedians-set.md` | Setup→punchline structure for myth-busting and reframes |
+| Kafkaesque Labyrinth | `references/kafkaesque-labyrinth.md` | Systemic absurdity where the villain is the system itself |
+| Sisyphean Arc | `references/sisyphean-arc.md` | Find meaning in repetitive work that never ends |
+| Stranger's Report | `references/strangers-report.md` | Fresh-eyes outsider perspective on normalized strangeness |
+| The Waiting | `references/the-waiting.md` | Something promised that never arrives — meaning from anticipation |
+
+Not every post maps cleanly to one framework. Hybrid approaches are fine — each framework's reference includes Combination Notes for pairing. Use a framework as a starting structure, not a straitjacket.
+
+`voice-tone.md` and `post-template.md` are always loaded. Load only one framework reference in addition — do not preload all twenty-seven.
 
 ### 4. Outline the Post
 
@@ -213,14 +267,44 @@ You're not being replaced; you're being amplified.
 - `references/post-template.md` - Output format template with frontmatter schema and structural skeleton.
 - `references/ai-slop-checklist.md` - AI writing tells to scan for during review. Adapted from Wikipedia's field guide.
 
-**Narrative frameworks** (read the one that matches the content):
+**Narrative frameworks** (read the one that matches the content — do not preload all twenty-seven):
 
-- `references/story-circle.md` - Journey/transformation narrative
-- `references/scqa.md` - Situation-Complication-Question-Answer for analytical problem-solving posts
+Journey & Transformation:
+- `references/story-circle.md` - 8-step hero's journey for personal transformation arcs
+- `references/three-act.md` - Classic setup/confrontation/resolution narrative spine
+- `references/freytags-pyramid.md` - 5-phase dramatic arc with explicit climax mapping
+- `references/the-metamorphosis.md` - Identity-level change — the author becomes someone different
+- `references/existential-awakening.md` - Profound realization that shifts relationship to work
+
+Structural Techniques:
+- `references/in-medias-res.md` - Start in the middle of the action, backfill context
+- `references/reverse-chronology.md` - Tell it backwards — outcome first, origin last
+- `references/nested-loops.md` - Layer stories inside each other like Russian dolls
+- `references/the-spiral.md` - Revisit the same concept with deeper understanding each pass
+- `references/the-petal.md` - Multiple stories radiating from a central theme
+
+Tension & Contrast:
+- `references/kishotenketsu.md` - 4-act twist without conflict — recontextualize, don't confront
+- `references/the-sparkline.md` - Oscillate between "what is" and "what could be"
+- `references/the-false-start.md` - Begin with the wrong story, then restart with truth
+- `references/converging-ideas.md` - Unrelated threads that connect to a single insight
+- `references/catch-22.md` - Paradox where the rules create an impossible situation
+- `references/the-rashomon.md` - Same event from multiple contradictory perspectives
+
+Analytical & Persuasive:
+- `references/scqa.md` - Situation-Complication-Question-Answer for logical problem-solving
 - `references/progressive-disclosure.md` - Simple-to-complex layering for teaching concepts
 - `references/compare-contrast.md` - Structured evaluation of trade-offs between options
-- `references/post-mortem.md` - Incident/migration retrospective with timeline and lessons
-- `references/problem-agitation-solution.md` - Punchy three-act structure for fix/optimization stories
+- `references/problem-agitation-solution.md` - Punchy problem→pain→fix for short optimization stories
+- `references/post-mortem.md` - Incident retrospective with timeline and lessons
+- `references/socratic-path.md` - Chain of questions leading to self-discovered conclusions
+
+Atmospheric & Experimental:
+- `references/comedians-set.md` - Setup→punchline structure for myth-busting and reframes
+- `references/kafkaesque-labyrinth.md` - Systemic absurdity where the villain is the system itself
+- `references/sisyphean-arc.md` - Find meaning in repetitive work that never ends
+- `references/strangers-report.md` - Fresh-eyes outsider perspective on normalized strangeness
+- `references/the-waiting.md` - Something promised that never arrives — meaning from anticipation
 
 ## Workflow Example
 

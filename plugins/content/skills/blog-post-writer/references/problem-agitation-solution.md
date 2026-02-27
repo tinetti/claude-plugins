@@ -52,6 +52,13 @@ The Agitation step is the engine. Without it, the post is just "problem, here's 
 
 Don't fake the agitation. If the problem was easy to diagnose, don't pretend it was a nightmare. Readers can tell.
 
+## Combination Notes
+
+- **+ The Sparkline:** PAS is a single oscillation (problem→pain→fix); Sparkline adds multiple oscillations. Use when you want to show several rounds of "this hurts / imagine if it didn't" before delivering the solution.
+- **+ Three-Act:** PAS is essentially a compressed three-act structure. Expand into full three-act when the agitation phase needs more room — multiple complications, failed attempts, deeper context.
+- **+ Comedians Set:** The agitation phase is a natural fit for comedic build — stack the absurdity of the problem until the fix lands like a punchline.
+- **+ Kafkaesque Labyrinth:** When the "problem" is systemic complexity, the agitation phase becomes a labyrinth walkthrough. PAS gives the structure; Kafkaesque gives the tone.
+
 ## When NOT to Use This
 
 If the solution requires extensive context or setup, PAS will feel rushed — use SCQA instead. Also a poor fit for posts where the journey is the point, not the destination.
