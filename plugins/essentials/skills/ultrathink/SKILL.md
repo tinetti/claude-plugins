@@ -1,5 +1,6 @@
 ---
 description: Engage deep thinking mode - question assumptions, plan meticulously, craft elegant solutions, and iterate relentlessly toward excellence
+disable-model-invocation: true
 ---
 
 **ultrathink** - Take a deep breath. We're not here to write code. We're here to make a dent in the universe.

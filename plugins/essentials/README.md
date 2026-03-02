@@ -177,9 +177,9 @@ You: "Run a security audit on src/api/"
 Claude: *security-auditor agent performs 6-phase analysis, reports critical findings*
 ```
 
-### Commands
+### Skills
 
-#### `/ultrathink` - Deep Thinking Mode
+#### `/essentials:ultrathink` - Deep Thinking Mode
 
 Engage deep thinking mode for complex problems that require excellence-driven problem-solving.
 
@@ -205,10 +205,10 @@ Inspired by Steve Jobs' approach to product development - question every assumpt
 **Example:**
 
 ```bash
-/ultrathink Design a plugin system for this application
+/essentials:ultrathink Design a plugin system for this application
 ```
 
-#### `/init-ultrathink` - Initialize CLAUDE.md
+#### `/essentials:init-ultrathink` - Initialize CLAUDE.md
 
 Create a comprehensive CLAUDE.md file by analyzing your repository with multiple specialized agents.
 
@@ -234,7 +234,7 @@ Create a comprehensive CLAUDE.md file by analyzing your repository with multiple
 **Example:**
 
 ```bash
-/init-ultrathink This is a Next.js e-commerce application
+/essentials:init-ultrathink This is a Next.js e-commerce application
 ```
 
 The command orchestrates five specialized agents:
@@ -245,7 +245,7 @@ The command orchestrates five specialized agents:
 4. **Testing Agent** - Test patterns and quality gates
 5. **Git History Analyst** - Evolution, decisions, common issues
 
-#### `/de-slopify` - Remove AI Code Slop
+#### `/essentials:de-slopify` - Remove AI Code Slop
 
 Remove AI-generated code slop from your current branch by comparing against a base branch.
 
@@ -265,10 +265,10 @@ Remove AI-generated code slop from your current branch by comparing against a ba
 **Example:**
 
 ```bash
-/de-slopify main
+/essentials:de-slopify main
 ```
 
-#### `/pr` - Create Pull Request
+#### `/essentials:pr` - Create Pull Request
 
 Create a pull request with a structured template.
 
@@ -299,12 +299,10 @@ Create a pull request with a structured template.
 **Example:**
 
 ```bash
-/pr
+/essentials:pr
 ```
 
-### Skills
-
-#### `/final-review` - Comprehensive PR Review & Testing
+#### `/essentials:final-review` - Comprehensive PR Review & Testing
 
 Multi-agent PR review that catches consistency issues, code smells, and defensive code problems before merge.
 
@@ -342,7 +340,7 @@ For best results, define in your project's CLAUDE.md:
 **Example:**
 
 ```bash
-/final-review
+/essentials:final-review
 ```
 
 **Output includes:**
@@ -393,14 +391,14 @@ Claude: *context-manager compresses and organizes project context*
 ### Deep Problem Solving
 
 ```
-You: "/ultrathink How should we architect this microservices system?"
+You: "/essentials:ultrathink How should we architect this microservices system?"
 Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution*
 ```
 
 ### Initialize Project Documentation
 
 ```
-You: "/init-ultrathink"
+You: "/essentials:init-ultrathink"
 Claude: *orchestrates multiple agents to analyze repo and generate comprehensive CLAUDE.md*
 ```
 
@@ -425,16 +423,17 @@ model: sonnet
 Agent prompt and instructions...
 ```
 
-### Command Configuration
+### Skill Configuration
 
-Commands are slash commands defined in markdown:
+Skills are defined as `SKILL.md` files in named directories under `skills/`:
 
 ```markdown
 ---
-description: Command description
+description: Skill description
+disable-model-invocation: true
 ---
 
-Command prompt and instructions...
+Skill prompt and instructions...
 ```
 
 ### File Structure

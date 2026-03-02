@@ -1,6 +1,6 @@
 ---
 description: Remove code slop from the current branch
-argument-hint: '[branch]'
+disable-model-invocation: true
 ---
 
 # Remove AI code slop
