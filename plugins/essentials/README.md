@@ -179,6 +179,27 @@ Claude: *security-auditor agent performs 6-phase analysis, reports critical find
 
 ### Skills
 
+#### `/essentials:link-reader` - Read Blocked URLs
+
+Read content from URLs that block direct web fetching (Twitter/X, Reddit) by routing through proxy APIs.
+
+**Auto-triggers** when you share a `twitter.com`, `x.com`, or `reddit.com` URL.
+
+**Supported platforms:**
+
+- **Twitter/X** — Tweets, threads, articles (long-form posts), media
+- **Reddit** — Posts with top comments
+
+**Examples:**
+
+```
+You: "Read this tweet https://x.com/someone/status/123456"
+Claude: *fetches via proxy, formats tweet with engagement stats*
+
+You: "https://reddit.com/r/programming/comments/abc123/cool_post"
+Claude: *fetches post and top 5 comments*
+```
+
 #### `/essentials:ultrathink` - Deep Thinking Mode
 
 Engage deep thinking mode for complex problems that require excellence-driven problem-solving.
@@ -367,6 +388,13 @@ Then install the essentials plugin:
 
 ## Usage Examples
 
+### Read Tweets and Reddit Posts
+
+```
+You: "Check out this tweet https://x.com/ryancarson/status/2034019206908547568"
+Claude: *fetches and formats the tweet content with engagement stats*
+```
+
 ### Research Documentation
 
 ```
@@ -404,7 +432,7 @@ Claude: *orchestrates multiple agents to analyze repo and generate comprehensive
 
 ## Keywords
 
-`git`, `commit`, `research`, `documentation`, `context-management`, `ultrathink`, `workflow`, `agents`, `initialization`, `best-practices`
+`git`, `commit`, `research`, `documentation`, `context-management`, `ultrathink`, `workflow`, `agents`, `initialization`, `best-practices`, `link-reader`, `twitter`, `reddit`
 
 ## Technical Details
 
