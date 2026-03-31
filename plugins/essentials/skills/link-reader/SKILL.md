@@ -1,6 +1,6 @@
 ---
 name: link-reader
-description: Read content from URLs that block direct access. Auto-triggers when the user provides a twitter.com, x.com, or reddit.com URL, or asks to read a tweet, post, article, or thread from Twitter/X or Reddit. Handles tweets, Twitter/X Articles (long-form posts), and Reddit posts/comments.
+description: Fetch tweets, Twitter/X articles, and Reddit posts via proxy APIs. Use when the user provides a twitter.com, x.com, or reddit.com URL, or asks to read a tweet, post, article, or thread from Twitter/X or Reddit.
 ---
 
 # Link Reader
