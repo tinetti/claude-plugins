@@ -52,7 +52,7 @@ if (values["input-image"]) {
 contents.push({ text: values.prompt });
 
 const response = await ai.models.generateContent({
-  model: "gemini-3-pro-image-preview",
+  model: "nano-banana-pro-preview",
   contents,
   config: {
     responseModalities: ["image", "text"],
