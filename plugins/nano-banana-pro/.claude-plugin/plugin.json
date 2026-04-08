@@ -1,0 +1,16 @@
+{
+  "name": "nano-banana-pro",
+  "version": "0.1.1",
+  "description": "Generate or edit images via Google Gemini API with support for 1K/2K/4K resolution",
+  "author": {
+    "name": "Zack Proser",
+    "url": "https://github.com/zackproser/nano-banana-pro"
+  },
+  "keywords": [
+    "image-generation",
+    "gemini",
+    "ai-images",
+    "diagrams",
+    "illustrations"
+  ]
+}
