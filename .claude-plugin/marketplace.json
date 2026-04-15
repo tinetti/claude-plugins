@@ -91,7 +91,10 @@
         "de-slopify",
         "link-reader",
         "twitter",
-        "reddit"
+        "reddit",
+        "codebase-cleanup",
+        "cleanup",
+        "code-quality"
       ]
     },
     {

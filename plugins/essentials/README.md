@@ -4,7 +4,7 @@ Essential agents, commands, and tools for enhanced Claude Code workflows.
 
 ## Overview
 
-The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, running comprehensive reviews, and auditing code for security vulnerabilities.
+The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, running comprehensive reviews, auditing code for security vulnerabilities, and running repo-wide quality sweeps.
 
 ## What's Included
 
@@ -182,6 +182,45 @@ Remove AI-generated code slop from your current branch by comparing against a ba
 /essentials:de-slopify main
 ```
 
+#### `/essentials:codebase-cleanup` - Full Codebase Quality Sweep
+
+Dispatch eight subagents to deep-clean an entire codebase across multiple quality axes. This is the repo-wide nuclear option — not for single files or branch diffs (use `de-slopify` for that).
+
+**When to use:**
+
+- Repo-wide quality audits before a major release
+- Comprehensive cleanup of an inherited or AI-generated codebase
+- "Deep clean the whole repo" requests
+
+**Do not use for:**
+
+- Single-file fixes — use `code-simplifier` agent
+- Branch-scoped diffs — use `de-slopify`
+- Targeted refactors
+
+**Eight subagents, two phases:**
+
+Phase 1 (parallel): deduplication, type consolidation, weak type elimination, defensive code pruning, deprecated/legacy removal, AI slop removal.
+
+Phase 2 (after Phase 1 commits): dead code removal via `knip`, circular dependency resolution via `madge`.
+
+**Safety rails:**
+
+- Creates a `cleanup/<date>` branch before starting
+- Verifies tests pass before dispatch — aborts if already broken
+- Per-subagent commits with test-suite run after each
+- Auto-reverts any subagent whose changes break tests
+- `disable-model-invocation: true` — requires explicit user intent
+
+**Output:** Per-subagent file/line counts, reverted subagents with test failures, and low-confidence findings flagged for human review.
+
+**Example:**
+
+```
+You: "Run a full codebase audit on this repo"
+Claude: *dispatches Phase 1 subagents in parallel, commits and tests each, then Phase 2*
+```
+
 #### `/essentials:pr` - Create Pull Request
 
 Create a pull request with a structured template.
@@ -265,6 +304,32 @@ For best results, define in your project's CLAUDE.md:
 - Test coverage summary
 - Recommendation on whether another pass is needed
 
+#### `/essentials:security-audit` - Dispatch Security Auditor
+
+Explicit entry point for the security-auditor agent. User-invocable only — does not auto-trigger, so ambiguous phrasing won't kick it off unintentionally.
+
+**When to use:**
+
+- You want a deep vulnerability audit of the current branch diff
+- Pre-merge or pre-release hardening pass
+- You explicitly want THIS plugin's auditor rather than the built-in `/security-review`
+
+**What it does:**
+
+1. Pre-gathers branch context (`git diff --stat`, commit list, PR metadata via `gh pr view` if open)
+2. Dispatches the `security-auditor` agent with that context pre-loaded
+3. Returns the agent's Phase 6 output verbatim — confirmed critical/high findings with exploit flows
+
+**Why a skill wrapper on top of the agent:**
+
+The agent auto-triggers on phrases like "do a security audit." The skill is the opposite — an explicit, user-only trigger for when you want to be certain the audit runs, with scope already assembled. Thin wrapper; all methodology stays in the agent.
+
+**Example:**
+
+```bash
+/essentials:security-audit
+```
+
 ## Installation
 
 Add this marketplace to Claude Code:
@@ -304,7 +369,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `security`, `audit`, `vulnerability`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`
 
 ## Technical Details
 
