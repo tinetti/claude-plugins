@@ -1,7 +1,7 @@
 {
   "name": "essentials",
   "version": "0.9.1",
-  "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, research, context management.",
+  "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and comprehensive reviews.",
   "author": {
     "name": "Nick Nisi",
     "email": "nick@nisi.org"
@@ -9,14 +9,16 @@
   "keywords": [
     "git",
     "commit",
-    "research",
-    "documentation",
-    "context-management",
     "ultrathink",
     "workflow",
     "agents",
-    "initialization",
     "best-practices",
-    "security"
+    "security",
+    "audit",
+    "vulnerability",
+    "code-review",
+    "pr",
+    "simplify",
+    "link-reader"
   ]
 }
