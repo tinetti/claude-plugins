@@ -9,16 +9,18 @@
   "keywords": [
     "git",
     "commit",
+    "semantic-commit",
     "ultrathink",
-    "workflow",
-    "agents",
-    "best-practices",
     "security",
     "audit",
     "vulnerability",
     "code-review",
     "pr",
     "simplify",
-    "link-reader"
+    "refactor",
+    "de-slopify",
+    "link-reader",
+    "twitter",
+    "reddit"
   ]
 }
