@@ -4,7 +4,7 @@ Essential agents, commands, and tools for enhanced Claude Code workflows.
 
 ## Overview
 
-The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, and running comprehensive reviews.
+The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, running comprehensive reviews, and auditing code for security vulnerabilities.
 
 ## What's Included
 
@@ -78,6 +78,33 @@ Refactor code to improve readability, reduce complexity, and enhance maintainabi
 ```
 You: "This function is hard to read, can you simplify it?"
 Claude: *code-simplifier agent refactors while preserving behavior*
+```
+
+#### 🔒 Security Auditor Agent
+
+Deep vulnerability audits using invariant-binding analysis across trust boundaries. Runs in an isolated subagent context so the multi-phase methodology stays out of your main conversation and unbiased by prior discussion.
+
+**When to use:**
+
+- Explicit security audit requests (e.g., "audit this for IDOR")
+- Pre-release vulnerability assessment
+- Targeted review of specific vulnerability classes (auth bypass, injection, access control)
+- NOT for general code review — only dedicated security analysis
+
+**Features:**
+
+- Six-phase methodology: context building → threat model → hypotheses → testing → validation → output
+- Invariant-binding analysis across bindings like credential ↔ tenant ↔ actor ↔ resource ↔ action ↔ time
+- Detection heuristics for auth/authz, IDOR, injection, trust boundaries, race conditions
+- High severity bar — reports only confirmed critical/high findings with exploit flows
+- Can spawn sub-subagents for unbiased validation
+- Targets the branch diff by default (`git diff main...HEAD`) or a scope you pass in
+
+**Example:**
+
+```
+You: "Run a security audit on the billing API changes"
+Claude: *security-auditor agent runs multi-phase audit, returns exploit flows for any confirmed findings*
 ```
 
 ### Skills
@@ -277,7 +304,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `security`, `audit`, `vulnerability`
 
 ## Technical Details
 
