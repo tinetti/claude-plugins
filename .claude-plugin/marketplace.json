@@ -70,7 +70,7 @@
     {
       "name": "essentials",
       "source": "./plugins/essentials",
-      "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and comprehensive reviews.",
+      "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and codebase cleanup.",
       "version": "0.10.0",
       "author": {
         "name": "Nick Nisi",
@@ -116,6 +116,27 @@
       ]
     },
     {
+      "name": "image-gen",
+      "source": "./plugins/image-gen",
+      "description": "Generate or edit images via Google Gemini (nano-banana-pro) or OpenAI gpt-image-2. Supports 1K/2K/4K resolution and masked inpainting.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "image-generation",
+        "gemini",
+        "nano-banana-pro",
+        "openai",
+        "gpt-image-2",
+        "ai-images",
+        "diagrams",
+        "illustrations",
+        "inpainting"
+      ]
+    },
+    {
       "name": "meta",
       "source": "./plugins/meta",
       "description": "Meta-cognitive tools for Claude Code self-improvement. Learn from feedback, optimize configuration, and evolve your AI development workflow.",
@@ -133,23 +154,6 @@
         "skills",
         "optimization",
         "workflow"
-      ]
-    },
-    {
-      "name": "nano-banana-pro",
-      "source": "./plugins/nano-banana-pro",
-      "description": "Generate or edit images via Google Gemini API with support for 1K/2K/4K resolution",
-      "version": "0.1.2",
-      "author": {
-        "name": "Zack Proser",
-        "url": "https://github.com/zackproser/nano-banana-pro"
-      },
-      "keywords": [
-        "image-generation",
-        "gemini",
-        "ai-images",
-        "diagrams",
-        "illustrations"
       ]
     },
     {
