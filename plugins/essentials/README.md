@@ -4,7 +4,7 @@ Essential agents, commands, and tools for enhanced Claude Code workflows.
 
 ## Overview
 
-The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, running comprehensive reviews, auditing code for security vulnerabilities, and running repo-wide quality sweeps.
+The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, auditing code for security vulnerabilities, and running repo-wide quality sweeps.
 
 ## What's Included
 
@@ -254,55 +254,6 @@ Create a pull request with a structured template.
 ```bash
 /essentials:pr
 ```
-
-#### `/essentials:final-review` - Comprehensive PR Review & Testing
-
-Multi-agent PR review that catches consistency issues, code smells, and defensive code problems before merge.
-
-**When to use:**
-
-- Before merging any PR
-- After completing a feature branch
-- When you want thorough automated review
-
-**What it does:**
-
-1. **Determines review pass** - Checks git history to see if this is a follow-up review
-2. **Creates/updates PR** - Ensures changes are on a feature branch with a PR
-3. **Launches 3 parallel review agents:**
-   - **Codebase Consistency Reviewer** - Finds duplication, checks for similar patterns that need the same fix
-   - **SOLID & Clean Code Reviewer** - Uncle Bob's principles, method decomposition, abstraction levels
-   - **Defensive Code Auditor** - Catches error swallowing, silent fallbacks, debugging-hostile patterns
-4. **Reconciles recommendations** - Applies most suggestions, handles conflicts intelligently
-5. **Runs comprehensive tests** - Auto-detects stack, runs lint/typecheck/unit/integration tests
-6. **Pushes and summarizes** - Documents what was applied, skipped, and tested
-
-**Stack detection:**
-
-Automatically detects your project stack from manifest files (`package.json`, `Gemfile`, `pyproject.toml`, `go.mod`, `Cargo.toml`, etc.) and runs appropriate tooling.
-
-**CLAUDE.md integration:**
-
-For best results, define in your project's CLAUDE.md:
-
-- Test commands (`npm test`, `pytest`, etc.)
-- Lint/typecheck commands
-- Test credentials (for integration tests)
-- Dev server URL/port (for browser testing)
-
-**Example:**
-
-```bash
-/essentials:final-review
-```
-
-**Output includes:**
-
-- Review pass number (tracks iterative reviews)
-- Changes applied from each agent
-- Recommendations skipped with reasoning
-- Test coverage summary
-- Recommendation on whether another pass is needed
 
 #### `/essentials:security-audit` - Dispatch Security Auditor
 
