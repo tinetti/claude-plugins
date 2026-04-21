@@ -6,10 +6,15 @@ Adapted from [zackproser/nano-banana-pro](https://github.com/zackproser/nano-ban
 
 ## Setup
 
-1. Install marketplace dependencies:
+Plugin users only need Node — the skill ships a pre-bundled JS file with deps inlined.
+
+For marketplace maintainers building locally:
+
+1. Install workspace dependencies and build:
 
    ```bash
    pnpm install
+   pnpm run build
    ```
 
 2. Set at least one provider key:
@@ -26,7 +31,7 @@ Trigger the skill by asking Claude Code to "generate image", "create diagram", "
 ### Generate
 
 ```bash
-tsx plugins/image-gen/skills/image-gen/scripts/generate_image.ts \
+node plugins/image-gen/skills/image-gen/dist/generate_image.js \
   --prompt "a cat wearing a space helmet" \
   --filename "space-cat.png" \
   --provider openai \
@@ -37,7 +42,7 @@ tsx plugins/image-gen/skills/image-gen/scripts/generate_image.ts \
 ### Edit
 
 ```bash
-tsx plugins/image-gen/skills/image-gen/scripts/generate_image.ts \
+node plugins/image-gen/skills/image-gen/dist/generate_image.js \
   --prompt "make the background blue" \
   --filename "edited.png" \
   --input-image "original.png"
@@ -46,7 +51,7 @@ tsx plugins/image-gen/skills/image-gen/scripts/generate_image.ts \
 ### Inpainting (OpenAI)
 
 ```bash
-tsx plugins/image-gen/skills/image-gen/scripts/generate_image.ts \
+node plugins/image-gen/skills/image-gen/dist/generate_image.js \
   --prompt "replace the sky with aurora" \
   --filename "inpainted.png" \
   --input-image "photo.png" \

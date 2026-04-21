@@ -14,18 +14,18 @@ Multi-provider image generation. Default provider is Gemini (nano-banana-pro); p
 
 ## Usage
 
-Run the script using tsx (do NOT cd to the skill directory):
+The skill ships a pre-bundled Node script — no tsx or dependency install required on the user side. Invoke with `node`:
 
 **Generate:**
 ```
-tsx ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/scripts/generate_image.ts \
+node ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/dist/generate_image.js \
   --prompt "your description" --filename "output.png" \
   [--provider gemini|openai] [--resolution 1K|2K|4K] [--size WxH] [--quality low|medium|high|auto] [--api-key KEY]
 ```
 
 **Edit (image-to-image):**
 ```
-tsx ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/scripts/generate_image.ts \
+node ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/dist/generate_image.js \
   --prompt "editing instructions" --filename "output.png" \
   --input-image "path/to/input.png" [--mask "path/to/mask.png"]
 ```

@@ -1,2 +1,3 @@
 packages:
   - 'plugins/*/mcp-server'
+  - 'plugins/*/skills/*'

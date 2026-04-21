@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "sync": "tsx scripts/sync-marketplace.ts",
-    "build": "pnpm -r --filter './plugins/**/mcp-server' run bundle",
+    "build": "pnpm -r --if-present run bundle",
     "typecheck": "tsc --build",
     "format": "prettier --write ."
   },
@@ -15,9 +15,5 @@
     "prettier": "^3.6.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@google/genai": "^1.48.0",
-    "openai": "^6.34.0"
   }
 }
