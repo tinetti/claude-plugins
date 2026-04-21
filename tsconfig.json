@@ -15,6 +15,6 @@
   "files": [],
   "references": [
     { "path": "./scripts" },
-    { "path": "./plugins/gpt5-consultant/mcp-server" }
+    { "path": "./plugins/consultant/mcp-server" }
   ]
 }
