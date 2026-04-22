@@ -25,26 +25,75 @@ const { values } = parseArgs({
   options: {
     prompt: { type: "string" },
     filename: { type: "string" },
-    "input-image": { type: "string" },
+    "input-image": { type: "string", multiple: true },
     mask: { type: "string" },
     resolution: { type: "string", default: "1K" },
     size: { type: "string" },
     quality: { type: "string" },
     provider: { type: "string" },
     "api-key": { type: "string" },
+    help: { type: "boolean", short: "h" },
   },
   strict: true,
 });
 
+const HELP = `Usage: generate_image.js --prompt <text> --filename <path> [options]
+
+Generate or edit images via Google Gemini (nano-banana-pro) or OpenAI (gpt-image-2).
+
+Required:
+  --prompt <text>         Prompt describing the image to generate or edit.
+  --filename <path>       Output PNG path.
+
+Provider & auth:
+  --provider <name>       gemini | openai. Default: gemini, unless only
+                          OPENAI_API_KEY is set (then openai).
+  --api-key <key>         API key for the selected provider. Overrides env.
+
+Resolution / size:
+  --resolution <size>     1K | 2K | 4K (default: 1K).
+                          Gemini: 1024 / 2048 / 4096.
+                          OpenAI: 1024x1024 / 2048x2048 / 3840x2160.
+  --size <WxH>            OpenAI only. Overrides --resolution. Max edge 3840;
+                          both edges must be multiples of 16.
+
+Quality (OpenAI only):
+  --quality <level>       low | medium | high | auto (default: auto).
+                          Ignored on Gemini with a warning.
+
+Editing:
+  --input-image <path>    Switch to edit mode using this image as input.
+                          Repeatable on Gemini for multi-image composition
+                          (e.g., combine subjects from multiple photos).
+                          OpenAI accepts only one.
+  --mask <path>           OpenAI only. Inpainting mask. Requires --input-image.
+
+Other:
+  -h, --help              Show this help.
+
+Env vars:
+  GEMINI_API_KEY, GOOGLE_API_KEY    Gemini provider.
+  OPENAI_API_KEY                    OpenAI provider.
+
+Examples:
+  node generate_image.js --prompt "sunset over mountains" --filename out.png
+  node generate_image.js --prompt "add aurora" --filename out.png \\
+      --input-image photo.png --provider openai --resolution 2K
+  node generate_image.js --prompt "replace sky" --filename out.png \\
+      --input-image photo.png --mask mask.png --provider openai`;
+
+if (values.help) {
+  console.log(HELP);
+  process.exit(0);
+}
+
 function die(msg: string): never {
-  console.error(`Error: ${msg}`);
+  console.error(`Error: ${msg}\n\nRun with --help for the full flag reference.`);
   process.exit(1);
 }
 
 if (!values.prompt || !values.filename) {
-  die(
-    "Usage: generate_image.ts --prompt <text> --filename <output.png> [--provider gemini|openai] [--input-image <path>] [--mask <path>] [--resolution 1K|2K|4K] [--size WxH] [--quality low|medium|high|auto] [--api-key <key>]",
-  );
+  die("--prompt and --filename are required.");
 }
 
 const resolution = values.resolution as Resolution;
@@ -55,11 +104,18 @@ if (!(resolution in GEMINI_RESOLUTION_MAP)) {
 const provider = resolveProvider(values.provider, values["api-key"]);
 const apiKey = resolveApiKey(provider, values["api-key"]);
 
+const inputImages = values["input-image"] ?? [];
+
 if (values.mask && provider !== "openai") {
   die("--mask is only supported with --provider openai.");
 }
-if (values.mask && !values["input-image"]) {
+if (values.mask && inputImages.length === 0) {
   die("--mask requires --input-image.");
+}
+if (provider === "openai" && inputImages.length > 1) {
+  die(
+    "OpenAI's edit endpoint accepts only one input image. Use --provider gemini for multi-image composition.",
+  );
 }
 if (values.quality && provider !== "openai") {
   console.warn("Warning: --quality is ignored for Gemini.");
@@ -76,7 +132,7 @@ const imageBase64 =
     ? await runOpenAI({
         apiKey,
         prompt: values.prompt,
-        inputImage: values["input-image"],
+        inputImage: inputImages[0],
         mask: values.mask,
         size: values.size ?? OPENAI_RESOLUTION_MAP[resolution],
         quality: (values.quality as Quality | undefined) ?? "auto",
@@ -84,7 +140,7 @@ const imageBase64 =
     : await runGemini({
         apiKey,
         prompt: values.prompt,
-        inputImage: values["input-image"],
+        inputImages,
       });
 
 await writeFile(outPath, Buffer.from(imageBase64, "base64"));
@@ -120,15 +176,15 @@ function resolveApiKey(p: Provider, flag: string | undefined): string {
 async function runGemini(args: {
   apiKey: string;
   prompt: string;
-  inputImage?: string;
+  inputImages: string[];
 }): Promise<string> {
   const ai = new GoogleGenAI({ apiKey: args.apiKey });
   const contents: Array<
     { inlineData: { mimeType: string; data: string } } | { text: string }
   > = [];
 
-  if (args.inputImage) {
-    const imageData = await readFile(args.inputImage);
+  for (const path of args.inputImages) {
+    const imageData = await readFile(path);
     contents.push({
       inlineData: {
         mimeType: "image/png",

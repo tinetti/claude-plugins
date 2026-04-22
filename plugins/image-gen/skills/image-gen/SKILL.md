@@ -14,9 +14,10 @@ Multi-provider image generation. Default provider is Gemini (nano-banana-pro); p
 
 ## Usage
 
-The skill ships a pre-bundled Node script — no tsx or dependency install required on the user side. Invoke with `node`:
+The skill ships a pre-bundled Node script — no tsx or dependency install required on the user side. Invoke with `node`. Run `node ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/dist/generate_image.js --help` at any time for the full flag reference printed by the script itself.
 
 **Generate:**
+
 ```
 node ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/dist/generate_image.js \
   --prompt "your description" --filename "output.png" \
@@ -24,11 +25,26 @@ node ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/dist/generate_image.js \
 ```
 
 **Edit (image-to-image):**
-```
 node ${CLAUDE_PLUGIN_ROOT}/skills/image-gen/dist/generate_image.js \
-  --prompt "editing instructions" --filename "output.png" \
-  --input-image "path/to/input.png" [--mask "path/to/mask.png"]
+ --prompt "editing instructions" --filename "output.png" \
+ --input-image "path/to/input.png" [--mask "path/to/mask.png"]
+
 ```
+
+## Flag reference
+
+| Flag | Values | Notes |
+|------|--------|-------|
+| `--prompt` | text | Required. |
+| `--filename` | path | Required. Output PNG. |
+| `--provider` | `gemini` \| `openai` | Default: `gemini` (or `openai` if only `OPENAI_API_KEY` is set). |
+| `--resolution` | `1K` \| `2K` \| `4K` | Default `1K`. `4K` clamps to `3840x2160` on OpenAI. |
+| `--size` | `WxH` | OpenAI only. Overrides `--resolution`. Max edge 3840, multiples of 16. |
+| `--quality` | `low` \| `medium` \| `high` \| `auto` | OpenAI only. Default `auto`. Ignored on Gemini. |
+| `--input-image` | path | Switches to edit mode. Repeatable on Gemini for multi-image composition; OpenAI accepts only one. |
+| `--mask` | path | OpenAI only. Inpainting mask. Requires `--input-image`. |
+| `--api-key` | key | Overrides env for selected provider. |
+| `-h`, `--help` | — | Print CLI help and exit. |
 
 ## Resolution
 
@@ -54,6 +70,8 @@ Resolution order:
    - OpenAI: `OPENAI_API_KEY`
 
 ## Filename convention
+
+```
 
 `YYYY-MM-DD-HH-MM-SS-descriptive-name.png`
 
