@@ -172,6 +172,27 @@
       ]
     },
     {
+      "name": "sidequest",
+      "source": "./plugins/sidequest",
+      "description": "Park tangents as side quests with full resurrection context — writes a handoff doc to the Obsidian vault and creates a linked OmniFocus task",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nick Nisi",
+        "email": "nick@nisi.org"
+      },
+      "keywords": [
+        "sidequest",
+        "tangent",
+        "capture",
+        "resurrect",
+        "obsidian",
+        "omnifocus",
+        "context",
+        "productivity",
+        "parking-lot"
+      ]
+    },
+    {
       "name": "spec-driven",
       "source": "./plugins/spec-driven",
       "description": "Transform specifications into executable code with automated analysis, validation checkpoints, and incremental delivery",

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "omnifocus-enhanced": {
+      "command": "npx",
+      "args": ["-y", "omnifocus-mcp-enhanced"]
+    }
+  }
+}
