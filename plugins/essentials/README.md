@@ -255,6 +255,41 @@ Create a pull request with a structured template.
 /essentials:pr
 ```
 
+#### `/essentials:squad-review` - Parallel Multi-Reviewer Code Review
+
+Dispatch six independent reviewers in parallel — **Security, Correctness, Conventions, Test Coverage, Architecture, Project Alignment** — and merge their findings into one categorized markdown report. A local sibling to the paid `/ultrareview`.
+
+**When to use:**
+
+- Pre-PR review of your branch diff
+- Pre-merge gut-check across multiple quality axes at once
+- You want more than one specialist looking at the change
+
+**Scope detection:**
+
+1. Feature branch with commits vs `main` → reviews `git diff main...HEAD`
+2. On `main` (or default branch) with uncommitted work → prompts you to pick tracked / untracked / both
+3. Nothing pending → responds `No changes to review.`
+
+**What each reviewer does:**
+
+- **Security** — invariant-binding analysis, critical/high only, exploit flow required
+- **Correctness** — real bugs, silent failure hunt; no style comments
+- **Conventions** — must cite a CLAUDE.md rule or 3+ in-repo examples per finding
+- **Test Coverage** — mutation-testing stance ("would the test fail if the impl regressed?")
+- **Architecture** — shape only (layering, coupling, types, blast radius)
+- **Project Alignment** — duplication / near-reimplementation hunt with file:line prior-art citations
+
+**Why a skill instead of a single agent:**
+
+Six specialists in parallel cover more ground than one generalist, and an agent can't inline-override another named agent's prompt. `disable-model-invocation: true` — explicit invocation only.
+
+**Example:**
+
+```bash
+/essentials:squad-review
+```
+
 #### `/essentials:security-audit` - Dispatch Security Auditor
 
 Explicit entry point for the security-auditor agent. User-invocable only — does not auto-trigger, so ambiguous phrasing won't kick it off unintentionally.
@@ -320,7 +355,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`
 
 ## Technical Details
 
