@@ -30,8 +30,32 @@ The skill will:
 
 - `voice-tone.md` - Writing style guide
 - `post-template.md` - Astro frontmatter schema and output format
-- `ai-slop-checklist.md` - AI writing tells checklist (with live Wikipedia sync)
 - 27 narrative framework references (loaded selectively, auto-selected based on content)
+
+### tighten-prose
+
+A final editing pass that catches and removes AI-detectable writing patterns. Scans prose for statistically overrepresented AI tells — vocabulary clusters, inflated significance, formulaic transitions, and more — then rewrites flagged sections.
+
+Use standalone on any writing, or as a composable quality gate in other skills (blog-post-writer runs it automatically as its final step).
+
+**Example usage:**
+
+```
+/tighten-prose
+
+[paste or reference the text to tighten]
+```
+
+The skill will:
+
+- Load the AI tells catalog and fetch live patterns from Wikipedia
+- Scan for pattern density across 12 categories
+- Report clusters (not individual hits — density is the signal)
+- Rewrite flagged sections while preserving voice and meaning
+
+**Bundled references:**
+
+- `ai-tells.md` - Full catalog of AI writing tells with examples and fix strategies
 
 ### conference-talk-builder
 
