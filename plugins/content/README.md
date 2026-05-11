@@ -97,4 +97,4 @@ Both skills support narrative frameworks auto-selected based on content type. Th
 
 ## Version
 
-0.5.0
+0.6.0
