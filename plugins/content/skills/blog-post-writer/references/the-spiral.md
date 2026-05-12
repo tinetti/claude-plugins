@@ -83,6 +83,6 @@ Two complications (three passes total) is the minimum to feel like a spiral rath
 
 If the concept doesn't have genuine layers of depth, the spiral feels like you're repeating yourself with slightly different words. Test: can you articulate how each pass's understanding is qualitatively different from the previous one? If the difference is just "more detail," use Progressive Disclosure.
 
-Also avoid this for concepts where the beginner understanding is fundamentally correct and just needs extension. The Spiral works best when each pass *transforms* understanding, not just *adds to* it. If the first pass isn't meaningfully wrong or incomplete, there's nothing to spiral through.
+Also avoid this for concepts where the beginner understanding is fundamentally correct and just needs extension. The Spiral works best when each pass _transforms_ understanding, not just _adds to_ it. If the first pass isn't meaningfully wrong or incomplete, there's nothing to spiral through.
 
 Multi-concept posts are a poor fit. The Spiral is for going deep on one thing. If you have three concepts, use The Petal with each petal being a mini-spiral.

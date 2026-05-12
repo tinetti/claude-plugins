@@ -167,30 +167,35 @@ Iterate based on feedback. The talk script is the deliverable — the user takes
 **Narrative frameworks** (read only the selected one — do not preload all twenty-two):
 
 Foundational:
+
 - `references/frameworks/three-act.md` — Setup, confrontation, resolution in three clean beats
 - `references/frameworks/freytags-pyramid.md` — Five-phase arc with rising action, climax, and falling action
 - `references/frameworks/story-circle.md` — Eight-step hero's journey for personal transformation arcs
 - `references/frameworks/kishotenketsu.md` — Four-act twist without conflict — recontextualize, don't confront
 
 Existential:
+
 - `references/frameworks/sisyphean-arc.md` — Recurring struggle reframed as meaningful through persistence
 - `references/frameworks/kafkaesque-labyrinth.md` — Navigating absurd bureaucratic or systemic complexity
 - `references/frameworks/existential-awakening.md` — Radical freedom and the weight of choosing your tools
 - `references/frameworks/strangers-report.md` — Detached observational analysis of a system's contradictions
 
 Absurdist:
+
 - `references/frameworks/the-waiting.md` — Meaning found in the space where nothing happens
 - `references/frameworks/the-metamorphosis.md` — Waking up to discover everything has fundamentally changed
 - `references/frameworks/catch-22.md` — Circular logic and no-win constraints in systems
 - `references/frameworks/comedians-set.md` — Setup-punchline rhythm with callbacks and escalating bits
 
 Non-linear:
+
 - `references/frameworks/in-medias-res.md` — Open mid-action, then rewind to explain
 - `references/frameworks/the-spiral.md` — Revisit the same concept at increasing depth each pass
 - `references/frameworks/the-rashomon.md` — Same event from multiple perspectives
 - `references/frameworks/reverse-chronology.md` — Start with the outcome and work backward
 
 Rhetorical:
+
 - `references/frameworks/the-sparkline.md` — Alternate between "what is" and "what could be"
 - `references/frameworks/nested-loops.md` — Layer stories inside stories, resolve in reverse order
 - `references/frameworks/the-petal.md` — Multiple independent stories supporting one central thesis

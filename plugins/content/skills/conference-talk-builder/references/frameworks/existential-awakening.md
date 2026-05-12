@@ -1,12 +1,12 @@
 # The Existential Awakening
 
-The Existential Awakening draws from two philosophical traditions: Jean-Paul Sartre's existentialism, particularly his declaration that "existence precedes essence" (*Being and Nothingness*, 1943), and Martin Heidegger's concept of *Dasein* — being-in-the-world, the moment when existence becomes aware of itself (*Being and Time*, 1927). Sartre argued that we are not born with a fixed nature; we become what we are through our choices. Heidegger described the shift from going through the motions (*das Man*, the anonymous "they-self") to authentic engagement with one's own existence. As a presentation framework, this structure captures a universal experience in technical work: the moment you realize something fundamental about your system, your process, or your assumptions — and everything changes. It works because the audience has had these moments. The framework doesn't teach a lesson; it recreates the phenomenology of sudden understanding. The talk IS the awakening, and the audience should feel it happen in real time.
+The Existential Awakening draws from two philosophical traditions: Jean-Paul Sartre's existentialism, particularly his declaration that "existence precedes essence" (_Being and Nothingness_, 1943), and Martin Heidegger's concept of _Dasein_ — being-in-the-world, the moment when existence becomes aware of itself (_Being and Time_, 1927). Sartre argued that we are not born with a fixed nature; we become what we are through our choices. Heidegger described the shift from going through the motions (_das Man_, the anonymous "they-self") to authentic engagement with one's own existence. As a presentation framework, this structure captures a universal experience in technical work: the moment you realize something fundamental about your system, your process, or your assumptions — and everything changes. It works because the audience has had these moments. The framework doesn't teach a lesson; it recreates the phenomenology of sudden understanding. The talk IS the awakening, and the audience should feel it happen in real time.
 
 ## The Phases
 
 ### 1. Going Through the Motions
 
-**Purpose**: Establish the pre-awakened state. The protagonist (you, the team, the industry) is competent, busy, and unaware that something is wrong. This is Heidegger's *das Man* — doing things the way "one" does them, without questioning. "One uses CI/CD. One writes tests. One follows best practices." The *das Man* is not ignorant — it's the aggregate wisdom of the profession, absorbed uncritically. The audience should recognize themselves here, and they should feel comfortable. That comfort is what you're about to disrupt.
+**Purpose**: Establish the pre-awakened state. The protagonist (you, the team, the industry) is competent, busy, and unaware that something is wrong. This is Heidegger's _das Man_ — doing things the way "one" does them, without questioning. "One uses CI/CD. One writes tests. One follows best practices." The _das Man_ is not ignorant — it's the aggregate wisdom of the profession, absorbed uncritically. The audience should recognize themselves here, and they should feel comfortable. That comfort is what you're about to disrupt.
 
 **In a talk**: "We had a microservices architecture. 47 services, well-documented APIs, CI/CD on every repo. We were doing everything right. We knew this because we'd read the blog posts and followed the patterns."
 
@@ -14,15 +14,15 @@ The Existential Awakening draws from two philosophical traditions: Jean-Paul Sar
 
 ### 2. Something Breaks the Routine
 
-**Purpose**: An interruption. Not necessarily a crisis — sometimes it's a question, a metric, a new hire's confusion, or a quiet observation that doesn't fit. Heidegger calls this *Angst* — not fear of something specific, but a general unease that the familiar has become strange. The routine cracks, and through the crack, you glimpse something. Heidegger distinguished *Angst* from *Furcht* (fear): fear has an object ("the server is down"), but *Angst* is objectless, a disquiet about the whole situation ("something about how we work doesn't make sense"). The interruption is the trigger for *Angst*.
+**Purpose**: An interruption. Not necessarily a crisis — sometimes it's a question, a metric, a new hire's confusion, or a quiet observation that doesn't fit. Heidegger calls this _Angst_ — not fear of something specific, but a general unease that the familiar has become strange. The routine cracks, and through the crack, you glimpse something. Heidegger distinguished _Angst_ from _Furcht_ (fear): fear has an object ("the server is down"), but _Angst_ is objectless, a disquiet about the whole situation ("something about how we work doesn't make sense"). The interruption is the trigger for _Angst_.
 
 **In a talk**: "Then a new engineer joined the team. She spent her first week trying to understand how data flowed through the system. After five days she asked: 'Why do three services all maintain their own copy of the user's subscription status?'"
 
-**Slide approach**: 3-5 slides. The interruption should feel small at first. Don't dramatize it. A question. An anomaly in the data. A failed test that shouldn't have failed. Let the audience feel the crack before they understand what it means. The best interruptions come from outsiders — new hires, customers, people from adjacent teams — because they haven't been absorbed into the *das Man*.
+**Slide approach**: 3-5 slides. The interruption should feel small at first. Don't dramatize it. A question. An anomaly in the data. A failed test that shouldn't have failed. Let the audience feel the crack before they understand what it means. The best interruptions come from outsiders — new hires, customers, people from adjacent teams — because they haven't been absorbed into the _das Man_.
 
 ### 3. Sudden Clarity
 
-**Purpose**: The awakening itself. Sartre's moment of radical freedom — the realization that what you assumed was fixed, necessary, or natural is actually contingent, chosen, and changeable. In *Nausea* (1938), Sartre's protagonist Roquentin suddenly perceives a chestnut tree root not as "a root" but as raw, contingent existence — and the entire world shifts. The veil drops. This phase should feel like a phase transition: the same facts rearrange into a completely different picture. What was background becomes foreground. Sartre wrote: "Existence precedes essence" — meaning there is no pre-defined nature of your architecture, your process, your team. What it IS is what you've made it, and you could make it otherwise.
+**Purpose**: The awakening itself. Sartre's moment of radical freedom — the realization that what you assumed was fixed, necessary, or natural is actually contingent, chosen, and changeable. In _Nausea_ (1938), Sartre's protagonist Roquentin suddenly perceives a chestnut tree root not as "a root" but as raw, contingent existence — and the entire world shifts. The veil drops. This phase should feel like a phase transition: the same facts rearrange into a completely different picture. What was background becomes foreground. Sartre wrote: "Existence precedes essence" — meaning there is no pre-defined nature of your architecture, your process, your team. What it IS is what you've made it, and you could make it otherwise.
 
 **In a talk**: "And then it clicked. We didn't have a microservices architecture. We had a distributed monolith. Every service knew about every other service. The boundaries weren't boundaries — they were seams where bugs could hide."
 
@@ -38,7 +38,7 @@ The Existential Awakening draws from two philosophical traditions: Jean-Paul Sar
 
 ### 5. New Way of Being
 
-**Purpose**: Heidegger's *Eigentlichkeit* — authenticity. Having awakened, you cannot go back. This isn't a simple "and then we fixed it" — it's a fundamental shift in how you operate. The new way of being includes the awareness that other unexamined assumptions exist. Sartre's freedom is also responsibility: "We are condemned to be free" — now that you know, you choose, and you own that choice. The new way of being is not comfortable. It's vigilant. It asks "what am I assuming?" as a regular practice, not a one-time epiphany.
+**Purpose**: Heidegger's _Eigentlichkeit_ — authenticity. Having awakened, you cannot go back. This isn't a simple "and then we fixed it" — it's a fundamental shift in how you operate. The new way of being includes the awareness that other unexamined assumptions exist. Sartre's freedom is also responsibility: "We are condemned to be free" — now that you know, you choose, and you own that choice. The new way of being is not comfortable. It's vigilant. It asks "what am I assuming?" as a regular practice, not a one-time epiphany.
 
 **In a talk**: "We didn't just fix the architecture. We changed how we evaluate architecture decisions. Every RFC now has a section: 'What assumption does this depend on, and how would we know if it's wrong?' The awakening wasn't the destination — it was the start of staying awake."
 
@@ -59,6 +59,7 @@ The critical delivery moment is the Sudden Clarity phase. Resist the urge to ove
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to the moment of clarity:
+
 - **Motions + Interruption** (3-5 slides): Fast setup. "We were doing X. Then someone asked Y."
 - **Clarity** (2-3 slides): The single, sharp insight. One slide, one sentence.
 - **New Way** (3-5 slides): What changed and what the audience should question
@@ -68,6 +69,7 @@ Skip the extended re-evaluation. In a lightning talk, the awakening is the talk.
 ### Standard Talk (20 min, 25-35 slides)
 
 Full five phases with the re-evaluation given room:
+
 - **Going Through the Motions** (4-6 slides): Rich normal, lots of "we were doing it right"
 - **Breaks the Routine** (4-5 slides): The interruption and the growing unease
 - **Sudden Clarity** (3-5 slides): The pivot, with breathing room
@@ -79,6 +81,7 @@ The standard length is ideal. You need enough time in the "motions" phase for th
 ### Extended Talk (45 min, 50-70 slides)
 
 Full philosophical depth:
+
 - **Going Through the Motions** (8-12 slides): Extensive context. Show the metrics, the processes, the confidence. Make the audience complicit in the pre-awakened state.
 - **Breaks the Routine** (8-10 slides): Multiple small cracks before the break. Build unease gradually.
 - **Sudden Clarity** (5-8 slides): The awakening plus philosophical framing. Quote Sartre or Heidegger. Connect the specific insight to the general condition.
@@ -108,31 +111,31 @@ Full philosophical depth:
 
 ### "Your Metrics Are Lying to You" — Standard Talk
 
-| Phase | Content |
-|-------|---------|
-| Going Through the Motions | "Our dashboard was green. 99.9% uptime. P95 latency under 200ms. We reported these numbers every week. Leadership was happy." |
-| Breaks the Routine | "A customer churned. Exit survey: 'The product is too slow.' We checked — their P95 was 180ms. That's fast. So we called them." |
-| Sudden Clarity | "They weren't measuring latency. They were measuring time-to-value. From intent to outcome: 47 seconds across 6 page loads, 3 spinners, and a redirect. Our metrics measured each request. The customer experienced the journey." |
-| Re-evaluation | Every SLO re-examined. Uptime meant nothing — the app was "up" but the workflow was broken. The dashboard was a portrait of our architecture, not our product. |
-| New Way of Being | "We now measure user journeys, not endpoints. And every metric has an 'assumption' annotation: what would have to be true for this number to be meaningful?" |
+| Phase                     | Content                                                                                                                                                                                                                           |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Going Through the Motions | "Our dashboard was green. 99.9% uptime. P95 latency under 200ms. We reported these numbers every week. Leadership was happy."                                                                                                     |
+| Breaks the Routine        | "A customer churned. Exit survey: 'The product is too slow.' We checked — their P95 was 180ms. That's fast. So we called them."                                                                                                   |
+| Sudden Clarity            | "They weren't measuring latency. They were measuring time-to-value. From intent to outcome: 47 seconds across 6 page loads, 3 spinners, and a redirect. Our metrics measured each request. The customer experienced the journey." |
+| Re-evaluation             | Every SLO re-examined. Uptime meant nothing — the app was "up" but the workflow was broken. The dashboard was a portrait of our architecture, not our product.                                                                    |
+| New Way of Being          | "We now measure user journeys, not endpoints. And every metric has an 'assumption' annotation: what would have to be true for this number to be meaningful?"                                                                      |
 
 ### "The Day I Realized We Were Building the Wrong Thing" — Lightning Talk
 
-| Phase | Content |
-|-------|---------|
-| Going Through the Motions | "Shipped 14 features in Q3. Velocity was up 40%. Best quarter ever." |
-| Sudden Clarity | "Customer research came back: 'We only use two features. The rest get in the way.'" |
-| New Way of Being | "Velocity is not value. We killed 8 features in Q4. Usage went up. Sartre was right — we have to choose, and choosing means saying no." |
+| Phase                     | Content                                                                                                                                 |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Going Through the Motions | "Shipped 14 features in Q3. Velocity was up 40%. Best quarter ever."                                                                    |
+| Sudden Clarity            | "Customer research came back: 'We only use two features. The rest get in the way.'"                                                     |
+| New Way of Being          | "Velocity is not value. We killed 8 features in Q4. Usage went up. Sartre was right — we have to choose, and choosing means saying no." |
 
 ### "We Were Testing the Wrong Thing for Two Years" — Extended Talk
 
-| Phase | Content |
-|-------|---------|
-| Going Through the Motions | "98% code coverage. 4,200 tests. Green builds every day. We presented coverage reports at every retro. Leadership loved the numbers." |
-| Breaks the Routine | "A junior engineer asked during onboarding: 'What do these tests actually test?' We pulled up a random file. 60% of the assertions were testing that the mocking framework returned what we told it to return." |
-| Sudden Clarity | "We didn't have 98% coverage of our application logic. We had 98% coverage of our test infrastructure. The tests were testing themselves. The metric we reported every sprint was a fiction." |
-| Re-evaluation | Walk through test categories: mock-testing-mock (40%), trivial assertions (20%), actually-useful tests (30%), tests that caught real bugs in the last year (10%). Re-examine the three incidents that tests "should have caught" — none were in areas with low coverage. The coverage number was decorrelating with quality. |
-| New Way of Being | "We deleted 1,800 tests. Coverage dropped to 62%. Bug escape rate didn't change. We now measure mutation testing scores on critical paths, not line coverage. Every test must answer: 'What production failure would this prevent?' If it can't, it doesn't ship." |
+| Phase                     | Content                                                                                                                                                                                                                                                                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Going Through the Motions | "98% code coverage. 4,200 tests. Green builds every day. We presented coverage reports at every retro. Leadership loved the numbers."                                                                                                                                                                                        |
+| Breaks the Routine        | "A junior engineer asked during onboarding: 'What do these tests actually test?' We pulled up a random file. 60% of the assertions were testing that the mocking framework returned what we told it to return."                                                                                                              |
+| Sudden Clarity            | "We didn't have 98% coverage of our application logic. We had 98% coverage of our test infrastructure. The tests were testing themselves. The metric we reported every sprint was a fiction."                                                                                                                                |
+| Re-evaluation             | Walk through test categories: mock-testing-mock (40%), trivial assertions (20%), actually-useful tests (30%), tests that caught real bugs in the last year (10%). Re-examine the three incidents that tests "should have caught" — none were in areas with low coverage. The coverage number was decorrelating with quality. |
+| New Way of Being          | "We deleted 1,800 tests. Coverage dropped to 62%. Bug escape rate didn't change. We now measure mutation testing scores on critical paths, not line coverage. Every test must answer: 'What production failure would this prevent?' If it can't, it doesn't ship."                                                           |
 
 ## Philosophical Quick Reference
 
@@ -141,10 +144,10 @@ These quotes and concepts can be woven into slides or speaker notes:
 - "Existence precedes essence." — Sartre's foundational claim. In tech: your system has no inherent nature; it is what your decisions have made it. Use on a slide during the Clarity phase.
 - "Man is condemned to be free." — Sartre on the burden of choice. After the awakening, you can't un-see it; every decision is now conscious and owned.
 - "We are our choices." — Sartre, simpler formulation. Good for the New Way of Being phase.
-- **Dasein** ("being-there"): Heidegger's term for the kind of being that humans have — existence that is aware of itself. The awakening is the moment your team's Dasein becomes *authentic* rather than absorbed in *das Man*.
+- **Dasein** ("being-there"): Heidegger's term for the kind of being that humans have — existence that is aware of itself. The awakening is the moment your team's Dasein becomes _authentic_ rather than absorbed in _das Man_.
 - **Das Man** ("the They"): Heidegger's term for the anonymous collective way of being — "one does it this way." Best practices, industry conventions, cargo-culted patterns. Not wrong per se, but unexamined.
-- **Thrownness** (*Geworfenheit*): Heidegger's term for the fact that we find ourselves already in a situation not of our choosing. You inherited this architecture. You didn't design the constraints. But you are now responsible for what you do within them.
-- "Hell is other people." — Sartre, *No Exit*. Often misquoted as misanthropy, it actually means that other people's perceptions of us can trap us in inauthentic roles. Applicable to team dynamics, performance reviews, and the stories we tell about our systems.
+- **Thrownness** (_Geworfenheit_): Heidegger's term for the fact that we find ourselves already in a situation not of our choosing. You inherited this architecture. You didn't design the constraints. But you are now responsible for what you do within them.
+- "Hell is other people." — Sartre, _No Exit_. Often misquoted as misanthropy, it actually means that other people's perceptions of us can trap us in inauthentic roles. Applicable to team dynamics, performance reviews, and the stories we tell about our systems.
 
 ## Combination Notes
 

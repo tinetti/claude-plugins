@@ -36,20 +36,20 @@ If the fetch fails, the static reference is sufficient. Proceed without it.
 
 Read the full text and scan across all categories:
 
-| Category | Signal |
-|---|---|
-| Vocabulary clusters | 3+ AI-overused words in a section |
-| Inflated significance | Phrases that inflate importance without adding information |
-| Superficial -ing clauses | Participial phrases tacked on as fake depth |
-| Promotional language | Travel-brochure / sales-deck vocabulary |
-| Vague authority | Phantom expert attributions ("Industry reports suggest...") |
-| Formulaic transitions | Five-paragraph-essay connectors (moreover, furthermore) |
-| Negative parallelism | Overuse of "not X, it's Y" construction |
-| Rule of three | Every list having exactly three items |
-| Copula avoidance | "Serves as" instead of "is" |
-| Elegant variation | Thesaurus cycling to avoid repeating a concrete noun |
-| Em dash density | Em dashes at 2-3x human rate |
-| Formatting tells | Mechanical boldface, title case headings, emoji decoration |
+| Category                 | Signal                                                      |
+| ------------------------ | ----------------------------------------------------------- |
+| Vocabulary clusters      | 3+ AI-overused words in a section                           |
+| Inflated significance    | Phrases that inflate importance without adding information  |
+| Superficial -ing clauses | Participial phrases tacked on as fake depth                 |
+| Promotional language     | Travel-brochure / sales-deck vocabulary                     |
+| Vague authority          | Phantom expert attributions ("Industry reports suggest...") |
+| Formulaic transitions    | Five-paragraph-essay connectors (moreover, furthermore)     |
+| Negative parallelism     | Overuse of "not X, it's Y" construction                     |
+| Rule of three            | Every list having exactly three items                       |
+| Copula avoidance         | "Serves as" instead of "is"                                 |
+| Elegant variation        | Thesaurus cycling to avoid repeating a concrete noun        |
+| Em dash density          | Em dashes at 2-3x human rate                                |
+| Formatting tells         | Mechanical boldface, title case headings, emoji decoration  |
 
 **The signal is density, not individual hits.** One "crucial" is fine. A cluster of three AI vocabulary words in two paragraphs is a rewrite.
 

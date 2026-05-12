@@ -75,55 +75,55 @@ Match the content to the best framework. Read the corresponding reference file b
 
 #### Journey & Transformation
 
-| Framework | Reference | One-liner |
-|---|---|---|
-| Story Circle | `references/story-circle.md` | 8-step hero's journey for personal transformation arcs |
-| Three-Act | `references/three-act.md` | Classic setup/confrontation/resolution narrative spine |
-| Freytag's Pyramid | `references/freytags-pyramid.md` | 5-phase dramatic arc with explicit climax mapping |
-| The Metamorphosis | `references/the-metamorphosis.md` | Identity-level change — the author becomes someone different |
-| Existential Awakening | `references/existential-awakening.md` | Profound realization that shifts relationship to work |
+| Framework             | Reference                             | One-liner                                                    |
+| --------------------- | ------------------------------------- | ------------------------------------------------------------ |
+| Story Circle          | `references/story-circle.md`          | 8-step hero's journey for personal transformation arcs       |
+| Three-Act             | `references/three-act.md`             | Classic setup/confrontation/resolution narrative spine       |
+| Freytag's Pyramid     | `references/freytags-pyramid.md`      | 5-phase dramatic arc with explicit climax mapping            |
+| The Metamorphosis     | `references/the-metamorphosis.md`     | Identity-level change — the author becomes someone different |
+| Existential Awakening | `references/existential-awakening.md` | Profound realization that shifts relationship to work        |
 
 #### Structural Techniques
 
-| Framework | Reference | One-liner |
-|---|---|---|
-| In Medias Res | `references/in-medias-res.md` | Start in the middle of the action, backfill context |
-| Reverse Chronology | `references/reverse-chronology.md` | Tell it backwards — outcome first, origin last |
-| Nested Loops | `references/nested-loops.md` | Layer stories inside each other like Russian dolls |
-| The Spiral | `references/the-spiral.md` | Revisit the same concept with deeper understanding each pass |
-| The Petal | `references/the-petal.md` | Multiple stories radiating from a central theme |
+| Framework          | Reference                          | One-liner                                                    |
+| ------------------ | ---------------------------------- | ------------------------------------------------------------ |
+| In Medias Res      | `references/in-medias-res.md`      | Start in the middle of the action, backfill context          |
+| Reverse Chronology | `references/reverse-chronology.md` | Tell it backwards — outcome first, origin last               |
+| Nested Loops       | `references/nested-loops.md`       | Layer stories inside each other like Russian dolls           |
+| The Spiral         | `references/the-spiral.md`         | Revisit the same concept with deeper understanding each pass |
+| The Petal          | `references/the-petal.md`          | Multiple stories radiating from a central theme              |
 
 #### Tension & Contrast
 
-| Framework | Reference | One-liner |
-|---|---|---|
-| Kishōtenketsu | `references/kishotenketsu.md` | 4-act twist without conflict — recontextualize, don't confront |
-| The Sparkline | `references/the-sparkline.md` | Oscillate between "what is" and "what could be" |
-| The False Start | `references/the-false-start.md` | Begin with the wrong story, then restart with truth |
-| Converging Ideas | `references/converging-ideas.md` | Unrelated threads that connect to a single insight |
-| Catch-22 | `references/catch-22.md` | Paradox where the rules create an impossible situation |
-| The Rashomon | `references/the-rashomon.md` | Same event from multiple contradictory perspectives |
+| Framework        | Reference                        | One-liner                                                      |
+| ---------------- | -------------------------------- | -------------------------------------------------------------- |
+| Kishōtenketsu    | `references/kishotenketsu.md`    | 4-act twist without conflict — recontextualize, don't confront |
+| The Sparkline    | `references/the-sparkline.md`    | Oscillate between "what is" and "what could be"                |
+| The False Start  | `references/the-false-start.md`  | Begin with the wrong story, then restart with truth            |
+| Converging Ideas | `references/converging-ideas.md` | Unrelated threads that connect to a single insight             |
+| Catch-22         | `references/catch-22.md`         | Paradox where the rules create an impossible situation         |
+| The Rashomon     | `references/the-rashomon.md`     | Same event from multiple contradictory perspectives            |
 
 #### Analytical & Persuasive
 
-| Framework | Reference | One-liner |
-|---|---|---|
-| SCQA | `references/scqa.md` | Situation-Complication-Question-Answer for logical problem-solving |
-| Progressive Disclosure | `references/progressive-disclosure.md` | Simple-to-complex layering for teaching concepts |
-| Compare & Contrast | `references/compare-contrast.md` | Structured evaluation of trade-offs between options |
-| PAS | `references/problem-agitation-solution.md` | Punchy problem→pain→fix for short optimization stories |
-| Post-mortem | `references/post-mortem.md` | Incident retrospective with timeline and lessons |
-| Socratic Path | `references/socratic-path.md` | Chain of questions leading to self-discovered conclusions |
+| Framework              | Reference                                  | One-liner                                                          |
+| ---------------------- | ------------------------------------------ | ------------------------------------------------------------------ |
+| SCQA                   | `references/scqa.md`                       | Situation-Complication-Question-Answer for logical problem-solving |
+| Progressive Disclosure | `references/progressive-disclosure.md`     | Simple-to-complex layering for teaching concepts                   |
+| Compare & Contrast     | `references/compare-contrast.md`           | Structured evaluation of trade-offs between options                |
+| PAS                    | `references/problem-agitation-solution.md` | Punchy problem→pain→fix for short optimization stories             |
+| Post-mortem            | `references/post-mortem.md`                | Incident retrospective with timeline and lessons                   |
+| Socratic Path          | `references/socratic-path.md`              | Chain of questions leading to self-discovered conclusions          |
 
 #### Atmospheric & Experimental
 
-| Framework | Reference | One-liner |
-|---|---|---|
-| Comedian's Set | `references/comedians-set.md` | Setup→punchline structure for myth-busting and reframes |
-| Kafkaesque Labyrinth | `references/kafkaesque-labyrinth.md` | Systemic absurdity where the villain is the system itself |
-| Sisyphean Arc | `references/sisyphean-arc.md` | Find meaning in repetitive work that never ends |
-| Stranger's Report | `references/strangers-report.md` | Fresh-eyes outsider perspective on normalized strangeness |
-| The Waiting | `references/the-waiting.md` | Something promised that never arrives — meaning from anticipation |
+| Framework            | Reference                            | One-liner                                                         |
+| -------------------- | ------------------------------------ | ----------------------------------------------------------------- |
+| Comedian's Set       | `references/comedians-set.md`        | Setup→punchline structure for myth-busting and reframes           |
+| Kafkaesque Labyrinth | `references/kafkaesque-labyrinth.md` | Systemic absurdity where the villain is the system itself         |
+| Sisyphean Arc        | `references/sisyphean-arc.md`        | Find meaning in repetitive work that never ends                   |
+| Stranger's Report    | `references/strangers-report.md`     | Fresh-eyes outsider perspective on normalized strangeness         |
+| The Waiting          | `references/the-waiting.md`          | Something promised that never arrives — meaning from anticipation |
 
 Not every post maps cleanly to one framework. Hybrid approaches are fine — each framework's reference includes Combination Notes for pairing. Use a framework as a starting structure, not a straitjacket.
 
@@ -259,6 +259,7 @@ You're not being replaced; you're being amplified.
 **Narrative frameworks** (read the one that matches the content — do not preload all twenty-seven):
 
 Journey & Transformation:
+
 - `references/story-circle.md` - 8-step hero's journey for personal transformation arcs
 - `references/three-act.md` - Classic setup/confrontation/resolution narrative spine
 - `references/freytags-pyramid.md` - 5-phase dramatic arc with explicit climax mapping
@@ -266,6 +267,7 @@ Journey & Transformation:
 - `references/existential-awakening.md` - Profound realization that shifts relationship to work
 
 Structural Techniques:
+
 - `references/in-medias-res.md` - Start in the middle of the action, backfill context
 - `references/reverse-chronology.md` - Tell it backwards — outcome first, origin last
 - `references/nested-loops.md` - Layer stories inside each other like Russian dolls
@@ -273,6 +275,7 @@ Structural Techniques:
 - `references/the-petal.md` - Multiple stories radiating from a central theme
 
 Tension & Contrast:
+
 - `references/kishotenketsu.md` - 4-act twist without conflict — recontextualize, don't confront
 - `references/the-sparkline.md` - Oscillate between "what is" and "what could be"
 - `references/the-false-start.md` - Begin with the wrong story, then restart with truth
@@ -281,6 +284,7 @@ Tension & Contrast:
 - `references/the-rashomon.md` - Same event from multiple contradictory perspectives
 
 Analytical & Persuasive:
+
 - `references/scqa.md` - Situation-Complication-Question-Answer for logical problem-solving
 - `references/progressive-disclosure.md` - Simple-to-complex layering for teaching concepts
 - `references/compare-contrast.md` - Structured evaluation of trade-offs between options
@@ -289,6 +293,7 @@ Analytical & Persuasive:
 - `references/socratic-path.md` - Chain of questions leading to self-discovered conclusions
 
 Atmospheric & Experimental:
+
 - `references/comedians-set.md` - Setup→punchline structure for myth-busting and reframes
 - `references/kafkaesque-labyrinth.md` - Systemic absurdity where the villain is the system itself
 - `references/sisyphean-arc.md` - Find meaning in repetitive work that never ends
@@ -336,7 +341,7 @@ it weaves right into VS Code. I get why people love it.
 
 But here's the thing: I'm not a VS Code person. I live in the terminal. Vim, tmux,
 `rg` piped into `fzf` — that's my happy place. And every time I opened Cursor, I felt
-like I was visiting someone else's apartment. Nice place, but not *mine*.
+like I was visiting someone else's apartment. Nice place, but not _mine_.
 
 Then I found Claude Code.
 ```

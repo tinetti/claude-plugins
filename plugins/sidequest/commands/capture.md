@@ -43,13 +43,13 @@ Frontmatter:
 
 ```yaml
 ---
-date: {Date}
-repo: {Repo name}
-repo_path: {Repo root or ""}
-cwd: {CWD}
-seed: "<original $ARGUMENTS>"
+date: { Date }
+repo: { Repo name }
+repo_path: { Repo root or "" }
+cwd: { CWD }
+seed: '<original $ARGUMENTS>'
 status: open
-slug: {full slug, no .md}
+slug: { full slug, no .md }
 ---
 ```
 

@@ -46,6 +46,7 @@ Likes: {likes} · Retweets: {retweets} · Views: {views}
 When `tweet.article` is present, the tweet is an article (long-form post). The article content uses Draft.js block format.
 
 The `article` object contains:
+
 - `title` — article title
 - `cover_image` — hero image metadata (use `original_img_url`)
 - `content.blocks[]` — array of content blocks
@@ -54,6 +55,7 @@ The `article` object contains:
 **Converting blocks to markdown:**
 
 Each block has a `type` and `text`:
+
 - `unstyled` → plain paragraph
 - `header-one` → `# heading`
 - `header-two` → `## heading`
@@ -67,12 +69,14 @@ Each block has a `type` and `text`:
 **Resolving entity ranges:**
 
 Each block may have `entityRanges: [{ key, offset, length }]`. Look up `content.entityMap[key]`:
+
 - If `type: "LINK"` → wrap the text span in `[text](url)` using `data.url`
 - If `type: "IMAGE"` → insert `![](data.src)`
 
 **Resolving inline styles:**
 
 Each block may have `inlineStyleRanges: [{ style, offset, length }]`:
+
 - `BOLD` → `**text**`
 - `ITALIC` → `*text*`
 - `CODE` → `` `text` ``

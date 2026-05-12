@@ -32,6 +32,7 @@ Walk through events in order. This is the narrative backbone.
 - Show the confusion and wrong turns — don't just present the clean path
 
 **Example:**
+
 - "2:03am — Alerts fire. Dashboard shows 500s spiking."
 - "2:08am — We check the last deploy. Nothing looks wrong."
 - "2:22am — Someone notices the CDN config changed."

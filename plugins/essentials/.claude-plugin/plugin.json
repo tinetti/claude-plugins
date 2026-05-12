@@ -1,6 +1,6 @@
 {
   "name": "essentials",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and codebase cleanup.",
   "author": {
     "name": "Nick Nisi",
@@ -24,6 +24,9 @@
     "reddit",
     "codebase-cleanup",
     "cleanup",
-    "code-quality"
+    "code-quality",
+    "handoff",
+    "context",
+    "session"
   ]
 }

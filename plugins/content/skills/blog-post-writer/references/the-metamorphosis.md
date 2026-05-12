@@ -23,7 +23,7 @@ Don't just describe what you did — describe who you were. What did you believe
 
 Something specific happened. Not gradual drift — a moment, an event, a conversation that cracked the identity open. The catalyst doesn't have to be dramatic, but it has to be identifiable. You should be able to point to a date, a meeting, a line of code.
 
-**Example:** "Our team lead asked me to debug a Node.js memory leak in production. 'You're the strongest developer on the team,' she said. 'I don't do backend,' I said. 'The leak doesn't care,' she said. I spent three days staring at heap snapshots and flame graphs, understanding maybe 40% of what I was looking at. On the third day, I found the leak. It was a closure holding a reference to an Express request object. And something shifted — not because I fixed it, but because I realized I'd been *choosing* not to understand this stuff. The boundary between frontend and backend wasn't technical. It was identity."
+**Example:** "Our team lead asked me to debug a Node.js memory leak in production. 'You're the strongest developer on the team,' she said. 'I don't do backend,' I said. 'The leak doesn't care,' she said. I spent three days staring at heap snapshots and flame graphs, understanding maybe 40% of what I was looking at. On the third day, I found the leak. It was a closure holding a reference to an Express request object. And something shifted — not because I fixed it, but because I realized I'd been _choosing_ not to understand this stuff. The boundary between frontend and backend wasn't technical. It was identity."
 
 ### 3. The Uncomfortable Middle (Neither Old Self nor New Self)
 

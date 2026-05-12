@@ -1,12 +1,12 @@
 # The Stranger's Report
 
-The Stranger's Report draws from Albert Camus' novel *The Stranger* (*L'Etranger*, 1942), in which the narrator Meursault reports the events of his life — including his mother's death and his own act of killing a man — with an unsettling emotional flatness. "Maman died today. Or yesterday maybe, I don't know." The power of the novel is not in what Meursault says but in what he doesn't say: the reader is forced to supply the emotional weight, the moral judgment, the interpretation. As a presentation framework, this structure exploits the same mechanism. You present observations, data, and events without telling the audience what to feel or conclude. Patterns emerge. The audience connects the dots. When you finally offer your own reading — if you offer one at all — it lands with extraordinary force because the audience has already arrived there independently. This framework is counterintuitive for speakers trained to "tell them what you're going to tell them," but it produces some of the most memorable technical talks: the ones where the audience feels like they discovered the insight themselves.
+The Stranger's Report draws from Albert Camus' novel _The Stranger_ (_L'Etranger_, 1942), in which the narrator Meursault reports the events of his life — including his mother's death and his own act of killing a man — with an unsettling emotional flatness. "Maman died today. Or yesterday maybe, I don't know." The power of the novel is not in what Meursault says but in what he doesn't say: the reader is forced to supply the emotional weight, the moral judgment, the interpretation. As a presentation framework, this structure exploits the same mechanism. You present observations, data, and events without telling the audience what to feel or conclude. Patterns emerge. The audience connects the dots. When you finally offer your own reading — if you offer one at all — it lands with extraordinary force because the audience has already arrived there independently. This framework is counterintuitive for speakers trained to "tell them what you're going to tell them," but it produces some of the most memorable technical talks: the ones where the audience feels like they discovered the insight themselves.
 
 ## The Phases
 
 ### 1. Present Observations Without Interpretation
 
-**Purpose**: Lay out facts, data, events, or system behaviors as they are. No framing. No "this is interesting because." No value judgments. The speaker adopts the Meursault posture: precise, attentive, emotionally neutral. In *The Stranger*, Meursault describes his mother's funeral with the same flat precision he uses to describe the weather: "The sun was the same as it had been the day I buried Maman." The audience should feel slightly unsettled — they're waiting for you to tell them what it means, and you're not doing it. That tension is the engine of the framework.
+**Purpose**: Lay out facts, data, events, or system behaviors as they are. No framing. No "this is interesting because." No value judgments. The speaker adopts the Meursault posture: precise, attentive, emotionally neutral. In _The Stranger_, Meursault describes his mother's funeral with the same flat precision he uses to describe the weather: "The sun was the same as it had been the day I buried Maman." The audience should feel slightly unsettled — they're waiting for you to tell them what it means, and you're not doing it. That tension is the engine of the framework.
 
 **In a talk**: "On March 3rd, the deployment pipeline ran 47 times. 31 deployments succeeded. 16 failed. Of the 16 failures, 12 were in the testing stage. Of those 12, 9 were timeout errors. Average test suite duration that week was 14 minutes, up from 6 minutes the previous week."
 
@@ -14,7 +14,7 @@ The Stranger's Report draws from Albert Camus' novel *The Stranger* (*L'Etranger
 
 ### 2. Let Patterns Emerge
 
-**Purpose**: Continue presenting observations, but the audience begins to see connections. You haven't drawn the lines — they're drawing them. The observations are ordered deliberately (this is where your authorial craft lives), but you maintain the neutral posture. The sequence does the arguing. Camus described the universe's "benign indifference" — the facts don't care what they mean, but meaning emerges anyway. Your craft as a speaker is entirely in the *selection* and *ordering* of observations. You are a curator, not an advocate. The argument is implicit in the arrangement.
+**Purpose**: Continue presenting observations, but the audience begins to see connections. You haven't drawn the lines — they're drawing them. The observations are ordered deliberately (this is where your authorial craft lives), but you maintain the neutral posture. The sequence does the arguing. Camus described the universe's "benign indifference" — the facts don't care what they mean, but meaning emerges anyway. Your craft as a speaker is entirely in the _selection_ and _ordering_ of observations. You are a curator, not an advocate. The argument is implicit in the arrangement.
 
 **In a talk**: "The test suite added 340 new tests in February. 280 of those tests were integration tests that boot a database. The database container takes 8 seconds to start. The CI runner has 4 parallel slots. Here is the timeline of a typical test run."
 
@@ -22,7 +22,7 @@ The Stranger's Report draws from Albert Camus' novel *The Stranger* (*L'Etranger
 
 ### 3. The Audience Draws Conclusions
 
-**Purpose**: This is the phase you don't control — and that's the point. The audience is now ahead of you. They see the pattern. They're forming their conclusion. You can feel it in the room. This phase is often just one or two slides, sometimes a pause. The power is in the space between the last observation and your next word. Camus understood this instinctively: *The Stranger*'s most powerful moments are the gaps — the connections Meursault doesn't make that the reader makes for him. Your audience is smarter than a passive listener; they are active meaning-makers. Trust them.
+**Purpose**: This is the phase you don't control — and that's the point. The audience is now ahead of you. They see the pattern. They're forming their conclusion. You can feel it in the room. This phase is often just one or two slides, sometimes a pause. The power is in the space between the last observation and your next word. Camus understood this instinctively: _The Stranger_'s most powerful moments are the gaps — the connections Meursault doesn't make that the reader makes for him. Your audience is smarter than a passive listener; they are active meaning-makers. Trust them.
 
 **In a talk**: "Here is the graph of deploy frequency over the same period. And here is the graph of incidents reported to the on-call team." [Pause. No commentary. The graphs clearly correlate.]
 
@@ -30,7 +30,7 @@ The Stranger's Report draws from Albert Camus' novel *The Stranger* (*L'Etranger
 
 ### 4. Offer Your Reading (Optional)
 
-**Purpose**: After the audience has formed their own conclusion, you may offer yours. This is not a reveal — the audience already knows. It's a confirmation, a naming, a shared exhale. In *The Stranger*, Meursault never offers his reading; the reader is left to reckon alone. In a talk, you have the option. If your reading matches what the audience concluded, it creates solidarity — the relief of "yes, I see it too." If it's slightly different, it creates productive friction — "wait, there's another way to read this?" If you withhold it entirely, the talk haunts. Each approach serves a different purpose, and you should choose deliberately.
+**Purpose**: After the audience has formed their own conclusion, you may offer yours. This is not a reveal — the audience already knows. It's a confirmation, a naming, a shared exhale. In _The Stranger_, Meursault never offers his reading; the reader is left to reckon alone. In a talk, you have the option. If your reading matches what the audience concluded, it creates solidarity — the relief of "yes, I see it too." If it's slightly different, it creates productive friction — "wait, there's another way to read this?" If you withhold it entirely, the talk haunts. Each approach serves a different purpose, and you should choose deliberately.
 
 **In a talk**: "We were adding tests faster than our infrastructure could run them. The tests weren't making us safer — they were making us slower. And slower deployments meant bigger batches, and bigger batches meant more risk."
 
@@ -51,6 +51,7 @@ If you choose to offer your reading in Phase 4, the tonal shift should be audibl
 ### Lightning Talk (5 min, 10-15 slides)
 
 The purest form of this framework:
+
 - **Observations** (6-9 slides): Rapid-fire data points, each on its own slide. No commentary. The pace itself creates tension.
 - **Audience Concludes** (2-3 slides): The juxtaposition that makes it click
 - **Your Reading** (1-2 slides): One sentence, or nothing at all
@@ -60,6 +61,7 @@ Lightning talks are ideal for the Stranger's Report. The constraint forces you t
 ### Standard Talk (20 min, 25-35 slides)
 
 Full four phases with deliberate pacing:
+
 - **Observations** (8-12 slides): Build the evidence base. Each observation is a brick; the wall emerges.
 - **Patterns Emerge** (6-9 slides): The observations become interconnected. The audience leans in.
 - **Audience Concludes** (3-5 slides): The key juxtapositions. The pause.
@@ -70,6 +72,7 @@ The standard length requires discipline. The temptation to interpret early is st
 ### Extended Talk (45 min, 50-70 slides)
 
 Multiple observation arcs:
+
 - **First Observation Set** (12-16 slides): One domain of evidence. System behavior, metrics, logs.
 - **Second Observation Set** (10-14 slides): A different domain. User behavior, team dynamics, business metrics. Still no interpretation.
 - **Patterns Emerge** (10-14 slides): The two domains intersect. Correlations appear across boundaries the audience didn't expect.
@@ -100,40 +103,40 @@ Multiple observation arcs:
 
 ### "What Our Deploy Pipeline Is Telling Us" — Standard Talk
 
-| Phase | Content |
-|-------|---------|
-| Observations | Deploy frequency by week: 23, 19, 14, 11, 8. Test count by week: 1200, 1540, 1890, 2200, 2450. CI run time by week: 6 min, 9 min, 14 min, 22 min, 31 min. Average batch size by week: 2 PRs, 3 PRs, 5 PRs, 7 PRs, 11 PRs. |
-| Patterns Emerge | Timeline showing test additions overlaid with CI duration. Deploy frequency overlaid with incident count. Batch size overlaid with rollback frequency. Each chart presented without annotation. |
-| Audience Concludes | Side by side: "Tests added to improve safety" and "Incidents increased despite more tests." One slide. No title. |
-| Your Reading | "More tests created slower pipelines. Slower pipelines created larger batches. Larger batches created more risk. The safety mechanism became the risk vector. We removed 800 integration tests and incidents dropped 40%." |
+| Phase              | Content                                                                                                                                                                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Observations       | Deploy frequency by week: 23, 19, 14, 11, 8. Test count by week: 1200, 1540, 1890, 2200, 2450. CI run time by week: 6 min, 9 min, 14 min, 22 min, 31 min. Average batch size by week: 2 PRs, 3 PRs, 5 PRs, 7 PRs, 11 PRs.  |
+| Patterns Emerge    | Timeline showing test additions overlaid with CI duration. Deploy frequency overlaid with incident count. Batch size overlaid with rollback frequency. Each chart presented without annotation.                            |
+| Audience Concludes | Side by side: "Tests added to improve safety" and "Incidents increased despite more tests." One slide. No title.                                                                                                           |
+| Your Reading       | "More tests created slower pipelines. Slower pipelines created larger batches. Larger batches created more risk. The safety mechanism became the risk vector. We removed 800 integration tests and incidents dropped 40%." |
 
 ### "A Year of Incident Data" — Extended Talk
 
-| Phase | Content |
-|-------|---------|
-| First Observations | Monthly incident counts, severity distribution, time-to-resolution medians, affected services |
-| Second Observations | Team size changes, deployment cadence, on-call rotation schedules, sprint velocity metrics |
-| Patterns Emerge | Overlay the two data sets. Incidents spike when on-call rotations change. Resolution times correlate with team size inversely. The highest-velocity team has the most incidents. |
-| Audience Concludes | "Here is the team that shipped the most features this year. Here is the team that caused the most incidents. They are the same team." |
-| Your Reading | "Velocity without slack creates fragility. We introduced 20% unscheduled capacity and incidents dropped by half. The data was always there. We just hadn't looked at it without a narrative." |
+| Phase               | Content                                                                                                                                                                                       |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| First Observations  | Monthly incident counts, severity distribution, time-to-resolution medians, affected services                                                                                                 |
+| Second Observations | Team size changes, deployment cadence, on-call rotation schedules, sprint velocity metrics                                                                                                    |
+| Patterns Emerge     | Overlay the two data sets. Incidents spike when on-call rotations change. Resolution times correlate with team size inversely. The highest-velocity team has the most incidents.              |
+| Audience Concludes  | "Here is the team that shipped the most features this year. Here is the team that caused the most incidents. They are the same team."                                                         |
+| Your Reading        | "Velocity without slack creates fragility. We introduced 20% unscheduled capacity and incidents dropped by half. The data was always there. We just hadn't looked at it without a narrative." |
 
 ### "How Our Users Actually Use the Product" — Lightning Talk
 
-| Phase | Content |
-|-------|---------|
-| Observations | Session recording data: average session 3 minutes. Most clicked button: "Back." Most visited page: Settings. Second most visited: Settings again (they couldn't find what they needed the first time). Most common flow: Login > Dashboard > Settings > Settings > Help > Logout. |
-| Audience Concludes | Show the intended user flow (5 steps to value) next to the actual user flow (11 steps, 3 loops, 2 dead ends). No labels. No commentary. |
-| Your Reading | "We designed for a user who knows what they want. Our users are figuring out what they want. Those are different products." |
+| Phase              | Content                                                                                                                                                                                                                                                                           |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Observations       | Session recording data: average session 3 minutes. Most clicked button: "Back." Most visited page: Settings. Second most visited: Settings again (they couldn't find what they needed the first time). Most common flow: Login > Dashboard > Settings > Settings > Help > Logout. |
+| Audience Concludes | Show the intended user flow (5 steps to value) next to the actual user flow (11 steps, 3 loops, 2 dead ends). No labels. No commentary.                                                                                                                                           |
+| Your Reading       | "We designed for a user who knows what they want. Our users are figuring out what they want. Those are different products."                                                                                                                                                       |
 
 ## Philosophical Quick Reference
 
 These quotes and concepts from Camus can be woven into slides or speaker notes:
 
-- "Maman died today. Or yesterday maybe, I don't know." — *The Stranger*, opening line. The most famous example of emotionally detached narration in literature. Not because Meursault doesn't care, but because he reports what he knows and nothing more. Useful as a framing device in the introduction.
+- "Maman died today. Or yesterday maybe, I don't know." — _The Stranger_, opening line. The most famous example of emotionally detached narration in literature. Not because Meursault doesn't care, but because he reports what he knows and nothing more. Useful as a framing device in the introduction.
 - "I said that people never change their lives, that in any case one life was as good as another." — Meursault's radical indifference. Applicable to comparative analyses where the data shows all options are roughly equivalent.
 - "Since we're all going to die, it's obvious that when and how don't matter." — Meursault at his trial. The ultimate expression of detachment — useful for framing talks where the conclusion is that the choice doesn't matter as much as people think.
-- **The Sun/Physical World**: In *The Stranger*, Meursault is more affected by physical sensations (the sun, the heat, the glare) than by social conventions (grief, guilt, love). For presentations: let the raw data (the "physical world") speak louder than the narrative conventions (good/bad, success/failure).
-- **The Absurd Observer**: Camus' philosophical position in *The Myth of Sisyphus* includes the idea that the absurd person must "live without appeal" — without relying on external systems of meaning. The Stranger's Report puts the audience in this position: here are the facts, without appeal to any interpretive framework. What do you make of them?
+- **The Sun/Physical World**: In _The Stranger_, Meursault is more affected by physical sensations (the sun, the heat, the glare) than by social conventions (grief, guilt, love). For presentations: let the raw data (the "physical world") speak louder than the narrative conventions (good/bad, success/failure).
+- **The Absurd Observer**: Camus' philosophical position in _The Myth of Sisyphus_ includes the idea that the absurd person must "live without appeal" — without relying on external systems of meaning. The Stranger's Report puts the audience in this position: here are the facts, without appeal to any interpretive framework. What do you make of them?
 - **Emotional honesty through restraint**: Camus argued that Meursault was "the only Christ we deserve" — condemned not for what he did but for refusing to perform the expected emotions. In a presentation, the refusal to editorialize is its own form of honesty.
 
 ## Combination Notes

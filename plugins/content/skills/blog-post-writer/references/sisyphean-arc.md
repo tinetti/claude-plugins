@@ -23,7 +23,7 @@ Name the boulder. Describe the work in enough detail that readers who do it will
 
 Zoom out. Show this isn't a one-time task — it's a pattern that repeats across sprints, quarters, years. The repetition needs to be felt, not just stated. Use parallel structure. Let the rhythm of the prose mirror the rhythm of the work.
 
-**Example:** "Q1: update deps, fix the breaking changes in the test suite, discover a peer dependency conflict, work around it. Q2: update deps, fix *different* breaking changes, discover the Q1 workaround is now the problem, remove it. Q3: update deps, realize the package you worked around in Q1 was deprecated in Q2, migrate to its replacement. Q4: update deps. The replacement has a peer dependency conflict."
+**Example:** "Q1: update deps, fix the breaking changes in the test suite, discover a peer dependency conflict, work around it. Q2: update deps, fix _different_ breaking changes, discover the Q1 workaround is now the problem, remove it. Q3: update deps, realize the package you worked around in Q1 was deprecated in Q2, migrate to its replacement. Q4: update deps. The replacement has a peer dependency conflict."
 
 ### 3. Reveal the Futility (Name What Everyone Knows)
 
@@ -35,11 +35,12 @@ Say the thing out loud. This is the vulnerable moment — acknowledging that the
 
 This is the Camus move. Don't pretend the cycle will end. Don't offer a tool that "solves" it. Instead, find what's genuinely valuable in the repetition itself: the craft of doing it well, the knowledge accumulated, the reliability you provide, the mastery that only comes from doing something hundreds of times.
 
-**Example:** "But here's what I've learned after doing this for ten years: I'm faster now. Not because the work got easier — because I got better at it. I can read a changelog and know which breaking changes will actually break our stuff. I can feel when a major version bump is safe and when it's going to cost a week. That intuition didn't come from a blog post or a conference talk. It came from rolling the boulder up the hill forty times. The repetition isn't the obstacle to mastery. It *is* the mastery."
+**Example:** "But here's what I've learned after doing this for ten years: I'm faster now. Not because the work got easier — because I got better at it. I can read a changelog and know which breaking changes will actually break our stuff. I can feel when a major version bump is safe and when it's going to cost a week. That intuition didn't come from a blog post or a conference talk. It came from rolling the boulder up the hill forty times. The repetition isn't the obstacle to mastery. It _is_ the mastery."
 
 ## Structure Notes
 
 **Tone shifts are the architecture:**
+
 - Step 1: Matter-of-fact. Deadpan. Just describing the work.
 - Step 2: Slightly wry. The parallel structure creates dry humor through accumulation.
 - Step 3: Vulnerable. Drop the deadpan. Be direct about what this feels like.

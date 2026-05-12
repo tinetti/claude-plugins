@@ -1,12 +1,12 @@
 # The Sisyphean Arc
 
-The Sisyphean Arc draws from Albert Camus' essay *The Myth of Sisyphus* (1942), in which Camus reframes the Greek king's eternal punishment — rolling a boulder up a hill only to watch it roll back down, forever — as the foundational metaphor for human existence. Camus argues that Sisyphus is not tragic but heroic: "The struggle itself toward the heights is enough to fill a man's heart. One must imagine Sisyphus happy." As a presentation framework, this arc works because it mirrors something every technical audience has felt — the repetitive, often thankless work that defines craft. The structure does not promise a silver bullet. Instead, it builds emotional weight through repetition, then delivers a reframe that transforms drudgery into meaning. The audience leaves not with a solution, but with a new relationship to the problem.
+The Sisyphean Arc draws from Albert Camus' essay _The Myth of Sisyphus_ (1942), in which Camus reframes the Greek king's eternal punishment — rolling a boulder up a hill only to watch it roll back down, forever — as the foundational metaphor for human existence. Camus argues that Sisyphus is not tragic but heroic: "The struggle itself toward the heights is enough to fill a man's heart. One must imagine Sisyphus happy." As a presentation framework, this arc works because it mirrors something every technical audience has felt — the repetitive, often thankless work that defines craft. The structure does not promise a silver bullet. Instead, it builds emotional weight through repetition, then delivers a reframe that transforms drudgery into meaning. The audience leaves not with a solution, but with a new relationship to the problem.
 
 ## The Phases
 
 ### 1. Establish the Task
 
-**Purpose**: Ground the audience in a specific, concrete task they recognize. Something they do regularly. Something that feels mundane. Camus was precise about Sisyphus' relationship to the boulder: it was *his* boulder. The task must feel personal, not abstract. The audience should recognize the specific texture of the work — the dashboard they open, the queue they check, the PR they review.
+**Purpose**: Ground the audience in a specific, concrete task they recognize. Something they do regularly. Something that feels mundane. Camus was precise about Sisyphus' relationship to the boulder: it was _his_ boulder. The task must feel personal, not abstract. The audience should recognize the specific texture of the work — the dashboard they open, the queue they check, the PR they review.
 
 **In a talk**: "Every Monday morning, you open the error dashboard. There are new alerts. There are always new alerts. You start triaging."
 
@@ -14,7 +14,7 @@ The Sisyphean Arc draws from Albert Camus' essay *The Myth of Sisyphus* (1942), 
 
 ### 2. Show the Repetition
 
-**Purpose**: Make the cycle visceral. This isn't a one-time event — it's a pattern. Show iteration after iteration. The audience should start to feel the weight. In the myth, Sisyphus watches the boulder roll down *every time*. He walks back down the hill *every time*. Camus identified this descent — the walk back to the bottom — as the most important moment: "It is during that return, that pause, that Sisyphus interests me." Your slides should capture both the push and the descent.
+**Purpose**: Make the cycle visceral. This isn't a one-time event — it's a pattern. Show iteration after iteration. The audience should start to feel the weight. In the myth, Sisyphus watches the boulder roll down _every time_. He walks back down the hill _every time_. Camus identified this descent — the walk back to the bottom — as the most important moment: "It is during that return, that pause, that Sisyphus interests me." Your slides should capture both the push and the descent.
 
 **In a talk**: "You fix the null pointer exception. It ships Tuesday. Wednesday, a different null pointer exception. Same root cause, different module. You fix it again. Thursday, another one."
 
@@ -30,11 +30,11 @@ The Sisyphean Arc draws from Albert Camus' essay *The Myth of Sisyphus* (1942), 
 
 ### 4. Find Meaning in the Doing
 
-**Purpose**: The Camusian reframe. This is not a pivot to optimism — it's a pivot to *purpose*. The work has value not because it solves the problem forever, but because the doing of it is where craft lives. "One must imagine Sisyphus happy." Camus wrote that "the absurd does not liberate; it binds" — meaning that recognizing futility doesn't free you from the work; it frees you from the *expectation* that the work should end. This is the crucial distinction. You're not saying "it's fine." You're saying "it doesn't need to end to matter."
+**Purpose**: The Camusian reframe. This is not a pivot to optimism — it's a pivot to _purpose_. The work has value not because it solves the problem forever, but because the doing of it is where craft lives. "One must imagine Sisyphus happy." Camus wrote that "the absurd does not liberate; it binds" — meaning that recognizing futility doesn't free you from the work; it frees you from the _expectation_ that the work should end. This is the crucial distinction. You're not saying "it's fine." You're saying "it doesn't need to end to matter."
 
 **In a talk**: "But here's what I've realized: the triage isn't the cost of the job. The triage IS the job. And doing it well — building better heuristics, faster diagnosis, cleaner fixes — that's not futile. That's mastery."
 
-**Slide approach**: 3-5 slides. The energy shifts here. Show what excellence looks like *within* the cycle. Show how the repetition itself has produced skill, tools, or understanding that wouldn't exist otherwise. The final slide should echo the first — same task, same dashboard, but the audience now sees it differently.
+**Slide approach**: 3-5 slides. The energy shifts here. Show what excellence looks like _within_ the cycle. Show how the repetition itself has produced skill, tools, or understanding that wouldn't exist otherwise. The final slide should echo the first — same task, same dashboard, but the audience now sees it differently.
 
 ## Tone and Delivery
 
@@ -47,6 +47,7 @@ Avoid the trap of making the reframe feel like a corporate "silver lining." Camu
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to the emotional arc:
+
 - **Establish + Repetition** (4-6 slides): One quick setup, then 3-4 rapid iterations to build the rhythm
 - **Futility** (2-3 slides): One stark slide naming the cycle
 - **Meaning** (3-4 slides): The reframe and a single takeaway
@@ -56,6 +57,7 @@ Skip extended code examples. The rhythm matters more than depth. Use slide repet
 ### Standard Talk (20 min, 25-35 slides)
 
 Full four phases with room to breathe:
+
 - **Establish** (3-5 slides): Set scene, connect to audience
 - **Repetition** (8-12 slides): 3-4 full iterations with code, demos, or data
 - **Futility** (4-6 slides): The honest reckoning, with evidence
@@ -66,6 +68,7 @@ This is the sweet spot for the Sisyphean Arc. You need enough time for the repet
 ### Extended Talk (45 min, 50-70 slides)
 
 Deep dive into each iteration:
+
 - **Establish** (5-8 slides): Rich context, audience identification
 - **Repetition** (20-28 slides): 5-6 full iterations, each progressively more detailed. Include live demos. Show real data, real codebases, real ticket counts.
 - **Futility** (8-12 slides): Philosophical aside — bring in Camus directly. Quote the essay. Connect to broader industry patterns.
@@ -87,36 +90,36 @@ Deep dive into each iteration:
 - **Tutorial or how-to talks**: Learners want a finish line, not an eternal cycle
 - **Talks with a clear hero solution**: If your talk ends with "and then we adopted X and the problem went away," this is the wrong framework — use the Story Circle
 - **Audiences expecting actionable fixes**: The Sisyphean Arc's takeaway is philosophical, not procedural. If the audience needs to leave with a to-do list, choose differently.
-- **Short-lived projects**: If the work had a clear end date, the Sisyphean metaphor rings hollow. The power is in the *ongoing* nature of the task.
+- **Short-lived projects**: If the work had a clear end date, the Sisyphean metaphor rings hollow. The power is in the _ongoing_ nature of the task.
 
 ## Example Mapping
 
 ### "The Art of Dependency Management" — Standard Talk
 
-| Phase | Content |
-|-------|---------|
-| Establish the Task | "Every quarter, Dependabot opens 200 PRs. You review them. You merge them. You fix what breaks." |
-| Show the Repetition | Quarter 1: upgrade React, fix breaking tests. Quarter 2: upgrade React, fix breaking tests. Quarter 3: upgrade React, fix different breaking tests. Show the PRs. Show the cycle. |
-| Reveal the Futility | "In 2 years, we've merged 1,600 dependency PRs. The dependency count hasn't gone down. It's gone up. We're not winning; we're maintaining." |
+| Phase                     | Content                                                                                                                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Establish the Task        | "Every quarter, Dependabot opens 200 PRs. You review them. You merge them. You fix what breaks."                                                                                                 |
+| Show the Repetition       | Quarter 1: upgrade React, fix breaking tests. Quarter 2: upgrade React, fix breaking tests. Quarter 3: upgrade React, fix different breaking tests. Show the PRs. Show the cycle.                |
+| Reveal the Futility       | "In 2 years, we've merged 1,600 dependency PRs. The dependency count hasn't gone down. It's gone up. We're not winning; we're maintaining."                                                      |
 | Find Meaning in the Doing | "But our upgrade time dropped from 3 days to 4 hours. Our test suite catches 94% of breakage automatically. The cycle taught us what matters. The boulder got lighter, even if the hill didn't." |
 
 ### "On-Call Doesn't Have to Break You" — Lightning Talk
 
-| Phase | Content |
-|-------|---------|
-| Establish the Task | "Friday night. Pager goes off. You open the laptop." |
-| Show the Repetition | Three rapid-fire incident vignettes: same dashboard, same commands, different services |
-| Reveal the Futility | "There will always be another page. You cannot prevent all failure." |
-| Find Meaning in the Doing | "But you can get *good* at this. And getting good at it — that's not a consolation prize. That's the whole game." |
+| Phase                     | Content                                                                                                           |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Establish the Task        | "Friday night. Pager goes off. You open the laptop."                                                              |
+| Show the Repetition       | Three rapid-fire incident vignettes: same dashboard, same commands, different services                            |
+| Reveal the Futility       | "There will always be another page. You cannot prevent all failure."                                              |
+| Find Meaning in the Doing | "But you can get _good_ at this. And getting good at it — that's not a consolation prize. That's the whole game." |
 
 ### "Fighting Entropy in a Monorepo" — Extended Talk
 
-| Phase | Content |
-|-------|---------|
-| Establish the Task | "Our monorepo has 2.3 million lines of code. Every morning, the lint job finds new violations. Every sprint, someone adds a package that breaks the build graph." |
-| Show the Repetition | Walk through 6 months of build system fixes. Each month, a new pattern: circular dependency, phantom type export, ESM/CJS conflict, unused barrel file. Show the PRs. Show the Slack threads. Show the same engineer's name on every fix. |
-| Reveal the Futility | "We've fixed 847 build issues in 18 months. The build is 14 seconds faster than when we started. There are currently 23 open build issues. There are always 20-30 open build issues. We run in place." Bring in Camus: "The absurd is born of the confrontation between human need [for order] and the unreasonable silence of the world [entropy]." |
-| Find Meaning in the Doing | "But here's the thing nobody talks about: we understand this codebase better than anyone. We've built tooling that catches 80% of issues before merge. The entropy taught us where the seams are. The boulder is our curriculum." |
+| Phase                     | Content                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Establish the Task        | "Our monorepo has 2.3 million lines of code. Every morning, the lint job finds new violations. Every sprint, someone adds a package that breaks the build graph."                                                                                                                                                                                    |
+| Show the Repetition       | Walk through 6 months of build system fixes. Each month, a new pattern: circular dependency, phantom type export, ESM/CJS conflict, unused barrel file. Show the PRs. Show the Slack threads. Show the same engineer's name on every fix.                                                                                                            |
+| Reveal the Futility       | "We've fixed 847 build issues in 18 months. The build is 14 seconds faster than when we started. There are currently 23 open build issues. There are always 20-30 open build issues. We run in place." Bring in Camus: "The absurd is born of the confrontation between human need [for order] and the unreasonable silence of the world [entropy]." |
+| Find Meaning in the Doing | "But here's the thing nobody talks about: we understand this codebase better than anyone. We've built tooling that catches 80% of issues before merge. The entropy taught us where the seams are. The boulder is our curriculum."                                                                                                                    |
 
 ## Philosophical Quick Reference
 

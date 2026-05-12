@@ -72,7 +72,7 @@ The opening of Thread B is a trust exercise. The reader trusted you through Thre
 ## Combination Notes
 
 - **The Petal:** Similar multi-thread structure, but petals radiate from a known center. Converging Ideas hides the center until the convergence. You can start with convergence and shift to petals for the synthesis section.
-- **Compare & Contrast:** If threads A and B are two perspectives on the same domain, you're doing Compare & Contrast. Converging Ideas works better when threads are from *different* domains.
+- **Compare & Contrast:** If threads A and B are two perspectives on the same domain, you're doing Compare & Contrast. Converging Ideas works better when threads are from _different_ domains.
 - **The Rashomon:** Same event from different angles that converge. Rashomon is inward-facing (multiple views of one thing); Converging Ideas is outward-facing (multiple things revealing one pattern).
 - **Kishotenketsu:** The convergence moment IS the twist (Ten). The threads are Ki and Sho, the convergence is Ten, the synthesis is Ketsu.
 

@@ -290,6 +290,37 @@ Six specialists in parallel cover more ground than one generalist, and an agent 
 /essentials:squad-review
 ```
 
+#### `/essentials:handoff` - Session Handoff Document
+
+Compact the current conversation into a handoff document so a fresh agent can continue the work without re-deriving context.
+
+**When to use:**
+
+- Ending a session with unfinished work
+- Context window getting long and you want to start fresh
+- Passing work to another person or session
+
+**What it captures:**
+
+- Goal, current state (branch, files, test status)
+- Decisions made and their rationale
+- Dead ends and failed approaches (prevents the next agent from repeating mistakes)
+- Open questions and blockers
+- Prioritized next steps
+- Suggested skills for the next session
+
+**What it avoids:**
+
+- Duplicating artifacts already in commits, PRDs, plans, or issues — references them by path instead
+- Verbatim code blocks unless they're critical uncommitted context
+- Full conversation rehash — distills, doesn't transcribe
+
+**Example:**
+
+```bash
+/essentials:handoff finish the paragraph-level detection
+```
+
 #### `/essentials:security-audit` - Dispatch Security Auditor
 
 Explicit entry point for the security-auditor agent. User-invocable only — does not auto-trigger, so ambiguous phrasing won't kick it off unintentionally.
@@ -355,7 +386,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`
 
 ## Technical Details
 

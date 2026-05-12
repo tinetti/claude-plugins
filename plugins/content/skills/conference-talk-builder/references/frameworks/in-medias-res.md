@@ -1,6 +1,6 @@
 # In Medias Res for Technical Presentations
 
-In Medias Res ("into the middle of things") drops the audience directly into the most compelling moment of your story, then rewinds to fill in context. Originating from Homer's epic poetry tradition — both the *Iliad* and the *Odyssey* open mid-action — the technique exploits a fundamental cognitive hook: when people witness a crisis without context, they cannot help but ask "how did we get here?" That question keeps them engaged through setup material that would otherwise feel slow. For technical talks, this means opening with the production incident, the failing test, the angry Slack thread, or the dashboard on fire — then rewinding to explain the architecture, decisions, and assumptions that led to that moment.
+In Medias Res ("into the middle of things") drops the audience directly into the most compelling moment of your story, then rewinds to fill in context. Originating from Homer's epic poetry tradition — both the _Iliad_ and the _Odyssey_ open mid-action — the technique exploits a fundamental cognitive hook: when people witness a crisis without context, they cannot help but ask "how did we get here?" That question keeps them engaged through setup material that would otherwise feel slow. For technical talks, this means opening with the production incident, the failing test, the angry Slack thread, or the dashboard on fire — then rewinding to explain the architecture, decisions, and assumptions that led to that moment.
 
 ## The Phases
 
@@ -51,6 +51,7 @@ Now continue past the opening moment. What happened next? How was it fixed? What
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to three beats:
+
 - **Drop** (2-3 slides): The crisis moment — make it vivid and specific
 - **Rewind** (4-6 slides): One key piece of context that explains the crisis
 - **Resolution** (3-4 slides): The fix and the lesson
@@ -60,6 +61,7 @@ Skip the Freeze and Catch-Up phases. Go directly from crisis to "here's why" to 
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 5 phases:
+
 - **Drop**: 2-3 slides (open with impact)
 - **Freeze**: 1-2 slides (introduce yourself, frame the question)
 - **Rewind**: 10-14 slides (full context, architecture, decisions)
@@ -69,6 +71,7 @@ Use all 5 phases:
 ### Extended Talk (45 min, 50-70 slides)
 
 Full depth everywhere. Expand the Rewind into multiple chapters with their own mini-tensions:
+
 - **Drop**: 3-5 slides (extended crisis with multiple artifacts — dashboard, Slack, logs)
 - **Freeze**: 2-3 slides (thorough self-introduction, preview of the journey)
 - **Rewind**: 20-30 slides (multiple flashback layers at different time scales)
@@ -97,33 +100,33 @@ Add multiple flashback layers in the Rewind (decisions at different time scales 
 
 ### "How a Typo Took Down DNS for 3 Hours" — Debugging Story
 
-| Phase | Content |
-|-------|---------|
-| Drop | "Our monitoring goes blank. Not red — blank. Grafana can't resolve our metrics endpoint. Because nothing can resolve anything. DNS is down." Show the empty dashboard. |
-| Freeze | "A single character in a BIND config file did this. Let me show you which character and how it got there." |
-| Rewind | The DNS infrastructure. The config management pipeline. The PR that updated a TTL value — and the trailing dot that was accidentally deleted from an FQDN. What a trailing dot means in DNS. Why the config parser didn't catch it. |
-| Catch-Up | "Without the trailing dot, `api.example.com` became `api.example.com.example.com`. Every internal service resolution failed. Cascading timeouts took down everything that depended on DNS — which was everything." |
-| Resolution | Config validation in CI that parses BIND zones before merge. The one-line test that would have caught this. The argument for infrastructure-as-code over manual config. |
+| Phase      | Content                                                                                                                                                                                                                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Drop       | "Our monitoring goes blank. Not red — blank. Grafana can't resolve our metrics endpoint. Because nothing can resolve anything. DNS is down." Show the empty dashboard.                                                              |
+| Freeze     | "A single character in a BIND config file did this. Let me show you which character and how it got there."                                                                                                                          |
+| Rewind     | The DNS infrastructure. The config management pipeline. The PR that updated a TTL value — and the trailing dot that was accidentally deleted from an FQDN. What a trailing dot means in DNS. Why the config parser didn't catch it. |
+| Catch-Up   | "Without the trailing dot, `api.example.com` became `api.example.com.example.com`. Every internal service resolution failed. Cascading timeouts took down everything that depended on DNS — which was everything."                  |
+| Resolution | Config validation in CI that parses BIND zones before merge. The one-line test that would have caught this. The argument for infrastructure-as-code over manual config.                                                             |
 
 ### "The Deploy That Deleted Production" — Incident Retrospective
 
-| Phase | Content |
-|-------|---------|
-| Drop | "Friday 5:02pm. `kubectl apply` completes. Every pod in the production namespace terminates. Not restarts — terminates. Here's the Slack thread." |
-| Freeze | "I'm [name], SRE at [company]. To understand how a routine deploy did this, we need to rewind to a Helm chart change made 6 weeks ago." |
-| Rewind | The Helm chart refactor. The label selector change. The review that approved it. The staging environment that didn't catch it (and why). The CD pipeline's assumptions about immutable selectors. |
-| Catch-Up | "So when the new chart applied, Kubernetes saw pods with labels that didn't match any deployment. Orphaned pods get garbage collected. Every single one." |
-| Resolution | Admission controller that blocks label selector changes. Pre-deploy diff tooling. The 3 questions to add to every Helm chart review. |
+| Phase      | Content                                                                                                                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Drop       | "Friday 5:02pm. `kubectl apply` completes. Every pod in the production namespace terminates. Not restarts — terminates. Here's the Slack thread."                                                 |
+| Freeze     | "I'm [name], SRE at [company]. To understand how a routine deploy did this, we need to rewind to a Helm chart change made 6 weeks ago."                                                           |
+| Rewind     | The Helm chart refactor. The label selector change. The review that approved it. The staging environment that didn't catch it (and why). The CD pipeline's assumptions about immutable selectors. |
+| Catch-Up   | "So when the new chart applied, Kubernetes saw pods with labels that didn't match any deployment. Orphaned pods get garbage collected. Every single one."                                         |
+| Resolution | Admission controller that blocks label selector changes. Pre-deploy diff tooling. The 3 questions to add to every Helm chart review.                                                              |
 
 ### "Why We Mass Reverted Our React Migration" — Architecture Decision Talk
 
-| Phase | Content |
-|-------|---------|
-| Drop | "Here's the PR: +0 -47,000 lines. Title: 'Revert: React migration.' Merged by the CTO at 11pm on a Tuesday." Show the actual PR (line counts, merge timestamp, approvals). |
-| Freeze | "This is a story about what happens when a migration is technically correct but organizationally wrong. Let me show you how we got to that PR." Introduce yourself. |
-| Rewind | The decision to migrate. The proof of concept that worked beautifully. The team structure that made incremental migration impossible. The performance regression nobody measured until month 3. The sprint retros that kept saying "next sprint will be better." |
-| Catch-Up | "The CTO opened that PR after the third sprint where zero features shipped because every team was blocked on migration bugs. The 47,000 lines were technically fine. The velocity cost was not." |
-| Resolution | How they re-attempted the migration 6 months later with a strangler fig pattern. What changed organizationally. The migration checklist they use now: technical readiness, team readiness, rollback plan, success metrics. |
+| Phase      | Content                                                                                                                                                                                                                                                          |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Drop       | "Here's the PR: +0 -47,000 lines. Title: 'Revert: React migration.' Merged by the CTO at 11pm on a Tuesday." Show the actual PR (line counts, merge timestamp, approvals).                                                                                       |
+| Freeze     | "This is a story about what happens when a migration is technically correct but organizationally wrong. Let me show you how we got to that PR." Introduce yourself.                                                                                              |
+| Rewind     | The decision to migrate. The proof of concept that worked beautifully. The team structure that made incremental migration impossible. The performance regression nobody measured until month 3. The sprint retros that kept saying "next sprint will be better." |
+| Catch-Up   | "The CTO opened that PR after the third sprint where zero features shipped because every team was blocked on migration bugs. The 47,000 lines were technically fine. The velocity cost was not."                                                                 |
+| Resolution | How they re-attempted the migration 6 months later with a strangler fig pattern. What changed organizationally. The migration checklist they use now: technical readiness, team readiness, rollback plan, success metrics.                                       |
 
 ## Combination Notes
 

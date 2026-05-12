@@ -45,7 +45,7 @@ Don't fake a clean ending. The honest options are: you map a path through the la
 
 ## Structure Notes
 
-**Tone:** Dry comedy and precise documentation throughout. You're not angry — you're *documenting*. Think nature documentary narrator describing a predator's hunting technique. The absurdity should speak for itself without editorial commentary.
+**Tone:** Dry comedy and precise documentation throughout. You're not angry — you're _documenting_. Think nature documentary narrator describing a predator's hunting technique. The absurdity should speak for itself without editorial commentary.
 
 **Pacing:** Each step should be slightly longer than the last. The escalation is the engine. Steps 1-2 should be ~30%, step 3 is ~25%, step 4 is ~25%, step 5 is ~20%.
 

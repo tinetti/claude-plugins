@@ -44,7 +44,7 @@ From the context above, three possible scopes may exist:
 
 ### Decision rules
 
-1. **All empty** → do NOT dispatch. Respond: *No changes to review.* Stop.
+1. **All empty** → do NOT dispatch. Respond: _No changes to review._ Stop.
 2. **Exactly one scope available, and it is `branch-diff`** → proceed
    automatically. State the scope in one sentence, then dispatch.
 3. **Any other case (on `main` with uncommitted work, or a feature
@@ -58,6 +58,7 @@ counts and (for small sets) file names. Include `Cancel` as the last
 option. Example templates:
 
 On `main` with tracked + untracked:
+
 ```
 Multiple review scopes available. Pick one:
 
@@ -68,6 +69,7 @@ Multiple review scopes available. Pick one:
 ```
 
 On a feature branch with extra uncommitted work:
+
 ```
 Multiple review scopes available. Pick one:
 
@@ -82,6 +84,7 @@ one sentence and dispatch.
 ### Binary/generated exclusions
 
 Regardless of scope, all reviewers ignore:
+
 - images (`*.png`, `*.jpg`, `*.jpeg`, `*.gif`, `*.webp`, `*.svg` as image content)
 - compiled artifacts (`dist/`, `build/`, `node_modules/`)
 - lockfiles (`pnpm-lock.yaml`, `package-lock.json`, `yarn.lock`)
@@ -482,7 +485,7 @@ single report, in this order:
 ```markdown
 # Squad Review — <branch name>
 
-*<N> commits, <X> files changed vs main*
+_<N> commits, <X> files changed vs main_
 
 <if open PR: > PR: #<num> — <title>
 

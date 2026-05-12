@@ -49,6 +49,7 @@ Land the universal lesson. The audience should leave with both the specific tech
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compressed false start — spend less time on the false story:
+
 - **Expected Story** (2-3 slides): Quick setup of the wrong assumption
 - **Interruption** (1 slide): Sharp break
 - **Real Story** (4-6 slides): The actual root cause and fix
@@ -59,6 +60,7 @@ The false story needs to be short enough that the audience buys it but doesn't i
 ### Standard Talk (20 min, 25-35 slides)
 
 Full development of both stories:
+
 - **Expected Story** (4-6 slides): Genuine investment in the wrong story
 - **Interruption** (1-2 slides): Clean break
 - **Real Story** (10-14 slides): Full technical deep-dive
@@ -68,6 +70,7 @@ Full development of both stories:
 ### Extended Talk (45 min, 50-70 slides)
 
 Option A — Single False Start with deep real story:
+
 - **Expected Story** (6-10 slides): Rich false narrative with demos
 - **Interruption** (1-2 slides): Break
 - **Real Story** (20-30 slides): Extended investigation with multiple sub-discoveries
@@ -75,6 +78,7 @@ Option A — Single False Start with deep real story:
 - **Takeaway** (6-10 slides): Multiple lessons, Q&A
 
 Option B — Multiple False Starts (advanced):
+
 - **False Start 1** (6-8 slides): First wrong assumption → interrupt
 - **False Start 2** (6-8 slides): Second wrong assumption → interrupt
 - **Real Story** (16-22 slides): The actual root cause
@@ -101,33 +105,33 @@ Option B is riskier — the second interruption can feel gimmicky if not handled
 
 ### "It Wasn't a Scaling Problem" — A Debugging Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Expected Story | 1-5 | "Traffic 10x'd. We horizontally scaled. 20 new instances." |
-| Interruption | 6 | "It made things worse. Let me stop. Here's what actually happened." |
-| Real Story | 7-18 | Memory leak in connection pool. One line fix. Step-by-step debugging walkthrough. |
-| The Gap | 19-23 | "Why did we reach for scaling? Because it's the default story. We never profiled." |
-| Takeaway | 24-28 | "Profile before you scale. Question the first diagnosis that feels right." |
+| Section        | Slides | Content                                                                            |
+| -------------- | ------ | ---------------------------------------------------------------------------------- |
+| Expected Story | 1-5    | "Traffic 10x'd. We horizontally scaled. 20 new instances."                         |
+| Interruption   | 6      | "It made things worse. Let me stop. Here's what actually happened."                |
+| Real Story     | 7-18   | Memory leak in connection pool. One line fix. Step-by-step debugging walkthrough.  |
+| The Gap        | 19-23  | "Why did we reach for scaling? Because it's the default story. We never profiled." |
+| Takeaway       | 24-28  | "Profile before you scale. Question the first diagnosis that feels right."         |
 
 ### "We Rewrote It in Rust (And It Was the Wrong Call)" — A Architecture Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Expected Story | 1-6 | "Python service was slow. Obvious fix: rewrite critical path in Rust. We did. 40x faster benchmarks." |
-| Interruption | 7 | "Production latency didn't change. Not one millisecond." |
-| Real Story | 8-17 | "The bottleneck was the database query, not the computation. We optimized the part that wasn't slow." |
-| The Gap | 18-22 | "Benchmark-driven development vs. production-profile-driven development. We measured the wrong thing." |
-| Takeaway | 23-27 | "Profile in production. Benchmarks measure components; latency is a system property." |
+| Section        | Slides | Content                                                                                                |
+| -------------- | ------ | ------------------------------------------------------------------------------------------------------ |
+| Expected Story | 1-6    | "Python service was slow. Obvious fix: rewrite critical path in Rust. We did. 40x faster benchmarks."  |
+| Interruption   | 7      | "Production latency didn't change. Not one millisecond."                                               |
+| Real Story     | 8-17   | "The bottleneck was the database query, not the computation. We optimized the part that wasn't slow."  |
+| The Gap        | 18-22  | "Benchmark-driven development vs. production-profile-driven development. We measured the wrong thing." |
+| Takeaway       | 23-27  | "Profile in production. Benchmarks measure components; latency is a system property."                  |
 
 ### "The Microservices Migration That Wasn't" — A Process Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Expected Story | 1-5 | "Monolith was slowing us down. 12-person team, 6-hour deploy cycles. Classic microservices candidate." |
-| Interruption | 6 | "We migrated. Deploy cycle went from 6 hours to 8 hours." |
-| Real Story | 7-16 | "The problem wasn't the monolith — it was the test suite. 4 hours of flaky E2E tests. Microservices just multiplied the test matrix." |
-| The Gap | 17-20 | "We treated a testing problem as an architecture problem because architecture is more interesting." |
-| Takeaway | 21-25 | "Fix the boring problem first. Architecture changes that don't address the actual bottleneck just redistribute the pain." |
+| Section        | Slides | Content                                                                                                                               |
+| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Expected Story | 1-5    | "Monolith was slowing us down. 12-person team, 6-hour deploy cycles. Classic microservices candidate."                                |
+| Interruption   | 6      | "We migrated. Deploy cycle went from 6 hours to 8 hours."                                                                             |
+| Real Story     | 7-16   | "The problem wasn't the monolith — it was the test suite. 4 hours of flaky E2E tests. Microservices just multiplied the test matrix." |
+| The Gap        | 17-20  | "We treated a testing problem as an architecture problem because architecture is more interesting."                                   |
+| Takeaway       | 21-25  | "Fix the boring problem first. Architecture changes that don't address the actual bottleneck just redistribute the pain."             |
 
 ## Combination Notes
 

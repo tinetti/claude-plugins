@@ -7,6 +7,7 @@ The Waiting is a narrative framework drawn from Samuel Beckett's _Waiting for Go
 Beckett described _Waiting for Godot_ as "a play in which nothing happens, twice." The two-act structure mirrors itself: the same characters, the same tree, the same waiting — but everything is subtly degraded or shifted. Vladimir and Estragon cannot even be sure if the boy who arrives is the same boy from yesterday. The play resists interpretation by design; Beckett refused to say who or what Godot represents. That refusal is itself the technique: the audience projects their own meaning onto the void, which makes the waiting personal. In a tech talk, this means the speaker does not need to resolve the tension. The audience will bring their own migrations, their own stalled projects, their own Godot. The speaker's job is to create the space for that recognition.
 
 Key Beckett principles to channel:
+
 - **Repetition with variation**: The same structure, but each repetition carries more weight
 - **Dignity in futility**: The characters are not pathetic; they are persistent
 - **Comedy as survival**: Vladimir and Estragon are funny precisely because the situation is unbearable
@@ -58,6 +59,7 @@ Mirror Act 1 deliberately. Restate the original promise — then show that the r
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to three beats:
+
 - **The Promise** (2-3 slides): Name the thing everyone is waiting for. Make it vivid.
 - **The Coping** (5-7 slides): Show the real work. One strong example of what was built in the meantime.
 - **The Shift** (2-3 slides): We're still waiting. But look what happened while we weren't paying attention.
@@ -67,6 +69,7 @@ Skip the explicit "It Doesn't Come" phase — imply it. The audience will fill i
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 5 phases with emphasis on Phase 3:
+
 - Phase 1: 3-4 slides (establish the anticipation)
 - Phase 2: 4-5 slides (let the absence breathe)
 - Phase 3: 10-14 slides (the substantive core — code, demos, architecture)
@@ -76,6 +79,7 @@ Use all 5 phases with emphasis on Phase 3:
 ### Extended Talk (45 min, 50-70 slides)
 
 Full Beckett. Lean into the repetition:
+
 - Phase 1: 5-7 slides (rich context, multiple stakeholder perspectives)
 - Phase 2: 8-12 slides (show the non-arrival from multiple angles — timeline, team morale, technical debt)
 - Phase 3: 20-28 slides (multiple examples, live demos, audience exercises)
@@ -114,22 +118,22 @@ Pacing is everything in this framework. The temptation is to rush through the ab
 
 ### "The Migration That Never Finished (And Why That's Fine)"
 
-| Phase | Content |
-|-------|---------|
-| The Promise | "We committed to decomposing the monolith. The RFC had 47 thumbs-up reactions." |
-| The Absence | "18 months later: 12 services extracted, 40 remaining. The Jira epic has its own Jira epic." |
-| The Coping | "The API gateway we built 'temporarily.' The contract testing framework born from desperation. The deploy pipeline that's better than anything the microservices plan envisioned." |
-| The Shift | "Our 'workarounds' have 94% test coverage. The monolith's critical paths are better-documented than ever. We built the tooling the migration needed, just not the migration itself." |
-| Still Waiting | "The epic is still open. I hope it stays open for a while — we do our best work while we're waiting." |
+| Phase         | Content                                                                                                                                                                              |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| The Promise   | "We committed to decomposing the monolith. The RFC had 47 thumbs-up reactions."                                                                                                      |
+| The Absence   | "18 months later: 12 services extracted, 40 remaining. The Jira epic has its own Jira epic."                                                                                         |
+| The Coping    | "The API gateway we built 'temporarily.' The contract testing framework born from desperation. The deploy pipeline that's better than anything the microservices plan envisioned."   |
+| The Shift     | "Our 'workarounds' have 94% test coverage. The monolith's critical paths are better-documented than ever. We built the tooling the migration needed, just not the migration itself." |
+| Still Waiting | "The epic is still open. I hope it stays open for a while — we do our best work while we're waiting."                                                                                |
 
 ### "Waiting for the Perfect Abstraction"
 
-| Phase | Content |
-|-------|---------|
-| The Promise | "Once we find the right state management pattern, our frontend will be clean and predictable." |
-| The Absence | "Redux, MobX, Zustand, signals, server components — the perfect pattern is always one library away." |
-| The Coping | "Meanwhile, we wrote custom hooks. Lots of them. They're ugly and specific and they work." |
-| The Shift | "The hooks aren't waiting for the right abstraction. They ARE the right abstraction — for us, for this codebase." |
+| Phase         | Content                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| The Promise   | "Once we find the right state management pattern, our frontend will be clean and predictable."                    |
+| The Absence   | "Redux, MobX, Zustand, signals, server components — the perfect pattern is always one library away."              |
+| The Coping    | "Meanwhile, we wrote custom hooks. Lots of them. They're ugly and specific and they work."                        |
+| The Shift     | "The hooks aren't waiting for the right abstraction. They ARE the right abstraction — for us, for this codebase." |
 | Still Waiting | "I still read every state management blog post. I probably always will. But I stopped waiting to start building." |
 
 ## Combination Notes

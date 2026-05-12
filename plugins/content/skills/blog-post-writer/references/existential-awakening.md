@@ -16,25 +16,25 @@ A post structured around a moment of profound realization that changes how the a
 
 Show the reader a life running on autopilot. Not miserable — just unquestioned. The routine should feel comfortable, even enviable. The point is that comfort can be its own trap.
 
-**Example:** "I had a system. Wake up, open the terminal, `git pull`, check Linear, write code, push, review, repeat. Fifteen years of this. I was good at it. My Neovim config was dialed. My tmux sessions were muscle memory. I could scaffold a React component with my eyes closed. I never once asked myself *why* I was doing any of it."
+**Example:** "I had a system. Wake up, open the terminal, `git pull`, check Linear, write code, push, review, repeat. Fifteen years of this. I was good at it. My Neovim config was dialed. My tmux sessions were muscle memory. I could scaffold a React component with my eyes closed. I never once asked myself _why_ I was doing any of it."
 
 ### 2. The Disruption (Something Breaks the Pattern)
 
 Something external cracks the routine. It doesn't have to be dramatic — sometimes the smallest thing opens the biggest door. The disruption isn't the realization itself. It's the thing that makes the realization possible.
 
-**Example:** "A junior developer on our team asked me why we use TypeScript. Not *how* — why. And I opened my mouth to answer and realized I was about to recite a blog post I'd read in 2018. I didn't have my own reason. I had inherited one."
+**Example:** "A junior developer on our team asked me why we use TypeScript. Not _how_ — why. And I opened my mouth to answer and realized I was about to recite a blog post I'd read in 2018. I didn't have my own reason. I had inherited one."
 
 ### 3. The Confrontation (Face the Uncomfortable Question)
 
-The disruption forces a question the author has been avoiding. This is the vulnerable core of the post. The question is usually some version of: *Am I doing this because I chose it, or because I never stopped to choose?*
+The disruption forces a question the author has been avoiding. This is the vulnerable core of the post. The question is usually some version of: _Am I doing this because I chose it, or because I never stopped to choose?_
 
 **Example:** "That night I sat with my dotfiles open and scrolled through years of accumulated configuration. Plugins I'd added for projects I'd left. Keybindings for workflows I'd abandoned. A `TODO` comment from 2019 that said 'figure out if I actually need this.' I never figured it out. I just kept carrying it. And I started wondering — how much of my career was like that `TODO`? Things I'd never examined, just... maintained."
 
 ### 4. The Choice (Decide What Matters)
 
-The author makes a deliberate choice — not necessarily to change everything, but to *choose* rather than drift. This is the existentialist move: authenticity comes from conscious decision, even if you decide to keep doing the same thing.
+The author makes a deliberate choice — not necessarily to change everything, but to _choose_ rather than drift. This is the existentialist move: authenticity comes from conscious decision, even if you decide to keep doing the same thing.
 
-**Example:** "I deleted my entire Neovim config. All of it. Started from `init.lua` with zero plugins. And then I added things back one at a time, but only if I could articulate why. Not 'because the internet said so.' Not 'because I've always had it.' Only if *I* needed it, for *my* work, right now. It took three weeks. I ended up with about 40% of what I had before."
+**Example:** "I deleted my entire Neovim config. All of it. Started from `init.lua` with zero plugins. And then I added things back one at a time, but only if I could articulate why. Not 'because the internet said so.' Not 'because I've always had it.' Only if _I_ needed it, for _my_ work, right now. It took three weeks. I ended up with about 40% of what I had before."
 
 ### 5. The New Commitment (Return to Work with Changed Relationship)
 

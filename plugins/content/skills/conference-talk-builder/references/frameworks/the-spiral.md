@@ -49,6 +49,7 @@ Circle back to the first-pass definition. Either validate it ("the simple mental
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to two passes:
+
 - **Simple Version** (3-4 slides): The intuitive explanation
 - **One Deeper Pass** (4-6 slides): The single most important nuance
 - **Return** (2-3 slides): Calibrate — when the simple version suffices, when it doesn't
@@ -58,6 +59,7 @@ Two passes are enough to create the spiral feeling. Don't try to fit all four de
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 5 phases with three content passes:
+
 - **Pass 1 — Simple**: 3-5 slides
 - **Pass 2 — Deeper**: 5-8 slides
 - **Pass 3 — Nuanced**: 7-10 slides
@@ -68,6 +70,7 @@ Skip the fourth pass (Full Complexity). Three orbits give the audience a satisfy
 ### Extended Talk (45 min, 50-70 slides)
 
 Full four passes with room to breathe:
+
 - **Pass 1 — Simple**: 4-6 slides
 - **Pass 2 — Deeper**: 8-12 slides
 - **Pass 3 — Nuanced**: 12-18 slides
@@ -96,42 +99,42 @@ Add live demos in Passes 3 and 4. Consider audience exercises between passes ("b
 
 ### "What Happens When You Type `await`" — JavaScript Concurrency Deep-Dive
 
-| Phase | Content |
-|-------|---------|
-| Pass 1 — Simple | "`await` pauses your function until the promise resolves. It's like pressing pause and play." Show a simple `fetch` example. |
-| Pass 2 — Deeper | "`await` doesn't pause the program — it yields control back to the event loop. Other code runs while you wait." Show two concurrent `await` calls and their interleaving. |
+| Phase            | Content                                                                                                                                                                                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pass 1 — Simple  | "`await` pauses your function until the promise resolves. It's like pressing pause and play." Show a simple `fetch` example.                                                                                                                                   |
+| Pass 2 — Deeper  | "`await` doesn't pause the program — it yields control back to the event loop. Other code runs while you wait." Show two concurrent `await` calls and their interleaving.                                                                                      |
 | Pass 3 — Nuanced | "The event loop has microtask and macrotask queues. `await` schedules a microtask. This means `await` has priority over `setTimeout`, and that priority has consequences." Show the surprising execution order of mixed `await`/`setTimeout`/`queueMicrotask`. |
-| Pass 4 — Full | "In production, this queue priority means a tight `await` loop can starve I/O callbacks. Here's a real case where a promise chain blocked the event loop for 800ms and how we diagnosed it with `--prof`." Show flame graphs. |
-| Return | "`await` pauses your function. That's still the right mental model. But now you know where to look when 'pausing' causes problems you didn't expect." |
+| Pass 4 — Full    | "In production, this queue priority means a tight `await` loop can starve I/O callbacks. Here's a real case where a promise chain blocked the event loop for 800ms and how we diagnosed it with `--prof`." Show flame graphs.                                  |
+| Return           | "`await` pauses your function. That's still the right mental model. But now you know where to look when 'pausing' causes problems you didn't expect."                                                                                                          |
 
 ### "What Is a Container, Really?" — Infrastructure Concepts for Application Developers
 
-| Phase | Content |
-|-------|---------|
-| Pass 1 — Simple | "A container is a lightweight VM. It has its own filesystem, its own process space, its own network. You put your app in it and it runs the same everywhere." |
-| Pass 2 — Deeper | "A container isn't a VM — it's a process with namespaces. The filesystem is a layered union mount. The 'isolation' is the Linux kernel enforcing boundaries, not a hypervisor." Show the same `docker run` from Pass 1 but now with `unshare` and `chroot` equivalents. |
-| Pass 3 — Nuanced | "Those kernel boundaries have gaps. Containers share a kernel, so a kernel exploit escapes all containers. Seccomp profiles, AppArmor, and user namespaces each close different gaps — and each has performance and compatibility costs." |
-| Pass 4 — Full | "In production, your container runs inside a pod inside a node inside a cluster. Each layer adds isolation and complexity. Here's how a request traverses all these boundaries, and here's where the abstraction leaks." |
-| Return | "A container is a lightweight VM. That mental model is fine for writing Dockerfiles. But now you know why your security team cares about the layers underneath." |
+| Phase            | Content                                                                                                                                                                                                                                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pass 1 — Simple  | "A container is a lightweight VM. It has its own filesystem, its own process space, its own network. You put your app in it and it runs the same everywhere."                                                                                                           |
+| Pass 2 — Deeper  | "A container isn't a VM — it's a process with namespaces. The filesystem is a layered union mount. The 'isolation' is the Linux kernel enforcing boundaries, not a hypervisor." Show the same `docker run` from Pass 1 but now with `unshare` and `chroot` equivalents. |
+| Pass 3 — Nuanced | "Those kernel boundaries have gaps. Containers share a kernel, so a kernel exploit escapes all containers. Seccomp profiles, AppArmor, and user namespaces each close different gaps — and each has performance and compatibility costs."                               |
+| Pass 4 — Full    | "In production, your container runs inside a pod inside a node inside a cluster. Each layer adds isolation and complexity. Here's how a request traverses all these boundaries, and here's where the abstraction leaks."                                                |
+| Return           | "A container is a lightweight VM. That mental model is fine for writing Dockerfiles. But now you know why your security team cares about the layers underneath."                                                                                                        |
 
 ### "Understanding CORS" — Web Security for Frontend Engineers
 
-| Phase | Content |
-|-------|---------|
-| Pass 1 — Simple | "CORS is the browser asking 'is this website allowed to talk to that server?' The server says yes or no with a header." |
-| Pass 2 — Deeper | "The browser sends a preflight OPTIONS request first. Not always — simple requests skip it. Here's what triggers a preflight and what doesn't." |
+| Phase            | Content                                                                                                                                                                                                             |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pass 1 — Simple  | "CORS is the browser asking 'is this website allowed to talk to that server?' The server says yes or no with a header."                                                                                             |
+| Pass 2 — Deeper  | "The browser sends a preflight OPTIONS request first. Not always — simple requests skip it. Here's what triggers a preflight and what doesn't."                                                                     |
 | Pass 3 — Nuanced | "Credentials (cookies) change everything. `Access-Control-Allow-Origin: *` doesn't work with credentials. Preflight caching matters for performance. Here's why your CDN might be caching the wrong CORS response." |
-| Pass 4 — Full | "CORS interacts with CSP, with service workers, with opaque responses in caches. Here's how a misconfigured CORS policy becomes a security vulnerability, and here's the audit checklist." |
-| Return | "CORS is still the browser asking 'is this allowed?' But now you can debug it when the answer is wrong." |
+| Pass 4 — Full    | "CORS interacts with CSP, with service workers, with opaque responses in caches. Here's how a misconfigured CORS policy becomes a security vulnerability, and here's the audit checklist."                          |
+| Return           | "CORS is still the browser asking 'is this allowed?' But now you can debug it when the answer is wrong."                                                                                                            |
 
 ### "What Does `O(n log n)` Actually Mean?" — Algorithm Intuition for Working Programmers
 
-| Phase | Content |
-|-------|---------|
-| Pass 1 — Simple | "O(n log n) means 'slightly worse than linear.' For 1,000 items, it's about 10,000 operations. For practical purposes, it's fast." |
-| Pass 2 — Deeper | "The `log n` factor comes from dividing the problem in half repeatedly. Merge sort: split, sort halves, merge. Each level of splitting does O(n) work, and there are O(log n) levels." |
+| Phase            | Content                                                                                                                                                                                                                                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pass 1 — Simple  | "O(n log n) means 'slightly worse than linear.' For 1,000 items, it's about 10,000 operations. For practical purposes, it's fast."                                                                                                                                      |
+| Pass 2 — Deeper  | "The `log n` factor comes from dividing the problem in half repeatedly. Merge sort: split, sort halves, merge. Each level of splitting does O(n) work, and there are O(log n) levels."                                                                                  |
 | Pass 3 — Nuanced | "But O(n log n) hides constant factors, cache behavior, and allocation patterns. Quicksort is O(n log n) average but O(n^2) worst case — and it's still faster than merge sort in practice because of cache locality. The notation tells you the shape, not the speed." |
-| Return | "O(n log n) means 'slightly worse than linear.' That's still true and still useful. But now you know why two algorithms with the same Big-O can have wildly different real-world performance." |
+| Return           | "O(n log n) means 'slightly worse than linear.' That's still true and still useful. But now you know why two algorithms with the same Big-O can have wildly different real-world performance."                                                                          |
 
 ## Combination Notes
 

@@ -36,7 +36,7 @@ The first petal should be your most accessible example. It establishes the patte
 
 The second petal should approach the center from a noticeably different direction. If Petal 1 was about tooling, Petal 2 might be about process or communication.
 
-- Show a different *kind* of example, not just a different instance
+- Show a different _kind_ of example, not just a different instance
 - The reader should think "oh, this applies there too"
 - Each petal should expand what the center means
 

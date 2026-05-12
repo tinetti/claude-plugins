@@ -1,6 +1,6 @@
 # Kishotenketsu for Technical Presentations
 
-Kishotenketsu (起承転結) is a four-act narrative structure originating in classical Chinese poetry (qi cheng zhuan he) and widely adopted in Japanese and Korean storytelling. Its defining feature is the absence of conflict as a structural driver. Instead of building tension through obstacles and resolution, Kishotenketsu builds understanding through introduction, development, a surprising *twist* that recontextualizes what came before, and a reconciliation that unifies everything. The twist is not an antagonist or a failure — it's a new perspective, an unexpected connection, or a reframing that makes the audience see the familiar differently. For technical talks, this is powerful when you want to teach, explore, or shift perspective without framing the narrative as "problem vs. solution." It's the framework for "we thought the problem was X, but actually it was Y" — where Y isn't an enemy, it's an insight.
+Kishotenketsu (起承転結) is a four-act narrative structure originating in classical Chinese poetry (qi cheng zhuan he) and widely adopted in Japanese and Korean storytelling. Its defining feature is the absence of conflict as a structural driver. Instead of building tension through obstacles and resolution, Kishotenketsu builds understanding through introduction, development, a surprising _twist_ that recontextualizes what came before, and a reconciliation that unifies everything. The twist is not an antagonist or a failure — it's a new perspective, an unexpected connection, or a reframing that makes the audience see the familiar differently. For technical talks, this is powerful when you want to teach, explore, or shift perspective without framing the narrative as "problem vs. solution." It's the framework for "we thought the problem was X, but actually it was Y" — where Y isn't an enemy, it's an insight.
 
 ## The Four Acts
 
@@ -24,7 +24,7 @@ Deepen the introduction. Add detail, nuance, and richness to what was establishe
 
 The pivot. Ten introduces something unexpected that recontextualizes Ki and Sho. This is NOT a conflict, NOT a failure, NOT an antagonist. It's a surprising connection, an overlooked perspective, or a shift in framing that makes the audience re-evaluate what they thought they understood. The best Ten moments feel inevitable in retrospect — "of course it was always this way, I just wasn't seeing it."
 
-**In a talk**: "Here's the thing nobody talks about: 73% of the errors your tracker captures are already known. Your team has seen them, triaged them, and decided they're not worth fixing. The actual problem isn't detecting errors — it's that error tracking tools are optimized for *discovery* when most teams need them for *prioritization*. What if we stop thinking about error tracking as an alerting system and start thinking about it as a decision-support system?"
+**In a talk**: "Here's the thing nobody talks about: 73% of the errors your tracker captures are already known. Your team has seen them, triaged them, and decided they're not worth fixing. The actual problem isn't detecting errors — it's that error tracking tools are optimized for _discovery_ when most teams need them for _prioritization_. What if we stop thinking about error tracking as an alerting system and start thinking about it as a decision-support system?"
 
 **Slide approach**: 3-6 slides. The twist should land in 1-2 slides — clean, unexpected, undeniable. Then 2-4 slides to let the audience absorb the recontextualization. Show how Ki and Sho look different through this new lens.
 
@@ -41,6 +41,7 @@ Bring everything together. Ketsu is NOT "resolution" in the conflict-resolution 
 ### Lightning Talk (5 min, 10-15 slides)
 
 Kishotenketsu can compress well because the twist is inherently memorable:
+
 - **Ki** (2-3 slides): Establish the topic quickly — the audience likely knows the basics
 - **Sho** (3-4 slides): One layer of depth — enough to establish what the audience "knows"
 - **Ten** (2-3 slides): The twist. Make it clean and sharp
@@ -51,6 +52,7 @@ Lightning Kishotenketsu talks are essentially "here's what you know, here's what
 ### Standard Talk (20 min, 25-35 slides)
 
 Natural fit — enough time for real depth in Sho and a fully developed twist:
+
 - **Ki** (3-6 slides): Clear, grounded introduction
 - **Sho** (10-14 slides): Deep teaching. Multiple examples, code walkthroughs, comparisons
 - **Ten** (3-5 slides): The twist, with supporting evidence and time for the audience to absorb
@@ -59,6 +61,7 @@ Natural fit — enough time for real depth in Sho and a fully developed twist:
 ### Extended Talk (45 min, 50-70 slides)
 
 Sho becomes a substantial teaching section. Ten can be developed more gradually:
+
 - **Ki** (6-10 slides): Rich context-setting, potentially with audience polling or interaction
 - **Sho** (22-30 slides): Full exploration of the topic. Multiple sub-topics, deep dives, demos. This is where the talk's educational substance lives
 - **Ten** (6-10 slides): Build to the twist more gradually. Consider foreshadowing — dropping small hints in Sho that only make sense after Ten. Show multiple pieces of evidence for the reframing
@@ -84,30 +87,30 @@ Sho becomes a substantial teaching section. Ten can be developed more gradually:
 
 ### Support Engineering: "What Error Messages Are Really For"
 
-| Act | Content | Slides |
-|-----|---------|--------|
-| **Ki (Introduction)** | Error messages in support tooling. How they're generated, how customers see them, how support agents use them to diagnose issues. Standard best practices: be specific, include error codes, suggest next steps. | 5 |
-| **Sho (Development)** | Deep dive into error message design patterns. Comparison of three approaches: technical (stack trace excerpts), user-friendly (plain language), and actionable (guided resolution). Show how each affects support ticket volume and resolution time. Data from 10,000 tickets. | 12 |
-| **Ten (Twist)** | The surprise: the *best-performing* error messages aren't the ones that help users self-serve — they're the ones that help users write better support tickets. The teams with the lowest resolution times don't have fewer tickets; they have better-described tickets. Error messages are a communication bridge, not a deflection tool. | 4 |
-| **Ketsu (Reconciliation)** | Both views coexist: error messages should help users self-serve AND help them communicate when self-service fails. Show a practical template that serves both purposes. The audience's existing error messages aren't wrong — they just need a second function added. | 8 |
+| Act                        | Content                                                                                                                                                                                                                                                                                                                                   | Slides |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| **Ki (Introduction)**      | Error messages in support tooling. How they're generated, how customers see them, how support agents use them to diagnose issues. Standard best practices: be specific, include error codes, suggest next steps.                                                                                                                          | 5      |
+| **Sho (Development)**      | Deep dive into error message design patterns. Comparison of three approaches: technical (stack trace excerpts), user-friendly (plain language), and actionable (guided resolution). Show how each affects support ticket volume and resolution time. Data from 10,000 tickets.                                                            | 12     |
+| **Ten (Twist)**            | The surprise: the _best-performing_ error messages aren't the ones that help users self-serve — they're the ones that help users write better support tickets. The teams with the lowest resolution times don't have fewer tickets; they have better-described tickets. Error messages are a communication bridge, not a deflection tool. | 4      |
+| **Ketsu (Reconciliation)** | Both views coexist: error messages should help users self-serve AND help them communicate when self-service fails. Show a practical template that serves both purposes. The audience's existing error messages aren't wrong — they just need a second function added.                                                                     | 8      |
 
 ### Product: "Rethinking Feature Flags Beyond Rollouts"
 
-| Act | Content | Slides |
-|-----|---------|--------|
-| **Ki (Introduction)** | Feature flags: what they are, how they work. Toggle features on/off for subsets of users. Standard use case: gradual rollouts, A/B tests, kill switches. | 4 |
-| **Sho (Development)** | How feature flag systems work under the hood. Evaluation strategies: user-based, percentage-based, environment-based. Code patterns for clean flag integration. Technical debt management: flag lifecycle, cleanup automation. Real examples from a production system with 200+ active flags. | 14 |
-| **Ten (Twist)** | Feature flags aren't just a deployment tool — they're a product decision architecture. Every flag represents a product hypothesis. Teams that treat their flag dashboard as a "decisions in progress" board make faster product decisions than teams using traditional roadmap tools. The flag system you already have is an unrecognized decision-tracking system. | 5 |
-| **Ketsu (Reconciliation)** | Feature flags as deployment safety AND decision architecture. Show how to add lightweight hypothesis metadata to existing flags. The audience's current flag system already contains latent product intelligence — here's how to surface it. No new tools required. | 7 |
+| Act                        | Content                                                                                                                                                                                                                                                                                                                                                             | Slides |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| **Ki (Introduction)**      | Feature flags: what they are, how they work. Toggle features on/off for subsets of users. Standard use case: gradual rollouts, A/B tests, kill switches.                                                                                                                                                                                                            | 4      |
+| **Sho (Development)**      | How feature flag systems work under the hood. Evaluation strategies: user-based, percentage-based, environment-based. Code patterns for clean flag integration. Technical debt management: flag lifecycle, cleanup automation. Real examples from a production system with 200+ active flags.                                                                       | 14     |
+| **Ten (Twist)**            | Feature flags aren't just a deployment tool — they're a product decision architecture. Every flag represents a product hypothesis. Teams that treat their flag dashboard as a "decisions in progress" board make faster product decisions than teams using traditional roadmap tools. The flag system you already have is an unrecognized decision-tracking system. | 5      |
+| **Ketsu (Reconciliation)** | Feature flags as deployment safety AND decision architecture. Show how to add lightweight hypothesis metadata to existing flags. The audience's current flag system already contains latent product intelligence — here's how to surface it. No new tools required.                                                                                                 | 7      |
 
 ### Developer Tools: "The Unexpected Value of Slow Tests"
 
-| Act | Content | Slides |
-|-----|---------|--------|
-| **Ki (Introduction)** | Test suites and speed. Every team wants faster tests. Industry consensus: fast tests enable fast feedback, fast feedback enables velocity. Here's what a modern fast test suite looks like. | 4 |
-| **Sho (Development)** | Techniques for fast tests: mocking, parallelization, test selection, caching. Show real optimizations that cut a 20-minute suite to 4 minutes. Data on how test speed correlates with commit frequency. The "fast tests" playbook, well-executed. | 12 |
-| **Ten (Twist)** | Analysis of three high-performing teams that intentionally kept some slow tests. Not because they couldn't optimize them — because the slow tests tested *real integrations* and caught bugs the fast tests never would. The teams with the best production reliability weren't the ones with the fastest tests. They were the ones with a deliberate two-tier strategy: fast tests for development flow, slow tests for deployment confidence. Speed and thoroughness aren't a tradeoff to optimize — they're two separate concerns to serve separately. | 5 |
-| **Ketsu (Reconciliation)** | Fast tests and slow tests serve different purposes and should be evaluated by different metrics. Show a practical CI configuration that runs both tiers appropriately. The audience's slow tests might not be a problem to fix — they might be an asset to properly position. | 8 |
+| Act                        | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Slides |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| **Ki (Introduction)**      | Test suites and speed. Every team wants faster tests. Industry consensus: fast tests enable fast feedback, fast feedback enables velocity. Here's what a modern fast test suite looks like.                                                                                                                                                                                                                                                                                                                                                               | 4      |
+| **Sho (Development)**      | Techniques for fast tests: mocking, parallelization, test selection, caching. Show real optimizations that cut a 20-minute suite to 4 minutes. Data on how test speed correlates with commit frequency. The "fast tests" playbook, well-executed.                                                                                                                                                                                                                                                                                                         | 12     |
+| **Ten (Twist)**            | Analysis of three high-performing teams that intentionally kept some slow tests. Not because they couldn't optimize them — because the slow tests tested _real integrations_ and caught bugs the fast tests never would. The teams with the best production reliability weren't the ones with the fastest tests. They were the ones with a deliberate two-tier strategy: fast tests for development flow, slow tests for deployment confidence. Speed and thoroughness aren't a tradeoff to optimize — they're two separate concerns to serve separately. | 5      |
+| **Ketsu (Reconciliation)** | Fast tests and slow tests serve different purposes and should be evaluated by different metrics. Show a practical CI configuration that runs both tiers appropriately. The audience's slow tests might not be a problem to fix — they might be an asset to properly position.                                                                                                                                                                                                                                                                             | 8      |
 
 ## Combination Notes
 

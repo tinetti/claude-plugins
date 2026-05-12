@@ -1,6 +1,6 @@
 # The Sparkline (Nancy Duarte)
 
-The Sparkline alternates between "what is" (current reality) and "what could be" (ideal future) throughout the entire talk. The tension between these two states creates emotional energy that pulls the audience forward. Nancy Duarte identified this pattern by analyzing hundreds of great speeches — from Martin Luther King Jr.'s "I Have a Dream" to Steve Jobs' iPhone launch — and documented it in her book *Resonate*. It works for talks because the oscillation prevents the audience from settling into passive listening; each swing back to "what is" re-engages their frustration, and each swing to "what could be" re-engages their hope. The talk ends by collapsing the gap, showing a clear path from the current state to the future state.
+The Sparkline alternates between "what is" (current reality) and "what could be" (ideal future) throughout the entire talk. The tension between these two states creates emotional energy that pulls the audience forward. Nancy Duarte identified this pattern by analyzing hundreds of great speeches — from Martin Luther King Jr.'s "I Have a Dream" to Steve Jobs' iPhone launch — and documented it in her book _Resonate_. It works for talks because the oscillation prevents the audience from settling into passive listening; each swing back to "what is" re-engages their frustration, and each swing to "what could be" re-engages their hope. The talk ends by collapsing the gap, showing a clear path from the current state to the future state.
 
 ## The Steps
 
@@ -57,6 +57,7 @@ The final swing — but this time, instead of returning to "what is," you show t
 ### Lightning Talk (5 min, 10-15 slides)
 
 One full oscillation plus the collapse:
+
 - **What Is** (2-3 slides): One sharp problem statement
 - **What Could Be** (2-3 slides): One clear vision
 - **What Is — Obstacle** (2-3 slides): Name the one thing in the way
@@ -67,6 +68,7 @@ Skip the deepening oscillations. One contrast is enough to create tension in 5 m
 ### Standard Talk (20 min, 25-35 slides)
 
 Two full oscillations plus the collapse:
+
 - **What Is — Opening** (3-4 slides): Establish shared reality
 - **What Could Be — First** (3-4 slides): Initial vision
 - **What Is — Deeper** (3-5 slides): Peel back the layer
@@ -77,6 +79,7 @@ Two full oscillations plus the collapse:
 ### Extended Talk (45 min, 50-70 slides)
 
 Three or more oscillations plus the collapse:
+
 - **What Is — Opening** (4-6 slides): Rich context with data and anecdotes
 - **What Could Be — First** (4-6 slides): Vision with concrete examples
 - **What Is — Deeper** (5-8 slides): Second-order problems, live demos
@@ -104,25 +107,25 @@ Each additional oscillation deepens the emotional investment. Don't add oscillat
 
 ### "Kill the Approval Gate" — A DevOps Talk
 
-| Step | Slides | Content |
-|------|--------|---------|
-| What Is (Opening) | 1-3 | "Our deploy takes 45 minutes. Here's the timeline." |
-| What Could Be (First) | 4-6 | "What if it took 90 seconds? Here's what that looks like." |
-| What Is (Deeper) | 7-10 | "Slow deploys cause batching. Batching causes rubber-stamping. Rubber-stamping causes incidents." |
-| What Could Be (Expanded) | 11-14 | "Fast deploys → small PRs → real reviews → fewer bugs. The virtuous cycle." |
-| What Is (Obstacle) | 15-18 | "The manual approval gate from 2022. Nobody's questioned it." |
-| New Bliss | 19-25 | "Automated canary analysis. 80-second deploys. Smaller PRs. Better reviews. Here's how." |
+| Step                     | Slides | Content                                                                                           |
+| ------------------------ | ------ | ------------------------------------------------------------------------------------------------- |
+| What Is (Opening)        | 1-3    | "Our deploy takes 45 minutes. Here's the timeline."                                               |
+| What Could Be (First)    | 4-6    | "What if it took 90 seconds? Here's what that looks like."                                        |
+| What Is (Deeper)         | 7-10   | "Slow deploys cause batching. Batching causes rubber-stamping. Rubber-stamping causes incidents." |
+| What Could Be (Expanded) | 11-14  | "Fast deploys → small PRs → real reviews → fewer bugs. The virtuous cycle."                       |
+| What Is (Obstacle)       | 15-18  | "The manual approval gate from 2022. Nobody's questioned it."                                     |
+| New Bliss                | 19-25  | "Automated canary analysis. 80-second deploys. Smaller PRs. Better reviews. Here's how."          |
 
 ### "Why Your Team Should Adopt TypeScript" — A Persuasion Talk
 
-| Step | Slides | Content |
-|------|--------|---------|
-| What Is (Opening) | 1-3 | "You ship JavaScript. It works. But every quarter, the same class of bug." |
-| What Could Be (First) | 4-5 | "What if the compiler caught those bugs before CI even ran?" |
-| What Is (Deeper) | 6-9 | "It's not just runtime errors. It's the onboarding cost, the implicit knowledge, the 'ask Sarah' problem." |
-| What Could Be (Expanded) | 10-12 | "Types as documentation that never drifts. New devs productive in days, not weeks." |
-| What Is (Obstacle) | 13-15 | "The migration cost feels impossible. 200k lines of JS." |
-| New Bliss | 16-20 | "Incremental adoption with allowJs. Start with the API layer. Here's a 3-sprint plan." |
+| Step                     | Slides | Content                                                                                                    |
+| ------------------------ | ------ | ---------------------------------------------------------------------------------------------------------- |
+| What Is (Opening)        | 1-3    | "You ship JavaScript. It works. But every quarter, the same class of bug."                                 |
+| What Could Be (First)    | 4-5    | "What if the compiler caught those bugs before CI even ran?"                                               |
+| What Is (Deeper)         | 6-9    | "It's not just runtime errors. It's the onboarding cost, the implicit knowledge, the 'ask Sarah' problem." |
+| What Could Be (Expanded) | 10-12  | "Types as documentation that never drifts. New devs productive in days, not weeks."                        |
+| What Is (Obstacle)       | 13-15  | "The migration cost feels impossible. 200k lines of JS."                                                   |
+| New Bliss                | 16-20  | "Incremental adoption with allowJs. Start with the API layer. Here's a 3-sprint plan."                     |
 
 ## Oscillation Design
 

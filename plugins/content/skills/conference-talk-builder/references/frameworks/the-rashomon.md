@@ -1,6 +1,6 @@
 # The Rashomon for Technical Presentations
 
-The Rashomon presents the same event, problem, or decision from multiple contradictory perspectives, forcing the audience to hold competing truths simultaneously. Named after Akira Kurosawa's 1950 film *Rashomon* — where four witnesses give irreconcilable accounts of the same crime — this framework works because software engineering is fundamentally perspectival: the same system looks completely different depending on whether you're the developer, the operator, the user, or the business owner. Instead of pretending there's one objective truth, The Rashomon makes the multiplicity of interpretation its thesis. The audience leaves not with a single answer but with a richer, more empathetic understanding of why reasonable people disagree.
+The Rashomon presents the same event, problem, or decision from multiple contradictory perspectives, forcing the audience to hold competing truths simultaneously. Named after Akira Kurosawa's 1950 film _Rashomon_ — where four witnesses give irreconcilable accounts of the same crime — this framework works because software engineering is fundamentally perspectival: the same system looks completely different depending on whether you're the developer, the operator, the user, or the business owner. Instead of pretending there's one objective truth, The Rashomon makes the multiplicity of interpretation its thesis. The audience leaves not with a single answer but with a richer, more empathetic understanding of why reasonable people disagree.
 
 ## The Phases
 
@@ -55,6 +55,7 @@ Address the contradictions. This is the phase that separates a Rashomon talk fro
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to two perspectives:
+
 - **Event** (2-3 slides): The shared facts, stripped to essentials
 - **Perspective 1** (3-4 slides): The obvious interpretation
 - **Perspective 2** (3-4 slides): The contradicting interpretation
@@ -65,6 +66,7 @@ Two perspectives are enough to create the Rashomon effect. A third perspective i
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 5 phases with three perspectives:
+
 - **Event**: 3-4 slides
 - **Perspective 1**: 5-8 slides
 - **Perspective 2**: 5-8 slides
@@ -76,6 +78,7 @@ Spend equal time on each perspective to maintain the framework's fairness. If on
 ### Extended Talk (45 min, 50-70 slides)
 
 Full depth with four perspectives and extended reconciliation:
+
 - **Event**: 4-6 slides (more detail, more artifacts)
 - **Perspective 1**: 8-12 slides
 - **Perspective 2**: 8-12 slides
@@ -105,33 +108,33 @@ Consider audience interaction between perspectives: "Before I show you the next 
 
 ### "The PR That Took 11 Days" — Code Review Culture Talk
 
-| Phase | Content |
-|-------|---------|
-| Event | The PR: 47 lines, 3 files, 4 reviewers, 11 days. Show the PR description and timeline. |
-| Perspective 1 (Developer) | Straightforward change. Clear pattern. Reviewers bikeshedding. Morale cost of slow reviews. Data: average review time across the team. |
-| Perspective 2 (Tech Lead) | Pattern had caused incidents. Nit comments were diplomatic steering. The redesign request prevented a repeat outage. Data: incident history from the same pattern. |
-| Perspective 3 (Customer) | Filed ticket March 8th. Fix merged March 25th. Churned March 20th. Customer lifetime value lost: $48,000. Data: support ticket timeline. |
-| Reconciliation | The review process optimized for code quality (tech lead's perspective) at the cost of delivery speed (developer's perspective) and customer retention (customer's perspective). No villain — a system that made these perspectives invisible to each other. |
+| Phase                     | Content                                                                                                                                                                                                                                                      |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Event                     | The PR: 47 lines, 3 files, 4 reviewers, 11 days. Show the PR description and timeline.                                                                                                                                                                       |
+| Perspective 1 (Developer) | Straightforward change. Clear pattern. Reviewers bikeshedding. Morale cost of slow reviews. Data: average review time across the team.                                                                                                                       |
+| Perspective 2 (Tech Lead) | Pattern had caused incidents. Nit comments were diplomatic steering. The redesign request prevented a repeat outage. Data: incident history from the same pattern.                                                                                           |
+| Perspective 3 (Customer)  | Filed ticket March 8th. Fix merged March 25th. Churned March 20th. Customer lifetime value lost: $48,000. Data: support ticket timeline.                                                                                                                     |
+| Reconciliation            | The review process optimized for code quality (tech lead's perspective) at the cost of delivery speed (developer's perspective) and customer retention (customer's perspective). No villain — a system that made these perspectives invisible to each other. |
 
 ### "Is Kubernetes Overkill?" — Infrastructure Decision Talk
 
-| Phase | Content |
-|-------|---------|
-| Event | A 4-person startup adopted Kubernetes for their first production workload. Show the architecture and team size. |
-| Perspective 1 (CTO) | Future-proofing. Hiring advantage (candidates want K8s). Standardized deployment pipeline from day 1. The 2 weeks of setup pays off in months. |
-| Perspective 2 (Solo Ops Engineer) | 2 weeks of setup became 2 months of maintenance. 60% of on-call pages are K8s issues, not app issues. Team can't debug without the one person who understands networking policies. |
-| Perspective 3 (The App) | 4 containers, 2 services, 1 database. The app doesn't know or care it's on K8s. It would run identically on a single VM with Docker Compose. The complexity is invisible from inside the container. |
-| Reconciliation | Deliberately unresolved. All three are right. The question isn't "is K8s overkill" but "which costs are you willing to pay and which perspectives are you willing to deprioritize?" |
+| Phase                             | Content                                                                                                                                                                                             |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Event                             | A 4-person startup adopted Kubernetes for their first production workload. Show the architecture and team size.                                                                                     |
+| Perspective 1 (CTO)               | Future-proofing. Hiring advantage (candidates want K8s). Standardized deployment pipeline from day 1. The 2 weeks of setup pays off in months.                                                      |
+| Perspective 2 (Solo Ops Engineer) | 2 weeks of setup became 2 months of maintenance. 60% of on-call pages are K8s issues, not app issues. Team can't debug without the one person who understands networking policies.                  |
+| Perspective 3 (The App)           | 4 containers, 2 services, 1 database. The app doesn't know or care it's on K8s. It would run identically on a single VM with Docker Compose. The complexity is invisible from inside the container. |
+| Reconciliation                    | Deliberately unresolved. All three are right. The question isn't "is K8s overkill" but "which costs are you willing to pay and which perspectives are you willing to deprioritize?"                 |
 
 ### "The Bug That Was a Feature" — Product/Engineering Tension Talk
 
-| Phase | Content |
-|-------|---------|
-| Event | A user reports that clicking "Delete" on a shared document removes it for all collaborators, not just themselves. Show the bug report, the code, the product spec. |
-| Perspective 1 (User) | "I deleted MY copy. Why did it delete everyone's? I lost my team's work." The mental model of personal ownership vs. shared state. |
-| Perspective 2 (Developer) | "The spec says 'delete removes the document.' There's one document. The code is correct. This is working as designed." The implementation matches the specification exactly. |
-| Perspective 3 (Product Manager) | "The spec was ambiguous because we hadn't decided on the collaboration model. The developer picked one interpretation. The user expected the other. Neither is wrong — the spec is wrong." |
-| Reconciliation | The bug isn't in the code or the user's expectations — it's in the gap between the product model and the user's mental model. Three tools for closing that gap: user research before spec writing, spec reviews that include edge cases, and UI copy that makes the system model explicit. |
+| Phase                           | Content                                                                                                                                                                                                                                                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Event                           | A user reports that clicking "Delete" on a shared document removes it for all collaborators, not just themselves. Show the bug report, the code, the product spec.                                                                                                                         |
+| Perspective 1 (User)            | "I deleted MY copy. Why did it delete everyone's? I lost my team's work." The mental model of personal ownership vs. shared state.                                                                                                                                                         |
+| Perspective 2 (Developer)       | "The spec says 'delete removes the document.' There's one document. The code is correct. This is working as designed." The implementation matches the specification exactly.                                                                                                               |
+| Perspective 3 (Product Manager) | "The spec was ambiguous because we hadn't decided on the collaboration model. The developer picked one interpretation. The user expected the other. Neither is wrong — the spec is wrong."                                                                                                 |
+| Reconciliation                  | The bug isn't in the code or the user's expectations — it's in the gap between the product model and the user's mental model. Three tools for closing that gap: user research before spec writing, spec reviews that include edge cases, and UI copy that makes the system model explicit. |
 
 ## Combination Notes
 

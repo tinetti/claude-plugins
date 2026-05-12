@@ -73,6 +73,7 @@ The audience is different now. Land the key takeaway.
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to 3 acts:
+
 - **Need** (2-3 slides): State the problem sharply
 - **Find** (4-6 slides): Show the solution with one clear example
 - **Change** (2-3 slides): Key takeaway + call to action
@@ -82,6 +83,7 @@ Skip You, Go, Search, Take, Return. No time for the journey — go straight to t
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 8 steps but keep Steps 1, 7, 8 tight:
+
 - Steps 1-2: 3-5 slides (establish + problem)
 - Steps 3-4: 8-12 slides (exploration + depth)
 - Steps 5-6: 5-8 slides (solution + tradeoffs)
@@ -90,6 +92,7 @@ Use all 8 steps but keep Steps 1, 7, 8 tight:
 ### Extended Talk (45 min, 50-70 slides)
 
 Full depth on every step. Add:
+
 - Multiple examples in Search (Step 4)
 - Live demos in Find (Step 5)
 - Audience exercises or reflection in Return (Step 7)
@@ -109,26 +112,26 @@ Full depth on every step. Add:
 
 ### Support Engineering Talk
 
-| Step | Content |
-|------|---------|
-| You | "You handle escalations every day" |
-| Need | "But complex issues take too long to resolve" |
-| Go | "We tried adding more docs, more training" |
+| Step   | Content                                                 |
+| ------ | ------------------------------------------------------- |
+| You    | "You handle escalations every day"                      |
+| Need   | "But complex issues take too long to resolve"           |
+| Go     | "We tried adding more docs, more training"              |
 | Search | "What actually slows resolution? Data from 500 tickets" |
-| Find | "Pattern recognition beats documentation" |
-| Take | "Requires investment in tooling and taxonomy" |
-| Return | "Three changes you can make this sprint" |
-| Change | "From ticket-taker to pattern-spotter" |
+| Find   | "Pattern recognition beats documentation"               |
+| Take   | "Requires investment in tooling and taxonomy"           |
+| Return | "Three changes you can make this sprint"                |
+| Change | "From ticket-taker to pattern-spotter"                  |
 
 ### Technical Deep-Dive
 
-| Step | Content |
-|------|---------|
-| You | "You use TypeScript every day" |
-| Need | "But your types don't catch the bugs that matter" |
-| Go | "What if types could encode business rules?" |
-| Search | "Branded types, template literals, conditional types" |
-| Find | "Combining these creates a compile-time safety net" |
-| Take | "More complex types, steeper learning curve" |
-| Return | "Start with these 3 patterns in your codebase" |
+| Step   | Content                                                  |
+| ------ | -------------------------------------------------------- |
+| You    | "You use TypeScript every day"                           |
+| Need   | "But your types don't catch the bugs that matter"        |
+| Go     | "What if types could encode business rules?"             |
+| Search | "Branded types, template literals, conditional types"    |
+| Find   | "Combining these creates a compile-time safety net"      |
+| Take   | "More complex types, steeper learning curve"             |
+| Return | "Start with these 3 patterns in your codebase"           |
 | Change | "From 'types as documentation' to 'types as validation'" |

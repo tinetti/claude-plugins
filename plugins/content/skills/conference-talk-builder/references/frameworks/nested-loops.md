@@ -1,6 +1,6 @@
 # Nested Loops
 
-Nested Loops layers three or more narratives inside each other like Russian nesting dolls. You open Story A, pause it to open Story B, pause that to open Story C — the innermost story — which carries the core message. Then you close C, close B, and close A in reverse order. Each outer story provides context, emotional framing, or stakes for the story inside it. The technique comes from oral storytelling traditions (notably *One Thousand and One Nights*) and works in talks because the open loops create cognitive tension — the audience's brain wants closure on each unfinished story, which keeps attention locked even during abstract or technical middle sections. The innermost story lands hardest because the audience has been primed by the outer layers.
+Nested Loops layers three or more narratives inside each other like Russian nesting dolls. You open Story A, pause it to open Story B, pause that to open Story C — the innermost story — which carries the core message. Then you close C, close B, and close A in reverse order. Each outer story provides context, emotional framing, or stakes for the story inside it. The technique comes from oral storytelling traditions (notably _One Thousand and One Nights_) and works in talks because the open loops create cognitive tension — the audience's brain wants closure on each unfinished story, which keeps attention locked even during abstract or technical middle sections. The innermost story lands hardest because the audience has been primed by the outer layers.
 
 ## The Steps
 
@@ -57,6 +57,7 @@ Return to the outermost story and close it. The resolution should now feel inevi
 ### Lightning Talk (5 min, 10-15 slides)
 
 Use only 2 loops (A and B). Three is too many for 5 minutes:
+
 - **Open A** (2 slides): Quick emotional hook with a cliffhanger
 - **Open + Close B** (6-8 slides): The core technical content as a complete inner story
 - **Close A** (2-3 slides): Resolution and takeaway
@@ -66,6 +67,7 @@ The inner story IS the talk. The outer story is just the hook and landing.
 ### Standard Talk (20 min, 25-35 slides)
 
 Full 3-loop structure:
+
 - **Open A** (3-4 slides): Establish the frame story
 - **Open B** (4-6 slides): Context and technical setup
 - **Open + Close C** (8-12 slides): Deep technical core
@@ -75,6 +77,7 @@ Full 3-loop structure:
 ### Extended Talk (45 min, 50-70 slides)
 
 3-4 loops with expanded inner stories:
+
 - **Open A** (4-6 slides): Rich frame story with multiple characters
 - **Open B** (6-10 slides): Detailed context with demos
 - **Open C** (3-4 slides): Setup for the core
@@ -103,24 +106,24 @@ Adding a 4th loop is only worth it if each layer genuinely adds a distinct persp
 
 ### "The Versioning Incident" — A Postmortem Talk
 
-| Loop | Action | Slides | Content |
-|------|--------|--------|---------|
-| A | Open | 1-3 | "CEO says we're losing our biggest customer. Two weeks." |
-| B | Open | 4-8 | "Six months ago, we chose our API versioning strategy. Here's what we picked." |
-| C | Open | 9-11 | "What happens inside a single request when versions collide?" |
-| C | Close | 12-16 | "One bad call poisons the cache. That's the bug." |
-| B | Close | 17-20 | "Our 'obvious' versioning choice made this possible. At scale, possible = guaranteed." |
-| A | Close | 21-25 | "Fixed in 4 days. Customer stayed. The lesson: audit your 'obvious' decisions." |
+| Loop | Action | Slides | Content                                                                                |
+| ---- | ------ | ------ | -------------------------------------------------------------------------------------- |
+| A    | Open   | 1-3    | "CEO says we're losing our biggest customer. Two weeks."                               |
+| B    | Open   | 4-8    | "Six months ago, we chose our API versioning strategy. Here's what we picked."         |
+| C    | Open   | 9-11   | "What happens inside a single request when versions collide?"                          |
+| C    | Close  | 12-16  | "One bad call poisons the cache. That's the bug."                                      |
+| B    | Close  | 17-20  | "Our 'obvious' versioning choice made this possible. At scale, possible = guaranteed." |
+| A    | Close  | 21-25  | "Fixed in 4 days. Customer stayed. The lesson: audit your 'obvious' decisions."        |
 
 ### "How I Learned to Stop Worrying and Love the Monorepo" — A Architecture Talk
 
-| Loop | Action | Slides | Content |
-|------|--------|--------|---------|
-| A | Open | 1-3 | "My team was mass-quitting. The reason surprised me." |
-| B | Open | 4-7 | "Our microservices architecture, 18 months in. 47 repos." |
-| C | Open + Close | 8-18 | "Tracing a single feature across 6 repos. The dependency graph. The deploy coordination. The ownership ambiguity." |
-| B | Close | 19-23 | "The architecture wasn't the problem — the repo boundary was. Same architecture, one repo." |
-| A | Close | 24-28 | "Nobody quit. The frustration was the tooling friction, not the work. Monorepo migration took 3 sprints." |
+| Loop | Action       | Slides | Content                                                                                                            |
+| ---- | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| A    | Open         | 1-3    | "My team was mass-quitting. The reason surprised me."                                                              |
+| B    | Open         | 4-7    | "Our microservices architecture, 18 months in. 47 repos."                                                          |
+| C    | Open + Close | 8-18   | "Tracing a single feature across 6 repos. The dependency graph. The deploy coordination. The ownership ambiguity." |
+| B    | Close        | 19-23  | "The architecture wasn't the problem — the repo boundary was. Same architecture, one repo."                        |
+| A    | Close        | 24-28  | "Nobody quit. The frustration was the tooling friction, not the work. Monorepo migration took 3 sprints."          |
 
 ## Closure Techniques
 

@@ -39,7 +39,7 @@ This is the empathy step. Show that the weird things aren't stupid — they're a
 
 ### 5. The Report (Synthesize What Newcomers See That Insiders Miss)
 
-Pull it together. What does the outsider perspective reveal that the insider perspective has lost? This isn't about solutions (though you can offer some). It's about *seeing clearly* — naming the things that have become invisible to the people who work here every day.
+Pull it together. What does the outsider perspective reveal that the insider perspective has lost? This isn't about solutions (though you can offer some). It's about _seeing clearly_ — naming the things that have become invisible to the people who work here every day.
 
 **Example:** "Here's what I can see from the outside that's hard to see from the inside: this codebase isn't broken. It's haunted. Every directory is a ghost of a team that used to own it. And the current team navigates around those ghosts so fluently that they've forgotten they're doing it. The biggest risk isn't the technical debt — it's that the workarounds have become invisible. New developers will learn to step around the ghosts without knowing they're there, and the haunting will get quieter without getting better."
 

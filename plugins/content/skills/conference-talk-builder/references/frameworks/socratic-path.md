@@ -65,6 +65,7 @@ State the conclusion — but by now, the audience has already arrived there. The
 ### Lightning Talk (5 min, 10-15 slides)
 
 Two question levels only:
+
 - **Opening Question** (2 slides): Pose the mystery with just enough context
 - **First Exploration** (3-4 slides): Rule out the obvious answer
 - **Deeper Question + Exploration** (3-5 slides): Find the real answer
@@ -75,6 +76,7 @@ Skip intermediate questions. Go from "obvious answer is wrong" to "here's the re
 ### Standard Talk (20 min, 25-35 slides)
 
 Three question levels:
+
 - **Opening Question** (2-3 slides): Context and the mystery
 - **First Exploration** (4-5 slides): Obvious answer, ruled out
 - **Deeper Question** (1-2 slides): Reframe
@@ -86,6 +88,7 @@ Three question levels:
 ### Extended Talk (45 min, 50-70 slides)
 
 Four or five question levels with rich exploration:
+
 - **Opening Question** (3-4 slides): Rich context, audience hypothesis time
 - **First Exploration** (6-8 slides): Multiple dead ends explored
 - **Deeper Question** (2-3 slides): Reframe with evidence
@@ -116,27 +119,27 @@ In extended talks, consider pausing after each question to let the audience disc
 
 ### "Why Do Our Tests Fail in CI?" — A Debugging Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Opening Question | 1-3 | "Tests pass locally, fail in CI. Every time. Only payments service." |
-| First Exploration | 4-7 | Rule out environment differences: Node, npm, OS all match. |
-| Deeper Question | 8 | "If environments are identical, what IS different?" |
-| Second Exploration | 9-14 | Diff everything. Discover CI runs tests in parallel; local runs sequential. |
-| Deeper Question Still | 15-16 | "Why does parallelism break them? They shouldn't share state." |
-| Final Exploration | 17-22 | Test database has shared user IDs. Parallel tests race on unique constraints. |
-| Arrived-At Insight | 23-26 | "Test isolation isn't real until proven under parallelism." |
+| Section               | Slides | Content                                                                       |
+| --------------------- | ------ | ----------------------------------------------------------------------------- |
+| Opening Question      | 1-3    | "Tests pass locally, fail in CI. Every time. Only payments service."          |
+| First Exploration     | 4-7    | Rule out environment differences: Node, npm, OS all match.                    |
+| Deeper Question       | 8      | "If environments are identical, what IS different?"                           |
+| Second Exploration    | 9-14   | Diff everything. Discover CI runs tests in parallel; local runs sequential.   |
+| Deeper Question Still | 15-16  | "Why does parallelism break them? They shouldn't share state."                |
+| Final Exploration     | 17-22  | Test database has shared user IDs. Parallel tests race on unique constraints. |
+| Arrived-At Insight    | 23-26  | "Test isolation isn't real until proven under parallelism."                   |
 
 ### "Why Did We Choose Postgres Over MongoDB?" — An ADR Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Opening Question | 1-2 | "New service needs a database. Why not MongoDB? It's what the team knows." |
-| First Exploration | 3-6 | MongoDB looks great: flexible schema, familiar, fast writes. |
-| Deeper Question | 7 | "What does our access pattern actually look like?" |
-| Second Exploration | 8-13 | Analyze queries: 80% are joins across 3+ entities. Document model fights this. |
-| Deeper Question Still | 14-15 | "Could we denormalize? What's the consistency cost?" |
-| Final Exploration | 16-21 | Denormalization creates update anomalies. Financial data can't tolerate inconsistency. |
-| Arrived-At Insight | 22-26 | "The data model chose the database. Relational data needs a relational database." |
+| Section               | Slides | Content                                                                                |
+| --------------------- | ------ | -------------------------------------------------------------------------------------- |
+| Opening Question      | 1-2    | "New service needs a database. Why not MongoDB? It's what the team knows."             |
+| First Exploration     | 3-6    | MongoDB looks great: flexible schema, familiar, fast writes.                           |
+| Deeper Question       | 7      | "What does our access pattern actually look like?"                                     |
+| Second Exploration    | 8-13   | Analyze queries: 80% are joins across 3+ entities. Document model fights this.         |
+| Deeper Question Still | 14-15  | "Could we denormalize? What's the consistency cost?"                                   |
+| Final Exploration     | 16-21  | Denormalization creates update anomalies. Financial data can't tolerate inconsistency. |
+| Arrived-At Insight    | 22-26  | "The data model chose the database. Relational data needs a relational database."      |
 
 ## Combination Notes
 

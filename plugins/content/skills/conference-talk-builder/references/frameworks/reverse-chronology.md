@@ -1,6 +1,6 @@
 # Reverse Chronology for Technical Presentations
 
-Reverse Chronology starts from the end — the final outcome, the shipped product, the current state of the system — and works backwards to reveal how we got there. Each step peels back a layer, showing the decision, failure, or accident that preceded the thing the audience just saw. The power is in recontextualization: each layer backwards changes the meaning of what came before. Christopher Nolan's *Memento* is the canonical film example; in archaeology, it's the process of digging through strata where the newest layer is on top. For technical talks, this means starting with the clean architecture and revealing the mess it replaced, starting with the successful launch and showing each failure that preceded it, or starting with today's "obvious" best practice and unearthing the history of wrong turns that made it obvious.
+Reverse Chronology starts from the end — the final outcome, the shipped product, the current state of the system — and works backwards to reveal how we got there. Each step peels back a layer, showing the decision, failure, or accident that preceded the thing the audience just saw. The power is in recontextualization: each layer backwards changes the meaning of what came before. Christopher Nolan's _Memento_ is the canonical film example; in archaeology, it's the process of digging through strata where the newest layer is on top. For technical talks, this means starting with the clean architecture and revealing the mess it replaced, starting with the successful launch and showing each failure that preceded it, or starting with today's "obvious" best practice and unearthing the history of wrong turns that made it obvious.
 
 ## The Phases
 
@@ -57,6 +57,7 @@ The strongest Recontextualizations change how the audience evaluates systems in 
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to three layers:
+
 - **Outcome** (2-3 slides): The end state, presented cleanly
 - **One Layer Back** (4-6 slides): The single most important predecessor — the thing that explains why the outcome looks the way it does
 - **Recontextualization** (3-4 slides): Return to the outcome with new understanding
@@ -66,6 +67,7 @@ One layer of peeling is enough for a lightning talk. The audience gets the "it's
 ### Standard Talk (20 min, 25-35 slides)
 
 Three to four layers of depth:
+
 - **Outcome**: 3-5 slides
 - **Layer 1**: 4-6 slides
 - **Layer 2**: 4-6 slides
@@ -77,6 +79,7 @@ Each layer should take roughly equal time. Resist the temptation to spend all yo
 ### Extended Talk (45 min, 50-70 slides)
 
 Five or more layers with full depth:
+
 - **Outcome**: 5-8 slides (extended demo of current state)
 - **Layer 1**: 6-10 slides
 - **Layer 2**: 8-12 slides
@@ -106,35 +109,35 @@ Add live demos at each layer showing the system in its historical state (if poss
 
 ### "Why Our CI Takes 22 Minutes" — DevOps Archaeology Talk
 
-| Phase | Content |
-|-------|---------|
-| Outcome | The current pipeline: 22-minute mean time to production. 4,200 tests, distributed runners, canary deploys, metric gates. Show the live dashboard. |
-| Layer 1 (3 months ago) | Before the pipeline: SSH + `git pull` deploys. The Friday 4:55pm incident. $31K revenue loss in 90 seconds. |
-| Layer 2 (6 months ago) | The "remove all process" quarter. OKR misinterpretation. Code review abolished. Test suite ignored. Deploy windows eliminated. |
-| Layer 3 (1 year ago) | The original test suite that existed before it was ignored: 800 tests, 12-minute run time, flaky, no one trusted it. Why it was written in the first place. |
-| Origin (2 years ago) | Single Django app, one EC2 instance, founder deploying from a laptop. Zero tests, zero pipeline, zero incidents — because there were zero customers. |
-| Recontextualization | Every stage of the pipeline maps to a specific scar. The 22 minutes aren't overhead — they're the compressed history of every failure mode the team survived. The pipeline is a document. |
+| Phase                  | Content                                                                                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Outcome                | The current pipeline: 22-minute mean time to production. 4,200 tests, distributed runners, canary deploys, metric gates. Show the live dashboard.                                         |
+| Layer 1 (3 months ago) | Before the pipeline: SSH + `git pull` deploys. The Friday 4:55pm incident. $31K revenue loss in 90 seconds.                                                                               |
+| Layer 2 (6 months ago) | The "remove all process" quarter. OKR misinterpretation. Code review abolished. Test suite ignored. Deploy windows eliminated.                                                            |
+| Layer 3 (1 year ago)   | The original test suite that existed before it was ignored: 800 tests, 12-minute run time, flaky, no one trusted it. Why it was written in the first place.                               |
+| Origin (2 years ago)   | Single Django app, one EC2 instance, founder deploying from a laptop. Zero tests, zero pipeline, zero incidents — because there were zero customers.                                      |
+| Recontextualization    | Every stage of the pipeline maps to a specific scar. The 22 minutes aren't overhead — they're the compressed history of every failure mode the team survived. The pipeline is a document. |
 
 ### "The Making of a Monolith" — Architecture Archaeology Talk
 
-| Phase | Content |
-|-------|---------|
-| Outcome | The current monolith: 2.1 million lines of Python, 45-minute build, 200 database tables, 6 teams working in the same repo. Everyone calls it "legacy." |
-| Layer 1 | The failed microservices migration 18 months ago. 3 services extracted, 2 brought back. The service that stayed out and why. |
-| Layer 2 | The rapid growth period: 12 engineers hired in 6 months. Everyone added code to the monolith because it was the fastest path to shipping. No one removed code. |
-| Layer 3 | The original clean architecture: 3 Django apps, clear boundaries, comprehensive tests. Written by 2 engineers who understood every line. |
-| Origin | The weekend prototype that became the company. 400 lines of Flask. The founder's laptop. "We'll rewrite it properly when we raise the Series A." |
+| Phase               | Content                                                                                                                                                                                                                                  |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Outcome             | The current monolith: 2.1 million lines of Python, 45-minute build, 200 database tables, 6 teams working in the same repo. Everyone calls it "legacy."                                                                                   |
+| Layer 1             | The failed microservices migration 18 months ago. 3 services extracted, 2 brought back. The service that stayed out and why.                                                                                                             |
+| Layer 2             | The rapid growth period: 12 engineers hired in 6 months. Everyone added code to the monolith because it was the fastest path to shipping. No one removed code.                                                                           |
+| Layer 3             | The original clean architecture: 3 Django apps, clear boundaries, comprehensive tests. Written by 2 engineers who understood every line.                                                                                                 |
+| Origin              | The weekend prototype that became the company. 400 lines of Flask. The founder's laptop. "We'll rewrite it properly when we raise the Series A."                                                                                         |
 | Recontextualization | The monolith isn't legacy — it's a success artifact. Each layer of accumulated code corresponds to a period of growth. The "clean rewrite" was attempted once and failed. The monolith is the company's autobiography written in Python. |
 
 ### "How HTTPS Became Default" — Web Standards Archaeology Talk
 
-| Phase | Content |
-|-------|---------|
-| Outcome | Today: browsers show a warning for HTTP sites. Let's Encrypt issues free certificates. HTTPS is the default for every new site. Show the browser UI, the adoption curves. |
-| Layer 1 (2017) | Chrome starts marking HTTP sites as "Not Secure." The forcing function. Show the Chrome blog post and the adoption spike it caused. |
-| Layer 2 (2015) | Let's Encrypt launches. Before this, certificates cost money and required manual renewal. Show the ACME protocol, the automation that made free certs possible. |
-| Layer 3 (2013) | Snowden revelations. HTTPS adoption was ~30%. The IETF declares pervasive surveillance an attack. The political will for "encrypt everything" crystallizes. |
-| Origin (1994) | Netscape creates SSL for e-commerce. HTTPS was designed for shopping carts, not the whole web. The original assumption: only "sensitive" pages need encryption. |
+| Phase               | Content                                                                                                                                                                                                                                                                                  |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Outcome             | Today: browsers show a warning for HTTP sites. Let's Encrypt issues free certificates. HTTPS is the default for every new site. Show the browser UI, the adoption curves.                                                                                                                |
+| Layer 1 (2017)      | Chrome starts marking HTTP sites as "Not Secure." The forcing function. Show the Chrome blog post and the adoption spike it caused.                                                                                                                                                      |
+| Layer 2 (2015)      | Let's Encrypt launches. Before this, certificates cost money and required manual renewal. Show the ACME protocol, the automation that made free certs possible.                                                                                                                          |
+| Layer 3 (2013)      | Snowden revelations. HTTPS adoption was ~30%. The IETF declares pervasive surveillance an attack. The political will for "encrypt everything" crystallizes.                                                                                                                              |
+| Origin (1994)       | Netscape creates SSL for e-commerce. HTTPS was designed for shopping carts, not the whole web. The original assumption: only "sensitive" pages need encryption.                                                                                                                          |
 | Recontextualization | The browser warning you see today is the end product of a 30-year arc from "encrypt shopping carts" to "encrypt everything." Each layer — a protocol, a political event, a free CA, a browser UI change — was necessary. The "obvious" default took three decades of accumulated layers. |
 
 ## Combination Notes

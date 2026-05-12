@@ -10,9 +10,9 @@ Every post must include YAML frontmatter at the top:
 
 ```yaml
 ---
-title: "Post Title Here"
+title: 'Post Title Here'
 pubDate: YYYY-MM-DD
-description: "A 1-2 sentence summary for SEO and social sharing."
+description: 'A 1-2 sentence summary for SEO and social sharing.'
 tags:
   - tag1
   - tag2
@@ -51,9 +51,9 @@ Default to standard unless the user specifies otherwise.
 
 ```markdown
 ---
-title: ""
+title: ''
 pubDate: YYYY-MM-DD
-description: ""
+description: ''
 tags: []
 ---
 

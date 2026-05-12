@@ -41,11 +41,12 @@ The key insight: the thing you were waiting for is no longer the thing you need.
 
 End where you began — but different. The promise might still be on a roadmap somewhere. The ticket might still exist. But you and the codebase have been changed by the waiting. The circular structure isn't defeat; it's recognition. Some things in software are permanent states, not temporary ones.
 
-**Example:** "The migration ticket is still in our backlog. It's been re-estimated twice, rescoped three times, and assigned to four different developers. The current assignee is on parental leave. I don't think we'll ever do it — not because it's impossible, but because we've been waiting so long that the workarounds *are* the system now. And that's okay. The 3,000-line legacy store is now 4,200 lines, but it works. The shadow architecture holds. Some things you wait for arrive. Some things you wait for teach you to stop waiting. I put 'Evaluate state management approach' on next quarter's roadmap. Force of habit."
+**Example:** "The migration ticket is still in our backlog. It's been re-estimated twice, rescoped three times, and assigned to four different developers. The current assignee is on parental leave. I don't think we'll ever do it — not because it's impossible, but because we've been waiting so long that the workarounds _are_ the system now. And that's okay. The 3,000-line legacy store is now 4,200 lines, but it works. The shadow architecture holds. Some things you wait for arrive. Some things you wait for teach you to stop waiting. I put 'Evaluate state management approach' on next quarter's roadmap. Force of habit."
 
 ## Structure Notes
 
 **Principles:**
+
 - **Repetition with variation.** Return to the same details — the ticket, the roadmap, the line count — but each time they've changed slightly. This creates the rhythm of waiting.
 - **Dignity in persistence.** The people waiting aren't fools. They're making rational decisions in the face of uncertainty. Honor that.
 - **Comedy as survival mechanism.** The humor should feel like coping, not commentary. Dry observations about the absurdity of the situation, not jokes at anyone's expense.
@@ -56,7 +57,7 @@ End where you began — but different. The promise might still be on a roadmap s
 
 ## Combination Notes
 
-- **Sisyphean Arc:** Both deal with endurance without resolution. The Sisyphean arc is active (the work continues); The Waiting is passive (the resolution doesn't arrive). They merge when you're doing the repetitive work *while* waiting for the thing that would make it unnecessary.
+- **Sisyphean Arc:** Both deal with endurance without resolution. The Sisyphean arc is active (the work continues); The Waiting is passive (the resolution doesn't arrive). They merge when you're doing the repetitive work _while_ waiting for the thing that would make it unnecessary.
 - **Existential Awakening:** The awakening is realizing the waiting has changed you more than the arrival would have. The turn in step 4 IS an existential awakening.
 - **Catch-22:** You're trapped by the wait: you can't start the migration because of blockers, and you can't remove the blockers without the migration. The Catch-22 lives inside The Waiting.
 - **Kafkaesque Labyrinth:** The system that promises but doesn't deliver. The labyrinth's bureaucracy is why the promise keeps slipping.

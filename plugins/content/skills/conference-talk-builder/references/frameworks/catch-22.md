@@ -7,6 +7,7 @@ The Catch-22 is a narrative framework drawn from Joseph Heller's _Catch-22_ (196
 Heller served as a bombardier in World War II, and _Catch-22_ is built on the architecture of military bureaucracy — systems designed by reasonable people that produce unreasonable outcomes. The novel's genius is that every individual rule makes sense in isolation. Catch-22 is not a single paradox but a meta-rule: "they can do anything we can't stop them from doing." The specific paradox (insanity and grounding) is just the most famous instance. Throughout the novel, characters encounter Catch-22s in different forms, each one a new proof that the system is rigged — not by malice, but by the accumulated weight of individually rational policies.
 
 Key Heller principles to channel:
+
 - **Both rules are correct**: A Catch-22 is not one good rule fighting one bad rule. Both are reasonable. That is the trap.
 - **The system is the villain**: No individual is to blame. The paradox emerges from the interaction of well-intentioned constraints.
 - **Humor as the only sane response**: Heller's characters laugh because the alternative is madness. The comedy IS the coping mechanism.
@@ -69,6 +70,7 @@ In Heller's novel, the only escape from Catch-22 is to stop playing the game —
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to the paradox and (optionally) the escape:
+
 - **The Goal + The Rules** (3-4 slides): State the goal, state both rules quickly. Get to the paradox fast.
 - **The Trap** (3-5 slides): Name the catch. Show one concrete example of the dysfunction.
 - **The Escape** (2-4 slides): If you have one, show it. If not, end on the paradox — it's a valid lightning talk to simply name a Catch-22 that the audience recognizes.
@@ -78,6 +80,7 @@ Lightning Catch-22 talks work especially well because the audience does the "exp
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 6 phases:
+
 - Phases 1-3: 6-9 slides (build the trap methodically — each rule gets its own space)
 - Phase 4: 3-5 slides (the reveal — the structural center of the talk)
 - Phase 5: 8-12 slides (explore the consequences with depth)
@@ -86,6 +89,7 @@ Use all 6 phases:
 ### Extended Talk (45 min, 50-70 slides)
 
 Full Heller. Multiple Catch-22s, nested and intersecting:
+
 - Phases 1-3: 10-15 slides (rich context, multiple stakeholders, policy archaeology)
 - Phase 4: 5-8 slides (the trap revealed from multiple perspectives)
 - Phase 5: 18-25 slides (deep exploration — code, case studies, live demos of the dysfunction, audience participation: "have you seen this?")
@@ -123,25 +127,25 @@ The trap should emerge from the audience's own logic, not be announced. The best
 
 ### "The Meeting About Reducing Meetings"
 
-| Phase | Content |
-|-------|---------|
-| The Goal | "We wanted to reduce meeting load. Engineers had 15+ hours of meetings per week." |
-| The Enabling Rule | "Solution: audit all recurring meetings. Require each one to justify its existence with clear agenda, outcomes, and owner." |
-| The Blocking Rule | "To conduct the audit, we need a cross-functional meeting series. Weekly. With all stakeholders. To discuss which meetings to cut." |
-| The Trap | "We added 2 hours of weekly meetings to discuss reducing meetings. Attendance was mandatory because the initiative was high-priority." |
-| The Exploration | "The meta-meeting generated action items that required sub-meetings. Three months in, total meeting hours had increased by 11%. The audit spreadsheet became its own standing agenda item." |
-| The Escape | "We cancelled the audit meeting and instead gave every team a meeting budget: X hours per week, enforce it yourselves. No meta-process. Just a constraint and trust." |
+| Phase             | Content                                                                                                                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The Goal          | "We wanted to reduce meeting load. Engineers had 15+ hours of meetings per week."                                                                                                           |
+| The Enabling Rule | "Solution: audit all recurring meetings. Require each one to justify its existence with clear agenda, outcomes, and owner."                                                                 |
+| The Blocking Rule | "To conduct the audit, we need a cross-functional meeting series. Weekly. With all stakeholders. To discuss which meetings to cut."                                                         |
+| The Trap          | "We added 2 hours of weekly meetings to discuss reducing meetings. Attendance was mandatory because the initiative was high-priority."                                                      |
+| The Exploration   | "The meta-meeting generated action items that required sub-meetings. Three months in, total meeting hours had increased by 11%. The audit spreadsheet became its own standing agenda item." |
+| The Escape        | "We cancelled the audit meeting and instead gave every team a meeting budget: X hours per week, enforce it yourselves. No meta-process. Just a constraint and trust."                       |
 
 ### "You Need Experience to Get the Job"
 
-| Phase | Content |
-|-------|---------|
-| The Goal | "Hire junior developers and grow them into senior engineers." |
-| The Enabling Rule | "Require 'production experience with distributed systems' — it's legitimately what the role needs." |
-| The Blocking Rule | "No one gets production experience without being hired into a role that gives them production access." |
-| The Trap | "Every 'junior-friendly' job posting requires 2+ years of experience that can only be gained by having the job." |
-| The Exploration | "Side projects don't count. Open source sometimes counts. Bootcamps are 'not the same.' The pipeline narrows to people who already have the thing we're trying to teach." |
-| The Escape | "Apprenticeship model: hire for aptitude, pair on production systems from day one, accept that 'experience' is something we create, not something we filter for." |
+| Phase             | Content                                                                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The Goal          | "Hire junior developers and grow them into senior engineers."                                                                                                             |
+| The Enabling Rule | "Require 'production experience with distributed systems' — it's legitimately what the role needs."                                                                       |
+| The Blocking Rule | "No one gets production experience without being hired into a role that gives them production access."                                                                    |
+| The Trap          | "Every 'junior-friendly' job posting requires 2+ years of experience that can only be gained by having the job."                                                          |
+| The Exploration   | "Side projects don't count. Open source sometimes counts. Bootcamps are 'not the same.' The pipeline narrows to people who already have the thing we're trying to teach." |
+| The Escape        | "Apprenticeship model: hire for aptitude, pair on production systems from day one, accept that 'experience' is something we create, not something we filter for."         |
 
 ## Combination Notes
 

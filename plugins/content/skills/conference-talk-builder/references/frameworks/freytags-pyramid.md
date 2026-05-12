@@ -1,6 +1,6 @@
 # Freytag's Pyramid for Technical Presentations
 
-Freytag's Pyramid comes from Gustav Freytag's 1863 analysis of dramatic structure. It breaks narrative into five phases: Exposition, Rising Action, Climax, Falling Action, and Denouement. What makes it distinct from simpler frameworks is the explicit *descent* after the peak — the falling action and resolution that give the audience time to process the climax and understand its implications. For technical talks, this works best when your talk has a clear dramatic peak: a breakthrough, a reveal, a "the data showed us something we didn't expect" moment. The pyramid structure ensures you build to that peak deliberately and don't just drop the mic after it.
+Freytag's Pyramid comes from Gustav Freytag's 1863 analysis of dramatic structure. It breaks narrative into five phases: Exposition, Rising Action, Climax, Falling Action, and Denouement. What makes it distinct from simpler frameworks is the explicit _descent_ after the peak — the falling action and resolution that give the audience time to process the climax and understand its implications. For technical talks, this works best when your talk has a clear dramatic peak: a breakthrough, a reveal, a "the data showed us something we didn't expect" moment. The pyramid structure ensures you build to that peak deliberately and don't just drop the mic after it.
 
 ## The Five Phases
 
@@ -30,7 +30,7 @@ The single highest point of tension, insight, or revelation. Everything before l
 
 ### 4. Falling Action (Working Through Implications)
 
-The tension releases, but the talk isn't over. Falling action is where you show what happened *after* the insight — the implementation, the results, the things that went right and wrong as you applied the solution. This phase is what separates a dramatic reveal from a complete narrative. Without it, the audience has a great "aha" but no idea what to do with it.
+The tension releases, but the talk isn't over. Falling action is where you show what happened _after_ the insight — the implementation, the results, the things that went right and wrong as you applied the solution. This phase is what separates a dramatic reveal from a complete narrative. Without it, the audience has a great "aha" but no idea what to do with it.
 
 **In a talk**: "Once we understood the architectural problem, we had a choice: incremental migration or full rewrite. We chose incremental. Week 1: separated the analytics computation into an async pipeline. Week 2: added pre-computed snapshots. Week 3: rolled out to 10% of customers. Load times dropped to 800ms. Then we hit a data consistency issue we hadn't anticipated..."
 
@@ -49,6 +49,7 @@ The story lands. Show the new state of the world — what changed, what the audi
 ### Lightning Talk (5 min, 10-15 slides)
 
 Freytag's Pyramid is hard to compress — the five phases need room. For lightning talks, collapse to three phases:
+
 - **Exposition + Rising Action** (3-4 slides): Context and one escalation beat
 - **Climax** (2-3 slides): The core insight, stated powerfully
 - **Denouement** (3-5 slides): What it means and what to do about it
@@ -58,6 +59,7 @@ Skip falling action entirely. The audience can infer the implementation. Focus o
 ### Standard Talk (20 min, 25-35 slides)
 
 The ideal length for Freytag's Pyramid:
+
 - **Exposition** (3-5 slides): Establish context and stakes
 - **Rising Action** (8-12 slides): 2-3 escalating complications
 - **Climax** (2-4 slides): The peak insight
@@ -67,6 +69,7 @@ The ideal length for Freytag's Pyramid:
 ### Extended Talk (45 min, 50-70 slides)
 
 Full depth on every phase:
+
 - **Exposition** (6-10 slides): Rich context, multiple stakeholders, system architecture overview
 - **Rising Action** (16-24 slides): 3-4 escalation beats, each with code and data. Consider audience interaction ("Who's seen this pattern?")
 - **Climax** (4-6 slides): Build to it slowly. Use silence. Let the audience sit with the insight
@@ -92,23 +95,23 @@ Full depth on every phase:
 
 ### Product: "How We Cut Dashboard Load Time by 60%"
 
-| Phase | Content | Slides |
-|-------|---------|--------|
-| **Exposition** | Product context: 40K support teams, 2-second SLA, current performance at 1.4s. The analytics feature ships. Stakes: customer retention depends on dashboard performance. | 4 |
-| **Rising Action** | Beat 1: Load time creeps to 2.1s after launch, query optimization gets it to 1.8s. Beat 2: Black Friday traffic spike pushes it to 3.2s, caching added, down to 2.4s. Beat 3: Customer reports 8-second blank screen — thundering herd problem in the cache layer. Each beat includes metrics dashboards and code. | 12 |
-| **Climax** | Flame graph reveals the analytics feature recomputes full dashboard state on every request. Every prior fix was treating symptoms. The architecture is the bug. Single-slide reveal with the flame graph. | 3 |
-| **Falling Action** | Incremental migration: async analytics pipeline, pre-computed snapshots, phased rollout. Data consistency issue surfaces during 10% rollout — how it was handled. Final metrics: 600ms load time. | 8 |
-| **Denouement** | Before/after comparison echoing the exposition. Three architectural principles extracted. "How to audit your own system for this pattern." | 5 |
+| Phase              | Content                                                                                                                                                                                                                                                                                                            | Slides |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| **Exposition**     | Product context: 40K support teams, 2-second SLA, current performance at 1.4s. The analytics feature ships. Stakes: customer retention depends on dashboard performance.                                                                                                                                           | 4      |
+| **Rising Action**  | Beat 1: Load time creeps to 2.1s after launch, query optimization gets it to 1.8s. Beat 2: Black Friday traffic spike pushes it to 3.2s, caching added, down to 2.4s. Beat 3: Customer reports 8-second blank screen — thundering herd problem in the cache layer. Each beat includes metrics dashboards and code. | 12     |
+| **Climax**         | Flame graph reveals the analytics feature recomputes full dashboard state on every request. Every prior fix was treating symptoms. The architecture is the bug. Single-slide reveal with the flame graph.                                                                                                          | 3      |
+| **Falling Action** | Incremental migration: async analytics pipeline, pre-computed snapshots, phased rollout. Data consistency issue surfaces during 10% rollout — how it was handled. Final metrics: 600ms load time.                                                                                                                  | 8      |
+| **Denouement**     | Before/after comparison echoing the exposition. Three architectural principles extracted. "How to audit your own system for this pattern."                                                                                                                                                                         | 5      |
 
 ### Developer Tools: "The Debugging Session That Changed Our Architecture"
 
-| Phase | Content | Slides |
-|-------|---------|--------|
-| **Exposition** | Internal developer platform serving 800 engineers. Build times averaging 3 minutes. "Fast enough" — until the monorepo crossed 2 million lines. | 4 |
-| **Rising Action** | Beat 1: Build times hit 7 minutes. Added parallel compilation — 5 minutes. Beat 2: Developers start skipping local builds, pushing untested code. CI queue backs up. Beat 3: A bad merge takes down staging for 6 hours. The build system can't isolate affected targets. | 10 |
-| **Climax** | Tracing a single build reveals that 80% of compilation time is spent rebuilding unchanged transitive dependencies. The dependency graph has become a dependency web. One slide: the dependency graph visualization. | 3 |
-| **Falling Action** | Implemented content-addressable caching with strict module boundaries. Enforced dependency depth limits in CI. Build times: 90 seconds for 95th percentile. Migration took 8 weeks and broke 140 build targets that had hidden circular dependencies. | 10 |
-| **Denouement** | Build time graph from 7 minutes to 90 seconds over 3 months. "Three rules for dependency hygiene." Call to action: "Run this command on your repo to see your dependency depth." | 5 |
+| Phase              | Content                                                                                                                                                                                                                                                                   | Slides |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| **Exposition**     | Internal developer platform serving 800 engineers. Build times averaging 3 minutes. "Fast enough" — until the monorepo crossed 2 million lines.                                                                                                                           | 4      |
+| **Rising Action**  | Beat 1: Build times hit 7 minutes. Added parallel compilation — 5 minutes. Beat 2: Developers start skipping local builds, pushing untested code. CI queue backs up. Beat 3: A bad merge takes down staging for 6 hours. The build system can't isolate affected targets. | 10     |
+| **Climax**         | Tracing a single build reveals that 80% of compilation time is spent rebuilding unchanged transitive dependencies. The dependency graph has become a dependency web. One slide: the dependency graph visualization.                                                       | 3      |
+| **Falling Action** | Implemented content-addressable caching with strict module boundaries. Enforced dependency depth limits in CI. Build times: 90 seconds for 95th percentile. Migration took 8 weeks and broke 140 build targets that had hidden circular dependencies.                     | 10     |
+| **Denouement**     | Build time graph from 7 minutes to 90 seconds over 3 months. "Three rules for dependency hygiene." Call to action: "Run this command on your repo to see your dependency depth."                                                                                          | 5      |
 
 ## Combination Notes
 

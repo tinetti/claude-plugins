@@ -40,7 +40,7 @@ The first exploration should naturally surface a new, more specific question. Th
 - It should be more specific than the opening question
 - Frame it so the reader is asking it with you, not just being told
 
-**Example:** "If the configuration hadn't changed and the emit phase was slower, what had changed about the *output*? That reframing mattered. I'd been asking 'why is the build slow?' when the real question was 'why is writing files slow?' So I looked at the output directory. 3,200 files — same as always. But the total output size had grown from 14MB to 58MB."
+**Example:** "If the configuration hadn't changed and the emit phase was slower, what had changed about the _output_? That reframing mattered. I'd been asking 'why is the build slow?' when the real question was 'why is writing files slow?' So I looked at the output directory. 3,200 files — same as always. But the total output size had grown from 14MB to 58MB."
 
 ### 4. Second Exploration (Deeper Investigation)
 

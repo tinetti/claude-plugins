@@ -49,6 +49,7 @@ Return to the center one final time, but now the theme has been enriched by all 
 ### Lightning Talk (5 min, 10-15 slides)
 
 Two petals only:
+
 - **Central Theme** (2 slides): Sharp theme statement
 - **Petal 1** (4-5 slides): First story, tight and punchy
 - **Petal 2** (4-5 slides): Contrasting story
@@ -59,6 +60,7 @@ Two petals are enough to show the theme isn't a one-off. Three would be rushed a
 ### Standard Talk (20 min, 25-35 slides)
 
 Three petals:
+
 - **Central Theme** (2-3 slides): Theme with framing context
 - **Petal 1** (5-8 slides): First story with technical depth
 - **Petal 2** (5-8 slides): Contrasting domain or scale
@@ -68,6 +70,7 @@ Three petals:
 ### Extended Talk (45 min, 50-70 slides)
 
 Four to five petals with expanded stories:
+
 - **Central Theme** (3-5 slides): Rich framing with data or anecdote
 - **Petal 1** (8-12 slides): Deep story with demos
 - **Petal 2** (8-12 slides): Different domain, full technical detail
@@ -99,26 +102,26 @@ For extended talks, consider having different speakers present different petals 
 
 ### "Measure First: Three Bottleneck Stories" — A Systems Thinking Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Central Theme | 1-3 | "Every system has a bottleneck. Are you optimizing the right one?" |
-| Petal 1: API Caching | 4-9 | Built Redis layer for slow API. Bottleneck was an unprofiled DB query. |
-| Return to Center | 10 | "We optimized the wrong bottleneck." |
-| Petal 2: Hiring Pipeline | 11-16 | Automated resume screening. Bottleneck was interview experience. |
-| Return to Center | 17 | "Again, wrong bottleneck." |
-| Petal 3: CI Pipeline | 18-23 | Parallelized tests. This time it worked — because we measured first. |
-| Return to Center | 24 | "We'd learned to check." |
-| Synthesis | 25-28 | "The real bottleneck is the assumption. Measure first. Always." |
+| Section                  | Slides | Content                                                                |
+| ------------------------ | ------ | ---------------------------------------------------------------------- |
+| Central Theme            | 1-3    | "Every system has a bottleneck. Are you optimizing the right one?"     |
+| Petal 1: API Caching     | 4-9    | Built Redis layer for slow API. Bottleneck was an unprofiled DB query. |
+| Return to Center         | 10     | "We optimized the wrong bottleneck."                                   |
+| Petal 2: Hiring Pipeline | 11-16  | Automated resume screening. Bottleneck was interview experience.       |
+| Return to Center         | 17     | "Again, wrong bottleneck."                                             |
+| Petal 3: CI Pipeline     | 18-23  | Parallelized tests. This time it worked — because we measured first.   |
+| Return to Center         | 24     | "We'd learned to check."                                               |
+| Synthesis                | 25-28  | "The real bottleneck is the assumption. Measure first. Always."        |
 
 ### "The Same Mistake, Three Scales" — A Architecture Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Central Theme | 1-2 | "Premature abstraction is the root of all evil." |
-| Petal 1: Function Level | 3-8 | Over-generalized a utility function. 6 type parameters, 3 callers. |
-| Petal 2: Service Level | 9-15 | Built a "universal" API gateway. Nobody could configure it. |
-| Petal 3: Org Level | 16-22 | Created a "platform team" before understanding what teams needed. |
-| Synthesis | 23-28 | "Abstraction is compression. You can't compress what you don't understand yet." |
+| Section                 | Slides | Content                                                                         |
+| ----------------------- | ------ | ------------------------------------------------------------------------------- |
+| Central Theme           | 1-2    | "Premature abstraction is the root of all evil."                                |
+| Petal 1: Function Level | 3-8    | Over-generalized a utility function. 6 type parameters, 3 callers.              |
+| Petal 2: Service Level  | 9-15   | Built a "universal" API gateway. Nobody could configure it.                     |
+| Petal 3: Org Level      | 16-22  | Created a "platform team" before understanding what teams needed.               |
+| Synthesis               | 23-28  | "Abstraction is compression. You can't compress what you don't understand yet." |
 
 ## Transition Design
 

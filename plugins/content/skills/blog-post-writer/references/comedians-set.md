@@ -28,7 +28,7 @@ Double down on the established model. Give more evidence. Use the rule of three 
 
 Plant a small detail that doesn't quite fit. Don't call attention to it — let it sit. Comedy writers call this "the turn." The reader should feel a flicker of "wait, really?" without fully processing it yet.
 
-**Example:** "So naturally, when our team hit a production bug that had slipped past 4,200 lines of type definitions, three generic utility types, and a `Readonly<DeepPartial<Omit<UserConfig, 'legacy'>>>`, I assumed we just needed *more* types."
+**Example:** "So naturally, when our team hit a production bug that had slipped past 4,200 lines of type definitions, three generic utility types, and a `Readonly<DeepPartial<Omit<UserConfig, 'legacy'>>>`, I assumed we just needed _more_ types."
 
 ### 4. The Punchline (Subvert Expectation with Insight)
 

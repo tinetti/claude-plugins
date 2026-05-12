@@ -57,6 +57,7 @@ With the converged insight established, explore what it means for the audience's
 ### Lightning Talk (5 min, 10-15 slides)
 
 Two threads only, compressed:
+
 - **Setup** (1 slide): "Two things. Bear with me."
 - **Thread 1** (3-4 slides): One key idea, one supporting example
 - **Thread 2** (3-4 slides): Contrasting domain, same depth
@@ -67,6 +68,7 @@ No room for a third thread. The convergence of two is surprising enough for 5 mi
 ### Standard Talk (20 min, 25-35 slides)
 
 Three threads:
+
 - **Setup** (1-2 slides): Frame the journey
 - **Thread 1** (6-8 slides): Full development
 - **Thread 2** (6-8 slides): Full development, different domain
@@ -77,6 +79,7 @@ Three threads:
 ### Extended Talk (45 min, 50-70 slides)
 
 Three to four threads with rich depth:
+
 - **Setup** (2-3 slides): Framing with a teaser
 - **Thread 1** (10-14 slides): Deep dive with demos and code
 - **Thread 2** (10-14 slides): Different domain, equal depth
@@ -105,25 +108,25 @@ In extended talks, consider placing brief "interlude" slides between threads tha
 
 ### "Resilience Is Authority" — A Systems Design Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Setup | 1-2 | "Three systems. Three scales. Bear with me." |
-| Thread 1: Netflix Chaos Monkey | 3-9 | Architecture of failure injection. Why services recover in <30s. |
-| Thread 2: Toyota Andon Cord | 10-16 | Factory-stopping authority. $10K/min cost, 1000 pulls/week. |
-| Thread 3: Our Incident Response | 17-22 | 4-hour MTTR. Timeline shows nobody was empowered to act. |
-| Convergence | 23-26 | "Resilience = distributed authority to fail safely and act immediately." |
-| Implications | 27-30 | "Distribute the kill switch. Make failure cheap. Remove approval gates." |
+| Section                         | Slides | Content                                                                  |
+| ------------------------------- | ------ | ------------------------------------------------------------------------ |
+| Setup                           | 1-2    | "Three systems. Three scales. Bear with me."                             |
+| Thread 1: Netflix Chaos Monkey  | 3-9    | Architecture of failure injection. Why services recover in <30s.         |
+| Thread 2: Toyota Andon Cord     | 10-16  | Factory-stopping authority. $10K/min cost, 1000 pulls/week.              |
+| Thread 3: Our Incident Response | 17-22  | 4-hour MTTR. Timeline shows nobody was empowered to act.                 |
+| Convergence                     | 23-26  | "Resilience = distributed authority to fail safely and act immediately." |
+| Implications                    | 27-30  | "Distribute the kill switch. Make failure cheap. Remove approval gates." |
 
 ### "Why We All Chose Event Sourcing" — An Architecture Decision Talk
 
-| Section | Slides | Content |
-|---------|--------|---------|
-| Setup | 1-2 | "Three teams. No coordination. Same conclusion." |
-| Thread 1: Payments Team | 3-8 | Audit trail requirements led to append-only event log. |
-| Thread 2: Notifications Team | 9-14 | Replay capability for debugging led to event store. |
-| Thread 3: Analytics Team | 15-20 | Time-travel queries led to immutable event stream. |
-| Convergence | 21-24 | "All roads led to event sourcing. The shared need: immutable history." |
-| Implications | 25-30 | "Unified event bus architecture. One infrastructure investment, three team problems solved." |
+| Section                      | Slides | Content                                                                                      |
+| ---------------------------- | ------ | -------------------------------------------------------------------------------------------- |
+| Setup                        | 1-2    | "Three teams. No coordination. Same conclusion."                                             |
+| Thread 1: Payments Team      | 3-8    | Audit trail requirements led to append-only event log.                                       |
+| Thread 2: Notifications Team | 9-14   | Replay capability for debugging led to event store.                                          |
+| Thread 3: Analytics Team     | 15-20  | Time-travel queries led to immutable event stream.                                           |
+| Convergence                  | 21-24  | "All roads led to event sourcing. The shared need: immutable history."                       |
+| Implications                 | 25-30  | "Unified event bus architecture. One infrastructure investment, three team problems solved." |
 
 ## Thread Independence Tips
 

@@ -7,6 +7,7 @@ The Metamorphosis is a narrative framework drawn from Franz Kafka's _Die Verwand
 _Die Verwandlung_ opens with one of the most famous sentences in literature: "As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a monstrous vermin." Kafka does not build to the transformation or explain it. It has already happened. The story is entirely about what comes after. This is Kafka's central technique: the premise is absurd, but every response to it is meticulously realistic. Gregor worries about catching his train. His manager comes to check on him. His family discusses finances. The mundane machinery of life does not pause for the incomprehensible.
 
 Key Kafka principles to channel:
+
 - **The absurd treated as mundane**: Never acknowledge the transformation as extraordinary — just deal with it
 - **Institutional indifference**: The systems around the transformed person continue their demands unchanged
 - **Isolation through adaptation**: The more Gregor adapts to being an insect, the more alien he becomes to his family
@@ -61,6 +62,7 @@ The story does not end with triumph. Gregor's family adjusts to having a giant i
 ### Lightning Talk (5 min, 10-15 slides)
 
 Compress to the emotional arc:
+
 - **Normal Morning** (1-2 slides): One slide of calm. Make it count.
 - **The Break** (2-3 slides): The announcement. The shock. Visceral.
 - **You Adapt** (5-7 slides): One concrete example of pragmatic adaptation.
@@ -71,6 +73,7 @@ Skip "Others React" entirely — no time for the ensemble cast. Go from break to
 ### Standard Talk (20 min, 25-35 slides)
 
 Use all 5 phases with the weight on Phase 4:
+
 - Phase 1: 2-4 slides (establish the mundane)
 - Phase 2: 3-4 slides (the break — let it land)
 - Phase 3: 4-6 slides (team and community reactions)
@@ -80,6 +83,7 @@ Use all 5 phases with the weight on Phase 4:
 ### Extended Talk (45 min, 50-70 slides)
 
 Full Kafka. Every phase gets depth:
+
 - Phase 1: 5-8 slides (rich context of the old world — architecture, team dynamics, assumptions)
 - Phase 2: 5-8 slides (the break from multiple angles — technical, organizational, emotional)
 - Phase 3: 10-14 slides (detailed stakeholder responses, community analysis, the discourse)
@@ -118,23 +122,23 @@ The key emotional register is deadpan pragmatism in the face of absurdity. The s
 
 ### "The Day Our API Disappeared"
 
-| Phase | Content |
-|-------|---------|
-| Normal Morning | "Our product was built on three external APIs. They were stable, well-documented, and free. We built 18 months of features on top of them." |
-| The Break | "March 14th: 'Effective April 1, API v2 is deprecated. v3 requires enterprise licensing. Pricing starts at $50k/year.'" |
-| Others React | "Engineering wanted to fork. Product wanted to negotiate. Finance wanted a cost analysis by Friday. Twitter wanted to boycott." |
-| You Adapt | "We built an abstraction layer in 3 weeks. We evaluated 4 alternatives. We wrote a compatibility shim that let us swap providers without touching feature code. We shipped it on day 27." |
-| New Normal | "We now have a provider-agnostic architecture we never would have built voluntarily. Our vendor lock-in score went from 'total' to 'minimal.' The crisis built the system the roadmap never prioritized." |
+| Phase          | Content                                                                                                                                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Normal Morning | "Our product was built on three external APIs. They were stable, well-documented, and free. We built 18 months of features on top of them."                                                               |
+| The Break      | "March 14th: 'Effective April 1, API v2 is deprecated. v3 requires enterprise licensing. Pricing starts at $50k/year.'"                                                                                   |
+| Others React   | "Engineering wanted to fork. Product wanted to negotiate. Finance wanted a cost analysis by Friday. Twitter wanted to boycott."                                                                           |
+| You Adapt      | "We built an abstraction layer in 3 weeks. We evaluated 4 alternatives. We wrote a compatibility shim that let us swap providers without touching feature code. We shipped it on day 27."                 |
+| New Normal     | "We now have a provider-agnostic architecture we never would have built voluntarily. Our vendor lock-in score went from 'total' to 'minimal.' The crisis built the system the roadmap never prioritized." |
 
 ### "Waking Up to AI in the Code Review"
 
-| Phase | Content |
-|-------|---------|
-| Normal Morning | "Code review was a human ritual. Two approvals, a style check, a conversation in the comments. It took time but it built shared understanding." |
-| The Break | "Monday standup: 'Starting this week, an AI agent will do first-pass review on all PRs. Human review follows. This is not optional.'" |
-| Others React | "Senior devs felt replaced. Junior devs felt surveilled. The AI flagged 300 style issues in its first hour. Someone asked if it had feelings about tabs vs spaces." |
-| You Adapt | "We tuned its rules. We established what it reviewed (style, types, common bugs) vs. what humans reviewed (architecture, intent, growth). We built a feedback loop. We stopped fighting it and started shaping it." |
-| New Normal | "Human reviews now focus entirely on design and mentorship. The AI handles what we were always bad at anyway — consistency. New hires think this is just how it works. It is." |
+| Phase          | Content                                                                                                                                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Normal Morning | "Code review was a human ritual. Two approvals, a style check, a conversation in the comments. It took time but it built shared understanding."                                                                     |
+| The Break      | "Monday standup: 'Starting this week, an AI agent will do first-pass review on all PRs. Human review follows. This is not optional.'"                                                                               |
+| Others React   | "Senior devs felt replaced. Junior devs felt surveilled. The AI flagged 300 style issues in its first hour. Someone asked if it had feelings about tabs vs spaces."                                                 |
+| You Adapt      | "We tuned its rules. We established what it reviewed (style, types, common bugs) vs. what humans reviewed (architecture, intent, growth). We built a feedback loop. We stopped fighting it and started shaping it." |
+| New Normal     | "Human reviews now focus entirely on design and mentorship. The AI handles what we were always bad at anyway — consistency. New hires think this is just how it works. It is."                                      |
 
 ## Combination Notes
 

@@ -7,6 +7,7 @@ The Comedian's Set is a narrative framework drawn from the structure of stand-up
 The comedian's toolkit draws from multiple traditions. The setup-punchline structure descends from vaudeville, but the deeper principles come from incongruity theory (humor arises from violated expectations), superiority theory (humor arises from recognizing absurdity others don't see), and relief theory (humor releases tension built by social taboos). In a tech talk, all three operate simultaneously: the audience laughs because the reality violated their expectation (incongruity), because they recognize a dysfunction others haven't named (superiority), and because someone finally said the uncomfortable thing out loud (relief).
 
 Key comedy principles to channel:
+
 - **Economy of language**: Every word in a setup should do work. Cut ruthlessly. Comics spend hours trimming a single bit.
 - **Specificity is funnier than generality**: "Our deploy takes 3 weeks" is funnier than "our deploy is slow" because specificity creates surprise.
 - **The rule of three**: Two items establish the pattern, the third breaks it. "We have monitoring, alerting, and hope."
@@ -64,6 +65,7 @@ In comedy, a "tag" is a follow-up joke that callbacks to an earlier bit, reconte
 Every slide follows a micro-version of the setup-punchline structure. The slide title sets the expectation; the content subverts it. Or the first bullet establishes the pattern; the last bullet breaks it. This creates a talk that is consistently engaging because the audience is being rewarded with small surprises every 30-60 seconds.
 
 Example slide progression:
+
 - Slide title: "Our Deployment Pipeline Is Fast"
 - Content: "Average deploy time: 4 minutes. Average time from merge to deploy: 3 weeks. (Human approval queue.)"
 
@@ -76,6 +78,7 @@ The entire talk is one long setup for a single punchline. Phases 1-2 might take 
 ### Lightning Talk (5 min, 10-15 slides)
 
 One clean bit:
+
 - **Setup** (3-5 slides): Establish the expectation quickly and clearly.
 - **Punchline** (3-5 slides): Subvert it with evidence.
 - **Tag** (2-3 slides): One callback, land the real message.
@@ -85,6 +88,7 @@ Skip the Build and Misdirect — no room for them. Lightning comedy is all about
 ### Standard Talk (20 min, 25-35 slides)
 
 Full five-phase structure:
+
 - Phase 1: 4-6 slides (build the world)
 - Phase 2: 5-8 slides (reinforce until the audience is committed)
 - Phase 3: 2-3 slides (the subtle turn)
@@ -96,6 +100,7 @@ At standard length, you can also embed 2-3 mini-bits within Phase 2 (smaller set
 ### Extended Talk (45 min, 50-70 slides)
 
 Multiple bits building to a master punchline:
+
 - Phase 1: 6-10 slides (rich setup, multiple threads established)
 - Phase 2: 12-18 slides (contains 3-4 self-contained mini-bits, each with their own punchline, all reinforcing the master setup)
 - Phase 3: 4-6 slides (the turn — can be more elaborate at this length)
@@ -135,23 +140,23 @@ Comedy timing cannot be fully encoded in slides, but the structure can support i
 
 ### "Best Practices: A Love Story"
 
-| Phase | Content |
-|-------|---------|
-| Setup | "We adopted every best practice in the book. Microservices, TDD, CI/CD, feature flags, observability, blameless postmortems. We were the team other teams benchmarked against." |
-| Build | "Metrics improved across the board. Deploy frequency: 12x/day. MTTR: 14 minutes. Test coverage: 92%. We gave internal talks. We got conference invitations." |
-| Misdirect | "Then someone asked a question nobody had thought to ask." |
+| Phase     | Content                                                                                                                                                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Setup     | "We adopted every best practice in the book. Microservices, TDD, CI/CD, feature flags, observability, blameless postmortems. We were the team other teams benchmarked against."                                                |
+| Build     | "Metrics improved across the board. Deploy frequency: 12x/day. MTTR: 14 minutes. Test coverage: 92%. We gave internal talks. We got conference invitations."                                                                   |
+| Misdirect | "Then someone asked a question nobody had thought to ask."                                                                                                                                                                     |
 | Punchline | "Customer satisfaction had dropped 15% over the same period. We were so busy optimizing our process that we shipped fewer features that users actually wanted. We were the most efficiently unproductive team in the company." |
-| Tag | "The internal talk I gave about our best practices? It was titled 'How We Ship Faster.' Faster to where, exactly?" |
+| Tag       | "The internal talk I gave about our best practices? It was titled 'How We Ship Faster.' Faster to where, exactly?"                                                                                                             |
 
 ### "How I Learned to Stop Worrying and Read the Error Message"
 
-| Phase | Content |
-|-------|---------|
-| Setup | "Debugging is an art. You need mental models, intuition, experience. You need to understand the system at every layer." |
-| Build | "I spent 3 days tracking a production issue. Network traces, heap dumps, flame graphs. I pulled in two senior engineers. We had a war room. I learned more about TCP congestion windows than I ever wanted to know." |
-| Misdirect | "On day 3, a junior engineer joined the war room." |
-| Punchline | "She read the error message. Out loud. It said exactly what was wrong. It had always said exactly what was wrong. We had been so busy debugging that we never read the first line of the stack trace." |
-| Tag | "I now have a Post-It on my monitor that says 'READ THE ERROR MESSAGE.' Senior engineers have asked me what it means. They think it's ironic. It is not ironic." |
+| Phase     | Content                                                                                                                                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Setup     | "Debugging is an art. You need mental models, intuition, experience. You need to understand the system at every layer."                                                                                              |
+| Build     | "I spent 3 days tracking a production issue. Network traces, heap dumps, flame graphs. I pulled in two senior engineers. We had a war room. I learned more about TCP congestion windows than I ever wanted to know." |
+| Misdirect | "On day 3, a junior engineer joined the war room."                                                                                                                                                                   |
+| Punchline | "She read the error message. Out loud. It said exactly what was wrong. It had always said exactly what was wrong. We had been so busy debugging that we never read the first line of the stack trace."               |
+| Tag       | "I now have a Post-It on my monitor that says 'READ THE ERROR MESSAGE.' Senior engineers have asked me what it means. They think it's ironic. It is not ironic."                                                     |
 
 ## Combination Notes
 
