@@ -103,8 +103,8 @@
     {
       "name": "ideation",
       "source": "./plugins/ideation",
-      "description": "Transform brain dumps into structured implementation artifacts: contracts, phased PRDs, and implementation specs",
-      "version": "0.11.0",
+      "description": "Transform brain dumps into implementation specs through conversational interviews. Interactive HTML contract for planning decisions, Markdown specs for execution. /ideation:run orchestrates full project execution — dispatches subagents per phase, parallel when possible, gates on failures.",
+      "version": "0.12.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
@@ -115,7 +115,9 @@
         "planning",
         "prd",
         "specification",
-        "execution"
+        "execution",
+        "orchestration",
+        "interactive"
       ]
     },
     {
@@ -168,11 +170,7 @@
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
       },
-      "keywords": [
-        "experimental",
-        "cunningham",
-        "output-styles"
-      ]
+      "keywords": ["experimental", "cunningham", "output-styles"]
     },
     {
       "name": "sidequest",
