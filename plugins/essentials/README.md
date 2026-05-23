@@ -4,7 +4,7 @@ Essential agents, commands, and tools for enhanced Claude Code workflows.
 
 ## Overview
 
-The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, auditing code for security vulnerabilities, and running repo-wide quality sweeps.
+The Essentials plugin provides foundational capabilities that improve how you work with Claude Code. It includes specialized agents for common development tasks and skills for deep thinking, reading blocked URLs, simplifying code, creating PRs, auditing code for security vulnerabilities, running repo-wide quality sweeps, codebase orientation, and throwaway prototyping.
 
 ## What's Included
 
@@ -321,6 +321,66 @@ Compact the current conversation into a handoff document so a fresh agent can co
 /essentials:handoff finish the paragraph-level detection
 ```
 
+#### `/essentials:zoom-out` - Codebase Orientation Map
+
+Go up a layer of abstraction and map the surrounding architecture when you're unfamiliar with an area of code.
+
+**When to use:**
+
+- You're looking at unfamiliar code and need the big picture
+- You want to understand how a file or module connects to the rest of the system
+- You need to know what calls something, or what it depends on
+
+**What it produces:**
+
+1. **One-sentence orientation** — what this module is and why it exists
+2. **Ancestry** — the call chain or module hierarchy 2-3 levels up
+3. **Sibling map** — peer modules at the same abstraction level
+4. **Key connections** — inbound callers and outbound dependencies
+5. **Domain vocabulary** — the 3-5 most important domain terms in context
+
+**What it doesn't do:**
+
+- No line-by-line code explanation
+- No refactoring suggestions — orientation only
+- No guessing — it reads the code first
+
+**Example:**
+
+```bash
+/essentials:zoom-out
+```
+
+#### `/essentials:prototype` - Throwaway Prototype Builder
+
+Build throwaway code that answers a design question before committing to real implementation. Routes between two branches based on what kind of question you're asking.
+
+**When to use:**
+
+- Spiking out a state machine or data model before building it for real
+- Exploring several radically different UI layouts before picking one
+- Validating an API surface or business logic flow
+- Any time you'd say "let me try something before committing"
+
+**Two branches:**
+
+- **Logic** — builds a tiny interactive app (TUI or localhost page) that lets you drive a state model by hand. The logic module is portable and liftable into production; the interactive shell gets deleted.
+- **UI** — generates 3+ structurally different UI variants on a single route, switchable via a floating bottom bar and `?variant=` URL param. Pick a winner, steal parts from others, delete the rest.
+
+**Features:**
+
+- Auto-routes to the right branch based on the question type
+- Accepts arguments: `/essentials:prototype the checkout flow state machine`
+- Locates prototype code next to the module it's prototyping
+- One command to run — wired into the project's existing task runner
+- Captures the answer (the only durable output) before cleanup
+
+**Example:**
+
+```bash
+/essentials:prototype what should the settings page look like
+```
+
 #### `/essentials:security-audit` - Dispatch Security Auditor
 
 Explicit entry point for the security-auditor agent. User-invocable only — does not auto-trigger, so ambiguous phrasing won't kick it off unintentionally.
@@ -386,7 +446,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`
 
 ## Technical Details
 
