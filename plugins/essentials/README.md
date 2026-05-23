@@ -182,9 +182,9 @@ Remove AI-generated code slop from your current branch by comparing against a ba
 /essentials:de-slopify main
 ```
 
-#### `/essentials:codebase-cleanup` - Full Codebase Quality Sweep
+#### `/essentials:codebase-sweep` - Full Codebase Quality Sweep
 
-Dispatch eight subagents to deep-clean an entire codebase across multiple quality axes. This is the repo-wide nuclear option — not for single files or branch diffs (use `de-slopify` for that).
+Dispatch up to eight subagents to deep-clean an entire codebase across multiple quality axes. This is the repo-wide nuclear option — not for single files or branch diffs (use `de-slopify` for that). Primary support for JS/TS projects (knip, madge); other languages get grep-based analysis.
 
 **When to use:**
 
@@ -198,11 +198,13 @@ Dispatch eight subagents to deep-clean an entire codebase across multiple qualit
 - Branch-scoped diffs — use `de-slopify`
 - Targeted refactors
 
-**Eight subagents, two phases:**
+**Up to eight subagents, two phases:**
 
 Phase 1 (parallel): deduplication, type consolidation, weak type elimination, defensive code pruning, deprecated/legacy removal, AI slop removal.
 
-Phase 2 (after Phase 1 commits): dead code removal via `knip`, circular dependency resolution via `madge`.
+Phase 2 (after Phase 1 commits): dead code removal, circular dependency resolution.
+
+Subagents that don't apply to the detected language are skipped automatically.
 
 **Safety rails:**
 
@@ -212,7 +214,7 @@ Phase 2 (after Phase 1 commits): dead code removal via `knip`, circular dependen
 - Auto-reverts any subagent whose changes break tests
 - `disable-model-invocation: true` — requires explicit user intent
 
-**Output:** Per-subagent file/line counts, reverted subagents with test failures, and low-confidence findings flagged for human review.
+**Output:** Per-subagent file/line counts, skipped subagents (with reason), reverted subagents with test failures, and low-confidence findings flagged for human review.
 
 **Example:**
 
@@ -446,7 +448,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-cleanup`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`
 
 ## Technical Details
 

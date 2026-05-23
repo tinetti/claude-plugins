@@ -70,8 +70,8 @@
     {
       "name": "essentials",
       "source": "./plugins/essentials",
-      "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and codebase cleanup.",
-      "version": "0.12.0",
+      "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and codebase sweep.",
+      "version": "0.13.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
@@ -92,7 +92,7 @@
         "link-reader",
         "twitter",
         "reddit",
-        "codebase-cleanup",
+        "codebase-sweep",
         "cleanup",
         "code-quality",
         "handoff",
