@@ -223,6 +223,37 @@ You: "Run a full codebase audit on this repo"
 Claude: *dispatches Phase 1 subagents in parallel, commits and tests each, then Phase 2*
 ```
 
+#### `/essentials:codebase-rehab` - Phased Maintainability Migration
+
+Deep, staged migration that transforms messy or overgrown repos into product-shaped codebases while preserving existing behavior. Unlike `codebase-sweep` (a quick parallel audit), this is a full migration with planning, safety nets, and checkpoint commits.
+
+**When to use:**
+
+- Inherited or prototype codebase that "works but hurts"
+- Productionizing a proof-of-concept
+- Structural modernization — file splitting, typed boundaries, feature folders
+
+**Do not use for:**
+
+- Quick quality sweeps — use `codebase-sweep`
+- Security audits, observability, compliance, or SRE work
+
+**Workflow:**
+
+1. **Discovery** — non-mutating scan of repo shape, file sizes, dependencies, workflows
+2. **Migration plan** — staged slices ordered by blast radius, with concurrency map and checkpoint policy
+3. **Safety net** — baseline tests, characterization tests, screenshots
+4. **Green slices** — execute in small, reversible commits with test gates
+5. **Validate & deploy** — typecheck/build/test at each checkpoint
+6. **Audit microsite** — static HTML report with before/after metrics, charts, and risk assessment
+
+**Example:**
+
+```
+You: "This repo is a mess — rehab it into something maintainable"
+Claude: *runs discovery, writes migration plan, executes in green slices, produces audit microsite*
+```
+
 #### `/essentials:pr` - Create Pull Request
 
 Create a pull request with a structured template.
@@ -448,7 +479,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `codebase-rehab`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`
 
 ## Technical Details
 
