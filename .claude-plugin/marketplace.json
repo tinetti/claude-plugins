@@ -1,5 +1,6 @@
 {
   "name": "nicknisi",
+  "description": "Personal collection of Claude Code plugins for content creation, ideation, developer experience, image generation, and enhanced workflows.",
   "owner": {
     "name": "Nick Nisi",
     "email": "nick@nisi.org"
