@@ -1,7 +1,7 @@
 {
   "name": "essentials",
-  "version": "0.14.0",
-  "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, PR creation, and codebase sweep.",
+  "version": "0.15.0",
+  "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, thermo-nuclear code-quality review, PR creation, and codebase sweep.",
   "author": {
     "name": "Nick Nisi",
     "email": "nick@nisi.org"
@@ -27,6 +27,8 @@
     "maintainability",
     "cleanup",
     "code-quality",
+    "thermo-nuclear",
+    "code-judo",
     "handoff",
     "context",
     "session",

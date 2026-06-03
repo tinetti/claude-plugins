@@ -107,6 +107,33 @@ You: "Run a security audit on the billing API changes"
 Claude: *security-auditor agent runs multi-phase audit, returns exploit flows for any confirmed findings*
 ```
 
+#### ☢️ Thermo-Nuclear Code Quality Review Agent
+
+An unusually strict maintainability auditor. The harsh, high-conviction sibling to ordinary code review — it hunts for structural regressions and ambitious "code judo" simplifications rather than cosmetic nits. Loads the `thermo-nuclear-code-quality-review` skill as its complete rubric and runs in an isolated subagent context.
+
+**When to use:**
+
+- You explicitly want a thermo-nuclear / thermonuclear review or a deep, demanding code-quality audit
+- A PR is bloating files (the 1k-line rule) or growing spaghetti branching
+- You want a structural pass that pushes for dramatic simplification, not "it works"
+- NOT for ordinary, balanced PR review — this is deliberately strict
+
+**Features:**
+
+- Loads the full rubric from the `thermo-nuclear-code-quality-review` skill
+- The 1k-line rule: a file crossing 1000 lines is a presumptive blocker
+- Hunts spaghetti growth, ad-hoc branching, thin wrappers, cast/optionality churn, and canonical-layer leaks
+- Prioritized output: structural regressions and missed simplifications first, cosmetic notes last (if at all)
+- High approval bar — does not rubber-stamp working-but-messy code
+- Targets the branch diff by default (`git diff main...HEAD`) or a scope you pass in
+
+**Example:**
+
+```
+You: "Give this branch a thermo-nuclear code quality review"
+Claude: *thermo-nuclear-code-quality-review agent applies the full rubric, returns prioritized structural findings and code-judo moves*
+```
+
 ### Skills
 
 #### `/essentials:link-reader` - Read Blocked URLs
@@ -440,6 +467,31 @@ The agent auto-triggers on phrases like "do a security audit." The skill is the 
 /essentials:security-audit
 ```
 
+#### `/essentials:thermo-nuclear-code-quality-review` - Strict Maintainability Audit
+
+The canonical rubric for an extremely strict code-quality review. User-invocable only — does not auto-trigger, so it won't fire on ordinary review phrasing.
+
+**When to use:**
+
+- You explicitly want the harsh maintainability audit of the current branch
+- You want to read or apply the rubric directly in this session rather than via the agent
+
+**What it does:**
+
+1. Holds the full thermo-nuclear rubric — the 1k-line rule, spaghetti-growth detection, code-judo simplification, type/boundary cleanliness, prioritized output, and a high approval bar
+2. When invoked directly, gathers the branch diff and full changed-file contents, then applies the rubric in this session
+3. Also serves as the rubric loaded by the `thermo-nuclear-code-quality-review` agent when you want the review in an isolated context
+
+**Why a skill + agent pair:**
+
+The skill is the rubric and a direct entry point; the agent loads that same skill and runs the review in an isolated subagent context (useful for parallel or uncluttered runs). Methodology lives in one place — the skill.
+
+**Example:**
+
+```bash
+/essentials:thermo-nuclear-code-quality-review
+```
+
 ## Installation
 
 Add this marketplace to Claude Code:
@@ -479,7 +531,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `codebase-rehab`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `codebase-rehab`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`, `thermo-nuclear`, `maintainability`, `code-judo`, `refactor`
 
 ## Technical Details
 
