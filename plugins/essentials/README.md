@@ -411,6 +411,34 @@ Go up a layer of abstraction and map the surrounding architecture when you're un
 /essentials:zoom-out
 ```
 
+#### `/essentials:socratic-tutor` - Master a Change Through Teaching
+
+Drill into a change until you deeply understand it — taught Socratically, one stage at a time, refusing to stop until you've demonstrated mastery. User-invocable only — does not auto-trigger, so it won't hijack an ordinary conversation.
+
+**When to use:**
+
+- You (or Claude) just made a change and you want to truly own it, not just skim it
+- You're reviewing a diff or PR and want to be quizzed until it sticks
+- You want the _why_ behind the design decisions, not just the _what_
+
+**How it works:**
+
+1. **Gauges you first** — has you restate your current understanding before teaching, to find the real gaps
+2. **Keeps a visible checklist** — three buckets (the problem, the solution, the broader impact), checked off only once you've demonstrated each
+3. **Drills the whys** — prioritizes understanding the problem before jumping to the solution
+4. **Quizzes, doesn't lecture** — multiple-choice and open questions via `AskUserQuestion`, answers hidden until you submit
+5. **Uses the code** — shows the diff or drives the debugger when it makes a concept concrete
+
+**Stop condition:**
+
+The session doesn't end until every checklist item is mastered. Supports `eli5` / `eli14` / `elii` (explain like I'm an intern) depth requests.
+
+**Example:**
+
+```bash
+/essentials:socratic-tutor
+```
+
 #### `/essentials:prototype` - Throwaway Prototype Builder
 
 Build throwaway code that answers a design question before committing to real implementation. Routes between two branches based on what kind of question you're asking.
@@ -531,7 +559,7 @@ Claude: *engages ultrathink mode, questions assumptions, crafts elegant solution
 
 ## Keywords
 
-`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `codebase-rehab`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`, `thermo-nuclear`, `maintainability`, `code-judo`, `refactor`
+`git`, `commit`, `ultrathink`, `workflow`, `agents`, `link-reader`, `twitter`, `reddit`, `pr`, `review`, `simplify`, `de-slopify`, `codebase-sweep`, `codebase-rehab`, `cleanup`, `code-quality`, `security`, `audit`, `vulnerability`, `squad-review`, `parallel-review`, `multi-agent`, `handoff`, `context`, `session`, `zoom-out`, `orientation`, `architecture`, `prototype`, `spike`, `poc`, `proof-of-concept`, `thermo-nuclear`, `maintainability`, `code-judo`, `refactor`, `socratic-tutor`, `teach`, `learning`, `understand`
 
 ## Technical Details
 

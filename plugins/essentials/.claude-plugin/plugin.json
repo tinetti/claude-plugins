@@ -1,6 +1,6 @@
 {
   "name": "essentials",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Essential agents, commands, and tools for enhanced Claude Code workflows - git commits, code simplification, security audits, thermo-nuclear code-quality review, PR creation, and codebase sweep.",
   "author": {
     "name": "Nick Nisi",
@@ -36,6 +36,10 @@
     "orientation",
     "prototype",
     "spike",
-    "poc"
+    "poc",
+    "socratic-tutor",
+    "teach",
+    "learning",
+    "understand"
   ]
 }
