@@ -12,7 +12,7 @@ test('askQuestions allows a custom single-select answer via input', async () => 
       ui: {
         async select(title: string, options: string[]) {
           selectCalls.push({ title, options });
-          return 'Type a custom answer';
+          return 'Other... (type your own answer)';
         },
         async input() {
           return 'Completely custom answer';
@@ -29,7 +29,10 @@ test('askQuestions allows a custom single-select answer via input', async () => 
     ],
   );
 
-  assert.equal(selectCalls[0]?.options.at(-1), 'Type a custom answer');
+  assert.equal(
+    selectCalls[0]?.options.at(-1),
+    'Other... (type your own answer)',
+  );
   assert.deepEqual(result.details.answers, [
     {
       header: 'Scope',
@@ -40,7 +43,11 @@ test('askQuestions allows a custom single-select answer via input', async () => 
 });
 
 test('askQuestions allows custom answers during multi-select prompts', async () => {
-  const selections = ['Type a custom answer', 'Option B — Recommended', 'Done'];
+  const selections = [
+    'Other... (type your own answer)',
+    'Option B — Recommended',
+    'Done',
+  ];
   const inputs = ['Custom choice'];
 
   const result = await askQuestions(

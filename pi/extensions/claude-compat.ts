@@ -27,7 +27,7 @@ type CompatTask = {
 };
 
 const MAX_TOOL_TEXT_BYTES = 50 * 1024;
-const CUSTOM_ANSWER_CHOICE = 'Type a custom answer';
+const CUSTOM_ANSWER_CHOICE = 'Other... (type your own answer)';
 let taskQueue = Promise.resolve();
 let todos: unknown[] = [];
 
