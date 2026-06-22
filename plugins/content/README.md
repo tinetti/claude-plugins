@@ -6,7 +6,7 @@ Tools for bootstrapping content creation including blog posts and conference tal
 
 ### blog-post-writer
 
-Transforms brain dumps into polished blog posts in Nick Nisi's voice.
+Transforms brain dumps into polished blog posts in John Tinetti's voice.
 
 Use this when you have scattered ideas, talking points, and conclusions that need organization into a cohesive narrative with a conversational, authentic tone.
 
@@ -21,10 +21,10 @@ Use this when you have scattered ideas, talking points, and conclusions that nee
 The skill will:
 
 - Gather constraints (target length, audience, draft vs revision)
-- Fetch your latest posts from nicknisi.com for live voice calibration
+- Fetch your latest posts from tinetti.com for live voice calibration
 - Choose the best narrative framework for the content
 - Structure your unorganized thoughts into a post with proper Astro frontmatter
-- Apply Nick's writing voice and tone throughout
+- Apply John's writing voice and tone throughout
 
 **Bundled references:**
 
@@ -75,12 +75,12 @@ The skill will:
 
 - Gather information about your talk topic, audience, and duration
 - Auto-suggest from 22 narrative frameworks using a scoring algorithm
-- Build a slide-by-slide talk script with speaker notes in Nick's voice
+- Build a slide-by-slide talk script with speaker notes in John's voice
 - Iterate on pacing, narrative arc, and content density
 
 **Bundled references:**
 
-- `voice-tone.md` - Nick's voice and tone guide for speaker notes
+- `voice-tone.md` - John's voice and tone guide for speaker notes
 - `framework-guide.md` - Framework selection algorithm with scoring matrix
 - `frameworks/` - 22 narrative framework references (Foundational, Existential, Absurdist, Non-linear, Rhetorical)
 
@@ -91,8 +91,8 @@ Both skills support narrative frameworks auto-selected based on content type. Th
 ## Installation
 
 ```bash
-/plugin marketplace add nicknisi/claude-plugins
-/plugin install content@nicknisi
+/plugin marketplace add tinetti/claude-plugins
+/plugin install content@tinetti
 ```
 
 ## Version

@@ -83,8 +83,8 @@ export GROK_API_KEY="..."        # For Grok
 1. Add the marketplace and install the plugin:
 
 ```bash
-/plugin marketplace add nicknisi/claude-plugins
-/plugin install consultant@nicknisi
+/plugin marketplace add tinetti/claude-plugins
+/plugin install consultant@tinetti
 ```
 
 2. Restart Claude Code
@@ -722,6 +722,6 @@ MIT
 
 ## Credits
 
-Created by Nick Nisi (nick@nisi.org)
+Created by John Tinetti (john.tinetti@nexteraanalytics.com)
 
 Merges consultation and research patterns for maximum flexibility.

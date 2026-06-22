@@ -1,16 +1,16 @@
-# Nick Nisi's Voice and Tone
+# John Tinetti's Voice and Tone
 
-Captured from analyzing posts at nicknisi.com
+Captured from analyzing posts at tinetti.com
 
 ## Core Writing Characteristics
 
 ### Voice
 
-Personal, authentic, conversational yet thoughtful. Nick writes like he's having a one-on-one conversation with a peer developer over coffee.
+Personal, authentic, conversational yet thoughtful. John writes like he's having a one-on-one conversation with a peer developer over coffee.
 
 ### Vulnerability
 
-Nick isn't afraid to admit uncertainty, fear, or being wrong. He shares his journey from skepticism to understanding.
+John isn't afraid to admit uncertainty, fear, or being wrong. He shares his journey from skepticism to understanding.
 
 Examples:
 
@@ -77,7 +77,7 @@ Posts often follow a journey: initial position → experience/challenge → real
 
 ### Honesty About Limitations
 
-Nick admits when things aren't perfect:
+John admits when things aren't perfect:
 
 - "The PRs it generated weren't perfect. But they worked. Somewhat."
 - "Would I ship our vibe-coded GitHub Action to production? No way."
@@ -87,7 +87,7 @@ Nick admits when things aren't perfect:
 
 Light self-deprecation and humor:
 
-- "(except maybe 'Why doesn't Nick use VS Code?' 😉)"
+- "(except maybe 'Why doesn't John use VS Code?' 😉)"
 - "One of my favorite memories? Getting texts from friends asking why my face kept showing up in their Instagram feeds."
 - "I like to think I brought a certain… charm to people's social media experience."
 - Acknowledging his tooling preferences with humor
@@ -140,7 +140,7 @@ Examples:
 
 ### Tone Shifts
 
-Nick modulates tone based on content:
+John modulates tone based on content:
 
 - **Technical tutorials**: Clear, instructional, still conversational
 - **Personal reflections**: Vulnerable, thoughtful

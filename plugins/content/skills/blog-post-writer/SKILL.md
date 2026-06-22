@@ -1,11 +1,11 @@
 ---
 name: blog-post-writer
-description: Transform brain dumps into polished blog posts in Nick Nisi's voice. Use when the user says "write a blog post," "draft a post," "write about [topic]," "turn my notes into a blog post," or provides scattered ideas, talking points, or conclusions that need shaping into a cohesive narrative.
+description: Transform brain dumps into polished blog posts in John Tinetti's voice. Use when the user says "write a blog post," "draft a post," "write about [topic]," "turn my notes into a blog post," or provides scattered ideas, talking points, or conclusions that need shaping into a cohesive narrative.
 ---
 
-# Nick Nisi Blog Writer
+# John Tinetti Blog Writer
 
-Transform unstructured brain dumps into polished blog posts that sound like Nick Nisi.
+Transform unstructured brain dumps into polished blog posts that sound like John Tinetti.
 
 ## Process
 
@@ -35,7 +35,7 @@ Load `references/voice-tone.md` as the baseline voice guide.
 
 **Then calibrate against recent writing:**
 
-1. Fetch `https://nicknisi.com/posts` to find the 2-3 most recent posts
+1. Fetch `https://tinetti.com/posts` to find the 2-3 most recent posts
 2. Fetch and read those posts
 3. Note any patterns that extend or differ from the static reference — new phrases, tone shifts, topic-specific voice adjustments
 
@@ -140,7 +140,7 @@ Apply the chosen framework to the brain dump material:
 
 If the content doesn't fit the framework cleanly, adapt — the framework is scaffolding, not a cage.
 
-### 5. Write in Nick's Voice
+### 5. Write in John's Voice
 
 Apply voice characteristics:
 
@@ -204,7 +204,7 @@ Show the post to the user for feedback and iterate.
 
 ## Output Format
 
-Format posts using `references/post-template.md` as the structural template. This defines the frontmatter schema and file format for Nick's site.
+Format posts using `references/post-template.md` as the structural template. This defines the frontmatter schema and file format for John's site.
 
 For detailed voice do's and don'ts, see `references/voice-tone.md`.
 
@@ -253,7 +253,7 @@ You're not being replaced; you're being amplified.
 
 ### References
 
-- `references/voice-tone.md` - Complete voice and tone guide. Read this first to capture Nick's style.
+- `references/voice-tone.md` - Complete voice and tone guide. Read this first to capture John's style.
 - `references/post-template.md` - Output format template with frontmatter schema and structural skeleton.
 
 **Narrative frameworks** (read the one that matches the content — do not preload all twenty-seven):

@@ -163,13 +163,13 @@ The meta plugin embodies **self-improvement through feedback**:
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add nicknisi/claude-plugins
+/plugin marketplace add tinetti/claude-plugins
 ```
 
 Then install the meta plugin:
 
 ```bash
-/plugin install meta@nicknisi
+/plugin install meta@tinetti
 ```
 
 ## Usage Examples

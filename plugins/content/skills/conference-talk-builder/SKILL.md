@@ -5,7 +5,7 @@ description: Create conference talk outlines and slide-by-slide content plans us
 
 # Conference Talk Builder
 
-Transform brain dumps, transcripts, or raw ideas into structured conference talk scripts using narrative frameworks and Nick Nisi's voice.
+Transform brain dumps, transcripts, or raw ideas into structured conference talk scripts using narrative frameworks and John Tinetti's voice.
 
 The output is a **talk script** — a narrative outline with slide-by-slide content plan, speaker notes, and timing guidance. It is deliberately tool-agnostic: feed the script into Slidev, Gamma, iA Presenter, Keynote, or whatever you use to build the actual slides.
 
@@ -71,7 +71,7 @@ Once a framework is selected, read **only** that framework's reference file from
 
 ### Stage 3: Build the Talk Script
 
-Read `references/voice-tone.md` to calibrate Nick's presentation voice.
+Read `references/voice-tone.md` to calibrate John's presentation voice.
 
 **Then calibrate against recent talks:**
 
@@ -106,7 +106,7 @@ For each slide:
 **Key visual**: [what should be on the slide — a code block, image, diagram, list, quote, or just a heading]
 **On screen**: [the actual text/content the audience sees]
 
-**Speaker notes**: [what you say while this slide is up — written in Nick's voice]
+**Speaker notes**: [what you say while this slide is up — written in John's voice]
 
 **Transition**: [how this connects to the next slide]
 ```
@@ -139,7 +139,7 @@ After presenting the talk script:
 - Is there vulnerability where appropriate?
 - Are there specific details (tool names, numbers, real examples)?
 - Is humor self-aware, not forced?
-- Would Nick actually say this on stage?
+- Would John actually say this on stage?
 
 Iterate based on feedback. The talk script is the deliverable — the user takes it to their slide tool of choice.
 
@@ -161,7 +161,7 @@ Iterate based on feedback. The talk script is the deliverable — the user takes
 
 ### References
 
-- `references/voice-tone.md` — Nick's voice and tone guide. Read this to calibrate speaker notes and talk style.
+- `references/voice-tone.md` — John's voice and tone guide. Read this to calibrate speaker notes and talk style.
 - `references/framework-guide.md` — Framework selection algorithm with scoring matrix. Read this in Stage 2.
 
 **Narrative frameworks** (read only the selected one — do not preload all twenty-two):
@@ -219,7 +219,7 @@ User: "I want to create a talk about how we migrated our monolith to TypeScript"
    - Take: Third-party library types, team resistance
    - Return: Full codebase migration complete
    - Change: 40% fewer runtime errors, team converts to TS advocates
-5. Generate slide-by-slide talk script (~25-30 slides) with speaker notes in Nick's voice.
+5. Generate slide-by-slide talk script (~25-30 slides) with speaker notes in John's voice.
 6. **Stage 4**: Iterate — user says the "Search" section is too long, compress. Add a humor beat after the "Take" section. Done.
 
 The user then takes this script to Slidev, Gamma, or whatever tool they prefer.

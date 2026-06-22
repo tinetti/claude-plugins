@@ -52,8 +52,8 @@ Strips away hedging, apologies, and excessive politeness for direct, assertive r
 ## Installation
 
 ```bash
-/plugin marketplace add nicknisi/claude-plugins
-/plugin install sandbox@nicknisi
+/plugin marketplace add tinetti/claude-plugins
+/plugin install sandbox@tinetti
 ```
 
 ## Usage

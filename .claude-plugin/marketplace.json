@@ -1,9 +1,10 @@
 {
-  "name": "nicknisi",
+  "name": "tinetti",
   "description": "Personal collection of Claude Code plugins for content creation, ideation, developer experience, image generation, and enhanced workflows.",
+  "upstream": "nicknisi/claude-plugins",
   "owner": {
-    "name": "Nick Nisi",
-    "email": "nick@nisi.org"
+    "name": "John Tinetti",
+    "email": "john.tinetti@nexteraanalytics.com"
   },
   "plugins": [
     {
@@ -14,6 +15,10 @@
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "consultant",
@@ -39,6 +44,10 @@
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
       },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
+      },
       "keywords": [
         "content",
         "blog",
@@ -56,6 +65,10 @@
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "dx",
@@ -76,6 +89,10 @@
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "git",
@@ -118,13 +135,17 @@
       "name": "ideation",
       "source": {
         "source": "github",
-        "repo": "nicknisi/ideation"
+        "repo": "tinetti/ideation"
       },
       "description": "Transform brain dumps into implementation specs through an evidence-gated interview stress-tested by adversarial plan critics. Interactive HTML contract for planning decisions, Markdown specs for execution. /ideation:autopilot runs all phases on a deterministic workflow engine with overlap-serialized parallel waves; /ideation:retro mines implementation notes into learnings future interviews read.",
-      "repository": "https://github.com/nicknisi/ideation",
+      "repository": "https://github.com/tinetti/ideation",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "ideation",
@@ -145,6 +166,10 @@
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "image-generation",
@@ -167,6 +192,10 @@
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
       },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
+      },
       "keywords": [
         "meta",
         "learning",
@@ -187,6 +216,10 @@
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
       },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
+      },
       "keywords": [
         "experimental",
         "cunningham",
@@ -196,11 +229,15 @@
     {
       "name": "sidequest",
       "source": "./plugins/sidequest",
-      "description": "Park tangents as side quests with full resurrection context — writes a handoff doc to the Obsidian vault and creates a linked OmniFocus task",
+      "description": "Park tangents as side quests with full resurrection context \u2014 writes a handoff doc to the Obsidian vault and creates a linked OmniFocus task",
       "version": "0.1.0",
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "sidequest",
@@ -223,6 +260,10 @@
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
       },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
+      },
       "keywords": [
         "specification",
         "requirements",
@@ -244,6 +285,10 @@
       "author": {
         "name": "Nick Nisi",
         "email": "nick@nisi.org"
+      },
+      "maintainer": {
+        "name": "John Tinetti",
+        "email": "john.tinetti@nexteraanalytics.com"
       },
       "keywords": [
         "tmux",

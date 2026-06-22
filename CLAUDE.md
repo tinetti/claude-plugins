@@ -45,8 +45,8 @@ plugins/{name}/
      "version": "0.1.0",
      "description": "Plugin description",
      "author": {
-       "name": "Nick Nisi",
-       "email": "nick@nisi.org"
+       "name": "John Tinetti",
+       "email": "john.tinetti@nexteraanalytics.com"
      },
      "keywords": ["optional", "search", "terms"]
    }

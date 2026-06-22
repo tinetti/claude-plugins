@@ -1,10 +1,14 @@
 {
   "name": "sidequest",
   "version": "0.1.0",
-  "description": "Park tangents as side quests with full resurrection context — writes a handoff doc to the Obsidian vault and creates a linked OmniFocus task",
+  "description": "Park tangents as side quests with full resurrection context \u2014 writes a handoff doc to the Obsidian vault and creates a linked OmniFocus task",
   "author": {
     "name": "Nick Nisi",
     "email": "nick@nisi.org"
+  },
+  "maintainer": {
+    "name": "John Tinetti",
+    "email": "john.tinetti@nexteraanalytics.com"
   },
   "keywords": [
     "sidequest",

@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Create Pull Request
 
-**Note**: If we're on `main`, then create a new feature branch following this pattern: `nicknisi/${feature}`.
+**Note**: If we're on `main`, then create a new feature branch following this pattern: `tinetti/${feature}`.
 
 Create a PR for the current branch following this template:
 

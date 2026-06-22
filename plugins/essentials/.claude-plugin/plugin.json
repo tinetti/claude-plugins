@@ -6,6 +6,10 @@
     "name": "Nick Nisi",
     "email": "nick@nisi.org"
   },
+  "maintainer": {
+    "name": "John Tinetti",
+    "email": "john.tinetti@nexteraanalytics.com"
+  },
   "keywords": [
     "git",
     "commit",

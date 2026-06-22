@@ -292,7 +292,7 @@ Create a pull request with a structured template.
 
 **Features:**
 
-- Auto-creates feature branch (`nicknisi/${feature}`) if on `main`
+- Auto-creates feature branch (`tinetti/${feature}`) if on `main`
 - Enforces concise titles (< 72 chars)
 - Structured body template
 
@@ -525,13 +525,13 @@ The skill is the rubric and a direct entry point; the agent loads that same skil
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add nicknisi/claude-plugins
+/plugin marketplace add tinetti/claude-plugins
 ```
 
 Then install the essentials plugin:
 
 ```bash
-/plugin install essentials@nicknisi
+/plugin install essentials@tinetti
 ```
 
 ## Usage Examples
