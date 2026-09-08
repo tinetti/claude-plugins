@@ -1,0 +1,33 @@
+{
+  "name": "tinetti",
+  "description": "John Tinetti's Claude Code plugin marketplace.",
+  "owner": {
+    "name": "John Tinetti",
+    "email": "john.tinetti@nexteraanalytics.com"
+  },
+  "plugins": [
+    {
+      "name": "waybill",
+      "source": {
+        "source": "github",
+        "repo": "tinetti/waybill"
+      },
+      "description": "A leg route with pluggable carriers: one command names the leg a change is on, the command that runs it next, and the model that command wants. Reads every leg's stamp off repository reality — a branch, a bay, a file, an exit code — so there is no state file to keep in sync and a leg done by hand counts the same as one done through the tool.",
+      "repository": "https://github.com/tinetti/waybill",
+      "author": {
+        "name": "John Tinetti",
+        "email": "john@tinetti.net"
+      },
+      "keywords": [
+        "workflow",
+        "handover",
+        "session",
+        "bay",
+        "worktree",
+        "model-routing",
+        "ideation",
+        "openspec"
+      ]
+    }
+  ]
+}
